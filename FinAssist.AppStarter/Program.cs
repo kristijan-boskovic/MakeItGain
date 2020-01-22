@@ -27,7 +27,9 @@ namespace FinAssist.AppStarter
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FinAssist.PresentationLayer.frmMainWindow(mainController));
+            //Application.Run(new FinAssist.PresentationLayer.frmMainWindow(mainController));
+            Application.Run(new Form1());
+
         }
     }
 }

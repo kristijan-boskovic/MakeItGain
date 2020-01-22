@@ -46,13 +46,13 @@
     <Compile Include="TransactionRepository.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\FinAssist.BaseLib\FinAssist.BaseLib.csproj">
+    <ProjectReference Include="..\FinAssist.BaseLib\MakeItGain.BaseLib.csproj">
       <Project>{1b25dd35-a85e-46a6-8804-131d26a303e4}</Project>
-      <Name>FinAssist.BaseLib</Name>
+      <Name>MakeItGain.BaseLib</Name>
     </ProjectReference>
-    <ProjectReference Include="..\FinAssist.Model\FinAssist.Model.csproj">
+    <ProjectReference Include="..\FinAssist.Model\MakeItGain.Model.csproj">
       <Project>{e2cb6e11-5265-441b-9747-9a9d80efa16a}</Project>
-      <Name>FinAssist.Model</Name>
+      <Name>MakeItGain.Model</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

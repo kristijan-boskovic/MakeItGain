@@ -55,6 +55,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FirstCustomControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FirstCustomControl.Designer.cs">
+      <DependentUpon>FirstCustomControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAddAccount.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,11 +127,28 @@
     <Compile Include="frmViewTransactions.Designer.cs">
       <DependentUpon>frmViewTransactions.cs</DependentUpon>
     </Compile>
+    <Compile Include="MySecondCustmControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MySecondCustmControl.Designer.cs">
+      <DependentUpon>MySecondCustmControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="WindowFormsFactory.cs" />
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FirstCustomControl.resx">
+      <DependentUpon>FirstCustomControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAddAccount.resx">
       <DependentUpon>frmAddAccount.cs</DependentUpon>
     </EmbeddedResource>
@@ -147,20 +176,46 @@
     <EmbeddedResource Include="frmViewTransactions.resx">
       <DependentUpon>frmViewTransactions.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MySecondCustmControl.resx">
+      <DependentUpon>MySecondCustmControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\FinAssist.BaseLib\FinAssist.BaseLib.csproj">
+    <ProjectReference Include="..\FinAssist.BaseLib\MakeItGain.BaseLib.csproj">
       <Project>{1b25dd35-a85e-46a6-8804-131d26a303e4}</Project>
-      <Name>FinAssist.BaseLib</Name>
+      <Name>MakeItGain.BaseLib</Name>
     </ProjectReference>
-    <ProjectReference Include="..\FinAssist.Controllers\FinAssist.Controllers.csproj">
+    <ProjectReference Include="..\FinAssist.Controllers\MakeItGain.Controllers.csproj">
       <Project>{e563c752-1b7a-44e8-817b-4a3527321122}</Project>
-      <Name>FinAssist.Controllers</Name>
+      <Name>MakeItGain.Controllers</Name>
     </ProjectReference>
-    <ProjectReference Include="..\FinAssist.Model\FinAssist.Model.csproj">
+    <ProjectReference Include="..\FinAssist.Model\MakeItGain.Model.csproj">
       <Project>{e2cb6e11-5265-441b-9747-9a9d80efa16a}</Project>
-      <Name>FinAssist.Model</Name>
+      <Name>MakeItGain.Model</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\baseline_av_timer_white_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\baseline_fitness_center_white_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\baseline_calendar_today_white_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\baseline_emoji_people_white_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\baseline_list_white_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\baseline_whatshot_white_24dp.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

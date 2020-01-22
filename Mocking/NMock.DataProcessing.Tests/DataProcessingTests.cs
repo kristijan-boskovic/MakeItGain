@@ -1,6 +1,7 @@
 ﻿using System;
 using Dynamic.DataProcessing;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Moq;
 using NUnit.Framework;
 
 namespace NMock.DataProcessing.Tests

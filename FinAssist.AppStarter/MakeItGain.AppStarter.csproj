@@ -80,25 +80,25 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\FinAssist.BaseLib\FinAssist.BaseLib.csproj">
+    <ProjectReference Include="..\FinAssist.BaseLib\MakeItGain.BaseLib.csproj">
       <Project>{1b25dd35-a85e-46a6-8804-131d26a303e4}</Project>
-      <Name>FinAssist.BaseLib</Name>
+      <Name>MakeItGain.BaseLib</Name>
     </ProjectReference>
-    <ProjectReference Include="..\FinAssist.Controllers\FinAssist.Controllers.csproj">
+    <ProjectReference Include="..\FinAssist.Controllers\MakeItGain.Controllers.csproj">
       <Project>{e563c752-1b7a-44e8-817b-4a3527321122}</Project>
-      <Name>FinAssist.Controllers</Name>
+      <Name>MakeItGain.Controllers</Name>
     </ProjectReference>
-    <ProjectReference Include="..\FinAssist.MemoryBasedDAL\FinAssist.MemoryBasedDAL.csproj">
+    <ProjectReference Include="..\FinAssist.MemoryBasedDAL\MakeItGain.MemoryBasedDAL.csproj">
       <Project>{82230f8e-489e-42d6-9fa6-1bdf21e1e4a0}</Project>
-      <Name>FinAssist.MemoryBasedDAL</Name>
+      <Name>MakeItGain.MemoryBasedDAL</Name>
     </ProjectReference>
-    <ProjectReference Include="..\FinAssist.Model\FinAssist.Model.csproj">
+    <ProjectReference Include="..\FinAssist.Model\MakeItGain.Model.csproj">
       <Project>{e2cb6e11-5265-441b-9747-9a9d80efa16a}</Project>
-      <Name>FinAssist.Model</Name>
+      <Name>MakeItGain.Model</Name>
     </ProjectReference>
-    <ProjectReference Include="..\FinAssist.PresentationLayer\FinAssist.PresentationLayer.csproj">
+    <ProjectReference Include="..\FinAssist.PresentationLayer\MakeItGain.PresentationLayer.csproj">
       <Project>{6f7c9bad-ee32-48e4-8fd5-503cb3ff9a17}</Project>
-      <Name>FinAssist.PresentationLayer</Name>
+      <Name>MakeItGain.PresentationLayer</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
