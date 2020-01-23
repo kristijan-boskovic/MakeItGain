@@ -28,33 +28,52 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.listDiplayExercises = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
-            // textBox1
+            // listAccounts
             // 
-            this.textBox1.Location = new System.Drawing.Point(355, 190);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(110, 20);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.Text = "exercises";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.listDiplayExercises.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2});
+            this.listDiplayExercises.HideSelection = false;
+            this.listDiplayExercises.Location = new System.Drawing.Point(141, 92);
+            this.listDiplayExercises.Margin = new System.Windows.Forms.Padding(2);
+            this.listDiplayExercises.Name = "listAccounts";
+            this.listDiplayExercises.Size = new System.Drawing.Size(465, 219);
+            this.listDiplayExercises.TabIndex = 1;
+            this.listDiplayExercises.UseCompatibleStateImageBehavior = false;
+            this.listDiplayExercises.View = System.Windows.Forms.View.Details;
+            this.listDiplayExercises.SelectedIndexChanged += new System.EventHandler(this.listAccounts_SelectedIndexChanged);
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Name";
+            this.columnHeader1.Width = 173;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Muscle group";
+            this.columnHeader2.Width = 137;
             // 
             // ExercisesControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.listDiplayExercises);
             this.Name = "ExercisesControl";
             this.Size = new System.Drawing.Size(817, 423);
             this.Load += new System.EventHandler(this.ExercisesControl_Load);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ListView listDiplayExercises;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
     }
 }

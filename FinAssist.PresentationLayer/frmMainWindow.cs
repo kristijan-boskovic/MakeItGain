@@ -66,5 +66,10 @@ namespace FinAssist.PresentationLayer
 		{
 			// _controller.ShowExpenditurePlaces();
 		}
-	}
+
+        private void frmMainWindow_Load(object sender, EventArgs e)
+        {
+
+        }
+    }
 }

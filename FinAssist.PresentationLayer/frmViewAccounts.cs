@@ -71,6 +71,9 @@ namespace FinAssist.PresentationLayer
 			}
 		}
 
+        private void listAccounts_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
-	}
+        }
+    }
 }

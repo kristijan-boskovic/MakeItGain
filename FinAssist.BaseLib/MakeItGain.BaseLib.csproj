@@ -42,9 +42,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Exceptions.cs" />
+    <Compile Include="IShowExerciseDetails.cs" />
     <Compile Include="IAddNewAccountView.cs" />
     <Compile Include="IEditAccountView.cs" />
     <Compile Include="IMainController.cs" />
+    <Compile Include="IMainFormController.cs" />
+    <Compile Include="IShowExercisesListView.cs" />
     <Compile Include="IShowAccountsView.cs" />
     <Compile Include="IWindowFormsFactory.cs" />
     <Compile Include="Subject.cs" />

@@ -98,14 +98,14 @@
             // viewAccountsToolStripMenuItem
             // 
             this.viewAccountsToolStripMenuItem.Name = "viewAccountsToolStripMenuItem";
-            this.viewAccountsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.viewAccountsToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.viewAccountsToolStripMenuItem.Text = "View accounts";
             this.viewAccountsToolStripMenuItem.Click += new System.EventHandler(this.viewAccountsToolStripMenuItem_Click);
             // 
             // addAccountToolStripMenuItem
             // 
             this.addAccountToolStripMenuItem.Name = "addAccountToolStripMenuItem";
-            this.addAccountToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.addAccountToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.addAccountToolStripMenuItem.Text = "Add account";
             this.addAccountToolStripMenuItem.Click += new System.EventHandler(this.addAccountToolStripMenuItem_Click);
             // 
@@ -118,7 +118,7 @@
             this.addIncomeToolStripMenuItem,
             this.addTransferToolStripMenuItem});
             this.transactionsToolStripMenuItem.Name = "transactionsToolStripMenuItem";
-            this.transactionsToolStripMenuItem.Size = new System.Drawing.Size(86, 20);
+            this.transactionsToolStripMenuItem.Size = new System.Drawing.Size(85, 20);
             this.transactionsToolStripMenuItem.Text = "Transactions";
             // 
             // viewTransactionsToolStripMenuItem
@@ -166,14 +166,14 @@
             // categoriesToolStripMenuItem
             // 
             this.categoriesToolStripMenuItem.Name = "categoriesToolStripMenuItem";
-            this.categoriesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.categoriesToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
             this.categoriesToolStripMenuItem.Text = "Categories";
             this.categoriesToolStripMenuItem.Click += new System.EventHandler(this.categoriesToolStripMenuItem_Click);
             // 
             // placesToolStripMenuItem
             // 
             this.placesToolStripMenuItem.Name = "placesToolStripMenuItem";
-            this.placesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.placesToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
             this.placesToolStripMenuItem.Text = "Places";
             this.placesToolStripMenuItem.Click += new System.EventHandler(this.placesToolStripMenuItem_Click);
             // 
@@ -200,9 +200,10 @@
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmMainWindow";
             this.Text = "FinAssist";
+            this.Load += new System.EventHandler(this.frmMainWindow_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

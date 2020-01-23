@@ -1,4 +1,4 @@
-﻿namespace FinAssist.Model
+﻿ namespace FinAssist.Model
 {
 	public class AccountFactory
 	{

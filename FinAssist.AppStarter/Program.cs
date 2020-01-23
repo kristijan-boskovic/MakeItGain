@@ -22,14 +22,14 @@ namespace FinAssist.AppStarter
 			// umjesto Singleton patterna, imati ćemo samo jednu instancu repozitorija unutar glavnog programa
 			TransactionRepository _transRepo = new TransactionRepository();
 
-			// a za Account repozitorij koristimo Singleton
-			MainFormController mainController = new MainFormController(_formsFactory, AccountRepository.getInstance(), _transRepo);
+            // a za Account repozitorij koristimo Singleton
+            //MainFormController mainController = new MainFormController(_formsFactory, AccountRepository.getInstance(), _transRepo);
+            MainController mainController = new MainController(_formsFactory, ExerciseRepository.getInstance());
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new FinAssist.PresentationLayer.frmMainWindow(mainController));
-            Application.Run(new MainForm());
-
+            //Application.Run(new frmMainWindow(mainController));
+            Application.Run(new frmMain(mainController));
         }
     }
 }
