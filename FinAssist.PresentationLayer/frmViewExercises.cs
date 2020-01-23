@@ -17,7 +17,7 @@ namespace FinAssist.PresentationLayer
 {
     public partial class frmViewExercises : Form, IShowExercisesListView
     {
-	    private List<DisplayExercise> _displayExercises = null;
+	    private List<Exercise> _exercises = null;
 	    private IMainController _mainController = null;
 
 		public frmViewExercises()
@@ -25,10 +25,10 @@ namespace FinAssist.PresentationLayer
             InitializeComponent();
         }
 
-        public void ShowModaless(IMainController mainController, List<DisplayExercise> displayExercises)
+        public void ShowExercises(IMainController mainController, List<Exercise> exercises)
         {
             _mainController = mainController;
-            _displayExercises = displayExercises;
+            _exercises = exercises;
 
             UpdateList();
 
@@ -44,7 +44,7 @@ namespace FinAssist.PresentationLayer
             if (listExercises.SelectedItems[0] != null)
             {
                 var index = listExercises.SelectedItems[0].Index;
-                var chosenExercise = _displayExercises[index];
+                var chosenExercise = _exercises[index];
                 _mainController.ViewExerciseDetails(chosenExercise);
 
                 //_mainController.EditAccount(accountName);
@@ -57,14 +57,14 @@ namespace FinAssist.PresentationLayer
 
         private void UpdateList()
         {
-            for (int i = 0; i < _displayExercises.Count(); i++)
+            for (int i = 0; i < _exercises.Count(); i++)
             {
-                DisplayExercise displayExercise = _displayExercises[i];
+                Exercise exercise = _exercises[i];
 
-                string muscleGroup = displayExercise.MuscleGroup.ToString().ToLower();
+                string muscleGroup = exercise.MuscleGroup.ToString().ToLower();
                 //string accInitialBalance = acc.InitialBalance.ToString(CultureInfo.InvariantCulture);
 
-                ListViewItem lvt = new ListViewItem(displayExercise.ExerciseName);
+                ListViewItem lvt = new ListViewItem(exercise.ExerciseName);
                 lvt.SubItems.Add(muscleGroup);
                 //lvt.SubItems.Add(accInitialBalance);
 

@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="WorkoutRepository.cs" />
     <Compile Include="ExerciseRepository.cs" />
     <Compile Include="AccountRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

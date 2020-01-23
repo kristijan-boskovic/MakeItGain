@@ -11,7 +11,7 @@ using FinAssist.BaseLib;
 
 namespace FinAssist.Controllers
 {
-    public class ExerciseController
+    public class WorkoutController
     {
         //public void AddNewAccount(IAddNewAccountView inForm, IAccountRepository accountRepository)
         //{
@@ -42,19 +42,19 @@ namespace FinAssist.Controllers
 
         //}
 
-        public void ViewExercises(IShowExercisesListView form, IExerciseRepository exerciseRepository, IMainController mainController)
+        public void ViewWorkouts(IShowWorkoutsListView form, IWorkoutRepository workoutRepository, IMainController mainController)
         {
             // dohvati sve accounte i proslijedi ih View-u
-            List<Exercise> exercises = exerciseRepository.getAllExercises();
+            List<Workout> workouts = workoutRepository.getAllWorkouts();
 
             // zašto proslijeđujemo i mainController?
             // zato što na ovom View-u imamo "Add new account" i "Edit new account" funkcionalnost!
-            form.ShowExercises(mainController, exercises);
+            form.ShowWorkouts(mainController, workouts);
         }
 
-        public void ViewExerciseDetails(IShowExerciseDetails form, Exercise exercise)
-        {
-            form.ShowExerciseDetails(exercise);
-        }
+        //public void ViewExerciseDetails(IShowExerciseDetails form, DisplayExercise exercise)
+        //{
+        //    form.ShowExerciseDetails(exercise);
+        //}
     }
 }

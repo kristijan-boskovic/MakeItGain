@@ -7,8 +7,7 @@ namespace FinAssist.Model.Repositories
 		int	getExerciseNum();
         Exercise getExerciseById(int exerciseId);
         Exercise getExerciseByName(string exerciseName);
-		List<DisplayExercise> getAllDisplayExercises();
-        List<WorkoutExercise> getAllWorkoutExercises();
+		List<Exercise> getAllExercises();
         List<int> getAllExercisesIds();
 		//List<int> getAllAccountsOfType(AccountTypesList.AccountTypesEnum inType);
 

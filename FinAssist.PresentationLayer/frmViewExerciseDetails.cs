@@ -17,7 +17,7 @@ namespace FinAssist.PresentationLayer
 {
     public partial class frmViewExerciseDetails : Form, IShowExerciseDetails
     {
-	    private List<DisplayExercise> _displayExercises = null;
+	    private List<Exercise> _exercises = null;
 	    private IMainController _mainController = null;
 
         public string AccountName => throw new NotImplementedException();
@@ -82,7 +82,7 @@ namespace FinAssist.PresentationLayer
 
         //}
 
-        public void ShowExerciseDetails(DisplayExercise exercise)
+        public void ShowExerciseDetails(Exercise exercise)
         {
             exerciseDescriptionLabel.Text = exercise.Description;
             var photoName = exercise.PhotoAbbv;

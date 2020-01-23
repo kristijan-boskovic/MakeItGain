@@ -77,9 +77,9 @@ namespace FinAssist.PresentationLayer
 
         }
 
-        private void scheduleButton_Click(object sender, EventArgs e)
+        private void workoutsButton_Click(object sender, EventArgs e)
         {
-            //_controller.ShowExercises();
+            _controller.ShowWorkouts();
         }
 
         private void historyButton_Click(object sender, EventArgs e)

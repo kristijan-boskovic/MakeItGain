@@ -15,7 +15,7 @@ namespace FinAssist.PresentationLayer
 {
     public partial class ExercisesControl : UserControl
     {
-        private List<DisplayExercise> _displayExercises = null;
+        private List<Exercise> _exercises = null;
         private MainController _controller;
 
         public ExercisesControl()
@@ -23,10 +23,10 @@ namespace FinAssist.PresentationLayer
             InitializeComponent();
         }
 
-        public void ShowModaless(MainController mainController, List<DisplayExercise> displayExercises)
+        public void ShowModaless(MainController mainController, List<Exercise> exercises)
         {
             _controller = mainController;
-            _displayExercises = displayExercises;
+            _exercises = exercises;
 
             UpdateList();
 
@@ -40,14 +40,14 @@ namespace FinAssist.PresentationLayer
 
         private void UpdateList()
         {
-            for (int i = 0; i < _displayExercises.Count(); i++)
+            for (int i = 0; i < _exercises.Count(); i++)
             {
-                DisplayExercise displayExercise = _displayExercises[i];
+                Exercise exercise = _exercises[i];
 
-                string muscleGroup = displayExercise.MuscleGroup.ToString().ToLower();
+                string muscleGroup = exercise.MuscleGroup.ToString().ToLower();
                 //string accInitialBalance = acc.InitialBalance.ToString(CultureInfo.InvariantCulture);
 
-                ListViewItem lvt = new ListViewItem(displayExercise.ExerciseName);
+                ListViewItem lvt = new ListViewItem(exercise.ExerciseName);
                 lvt.SubItems.Add(muscleGroup);
                 //lvt.SubItems.Add(accInitialBalance);
 

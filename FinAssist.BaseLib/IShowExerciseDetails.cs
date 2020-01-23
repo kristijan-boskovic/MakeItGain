@@ -9,10 +9,6 @@ namespace FinAssist.BaseLib
 {
 	public interface IShowExerciseDetails
 	{
-		void ShowExerciseDetails(DisplayExercise exercise);
-
-		//string	AccountName { get; }
-		//string	AccountType { get; }
-		//float	InitialBalance { get; }
+		void ShowExerciseDetails(Exercise exercise);
 	}
 }

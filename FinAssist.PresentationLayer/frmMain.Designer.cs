@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.exercisesButton = new System.Windows.Forms.Button();
-            this.scheduleButton = new System.Windows.Forms.Button();
+            this.workoutsButton = new System.Windows.Forms.Button();
             this.bodyButton = new System.Windows.Forms.Button();
             this.trainerButton = new System.Windows.Forms.Button();
             this.historyButton = new System.Windows.Forms.Button();
@@ -45,15 +45,15 @@
             this.exercisesButton.UseVisualStyleBackColor = true;
             this.exercisesButton.Click += new System.EventHandler(this.exercisesButton_Click);
             // 
-            // scheduleButton
+            // workoutsButton
             // 
-            this.scheduleButton.Location = new System.Drawing.Point(98, 82);
-            this.scheduleButton.Name = "scheduleButton";
-            this.scheduleButton.Size = new System.Drawing.Size(158, 54);
-            this.scheduleButton.TabIndex = 2;
-            this.scheduleButton.Text = "Schedule";
-            this.scheduleButton.UseVisualStyleBackColor = true;
-            this.scheduleButton.Click += new System.EventHandler(this.scheduleButton_Click);
+            this.workoutsButton.Location = new System.Drawing.Point(98, 82);
+            this.workoutsButton.Name = "workoutsButton";
+            this.workoutsButton.Size = new System.Drawing.Size(158, 54);
+            this.workoutsButton.TabIndex = 2;
+            this.workoutsButton.Text = "Workouts";
+            this.workoutsButton.UseVisualStyleBackColor = true;
+            this.workoutsButton.Click += new System.EventHandler(this.workoutsButton_Click);
             // 
             // bodyButton
             // 
@@ -93,7 +93,7 @@
             this.Controls.Add(this.historyButton);
             this.Controls.Add(this.trainerButton);
             this.Controls.Add(this.bodyButton);
-            this.Controls.Add(this.scheduleButton);
+            this.Controls.Add(this.workoutsButton);
             this.Controls.Add(this.exercisesButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -106,7 +106,7 @@
 
         #endregion
         private System.Windows.Forms.Button exercisesButton;
-        private System.Windows.Forms.Button scheduleButton;
+        private System.Windows.Forms.Button workoutsButton;
         private System.Windows.Forms.Button bodyButton;
         private System.Windows.Forms.Button trainerButton;
         private System.Windows.Forms.Button historyButton;

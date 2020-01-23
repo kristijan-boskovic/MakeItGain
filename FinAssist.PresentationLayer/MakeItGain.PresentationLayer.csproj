@@ -85,6 +85,12 @@
     <Compile Include="frmViewExerciseDetails.Designer.cs">
       <DependentUpon>frmViewExerciseDetails.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmViewWorkouts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmViewWorkouts.Designer.cs">
+      <DependentUpon>frmViewWorkouts.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmViewExercises.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -205,6 +211,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmViewExerciseDetails.resx">
       <DependentUpon>frmViewExerciseDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmViewWorkouts.resx">
+      <DependentUpon>frmViewWorkouts.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmViewExercises.resx">
       <DependentUpon>frmViewExercises.cs</DependentUpon>

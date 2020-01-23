@@ -1,6 +1,6 @@
 ﻿namespace FinAssist.PresentationLayer
 {
-    partial class frmViewExercises
+    partial class frmViewWorkouts
     {
         /// <summary>
         /// Required designer variable.
@@ -28,37 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.listExercises = new System.Windows.Forms.ListView();
+            this.listWorkouts = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnClose = new System.Windows.Forms.Button();
             this.exerciseDescriptionLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // listExercises
+            // listWorkouts
             // 
-            this.listExercises.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.listWorkouts.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2});
-            this.listExercises.HideSelection = false;
-            this.listExercises.Location = new System.Drawing.Point(11, 11);
-            this.listExercises.Margin = new System.Windows.Forms.Padding(2);
-            this.listExercises.Name = "listExercises";
-            this.listExercises.Size = new System.Drawing.Size(289, 219);
-            this.listExercises.TabIndex = 0;
-            this.listExercises.UseCompatibleStateImageBehavior = false;
-            this.listExercises.View = System.Windows.Forms.View.Details;
-            this.listExercises.SelectedIndexChanged += new System.EventHandler(this.listExercises_SelectedIndexChanged);
-            this.listExercises.DoubleClick += new System.EventHandler(this.listExercises_DoubleClick);
+            this.listWorkouts.HideSelection = false;
+            this.listWorkouts.Location = new System.Drawing.Point(11, 11);
+            this.listWorkouts.Margin = new System.Windows.Forms.Padding(2);
+            this.listWorkouts.Name = "listWorkouts";
+            this.listWorkouts.Size = new System.Drawing.Size(289, 219);
+            this.listWorkouts.TabIndex = 0;
+            this.listWorkouts.UseCompatibleStateImageBehavior = false;
+            this.listWorkouts.View = System.Windows.Forms.View.Details;
+            this.listWorkouts.SelectedIndexChanged += new System.EventHandler(this.listWorkouts_SelectedIndexChanged);
+            this.listWorkouts.DoubleClick += new System.EventHandler(this.listWorkouts_DoubleClick);
             // 
             // columnHeader1
             // 
-            this.columnHeader1.Text = "Exercise";
+            this.columnHeader1.Text = "Day";
             this.columnHeader1.Width = 148;
             // 
             // columnHeader2
             // 
-            this.columnHeader2.Text = "Muscle group";
+            this.columnHeader2.Text = "Workout";
             this.columnHeader2.Width = 137;
             // 
             // btnClose
@@ -81,26 +81,26 @@
             this.exerciseDescriptionLabel.TabIndex = 4;
             this.exerciseDescriptionLabel.Text = "Hint: double-click on exercise name to see exercise details.";
             // 
-            // frmViewExercises
+            // frmViewWorkouts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(487, 287);
             this.Controls.Add(this.exerciseDescriptionLabel);
             this.Controls.Add(this.btnClose);
-            this.Controls.Add(this.listExercises);
+            this.Controls.Add(this.listWorkouts);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "frmViewExercises";
-            this.Text = "Exercises";
-            this.Load += new System.EventHandler(this.frmViewExercises_Load);
+            this.Name = "frmViewWorkouts";
+            this.Text = "Workouts";
+            this.Load += new System.EventHandler(this.frmViewWorkouts_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.ListView listExercises;
+        private System.Windows.Forms.ListView listWorkouts;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.Button btnClose;

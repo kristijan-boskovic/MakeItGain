@@ -47,6 +47,7 @@
     <Compile Include="IEditAccountView.cs" />
     <Compile Include="IMainController.cs" />
     <Compile Include="IMainFormController.cs" />
+    <Compile Include="IShowWorkoutsListView.cs" />
     <Compile Include="IShowExercisesListView.cs" />
     <Compile Include="IShowAccountsView.cs" />
     <Compile Include="IWindowFormsFactory.cs" />

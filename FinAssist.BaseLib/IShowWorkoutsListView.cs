@@ -8,8 +8,8 @@ using FinAssist.Model;
 
 namespace FinAssist.BaseLib
 {
-	public interface IShowExercisesListView
+	public interface IShowWorkoutsListView
 	{
-		void ShowExercises(IMainController mainController, List<Exercise> exerciseList);
+		void ShowWorkouts(IMainController mainController, List<Workout> workoutList);
 	}
 }

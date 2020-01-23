@@ -39,5 +39,12 @@ namespace FinAssist.PresentationLayer
 
             return newFrm;
         }
+
+        public IShowWorkoutsListView CreateShowWorkoutsListView()
+        {
+            var newFrm = new frmViewWorkouts();
+
+            return newFrm;
+        }
     }
 }

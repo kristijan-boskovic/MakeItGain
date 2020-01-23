@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="WorkoutController.cs" />
     <Compile Include="ExerciseController.cs" />
     <Compile Include="AccountController.cs" />
     <Compile Include="MainController.cs" />
