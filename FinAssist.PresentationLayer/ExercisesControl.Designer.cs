@@ -1,6 +1,6 @@
 ﻿namespace FinAssist.PresentationLayer
 {
-    partial class HistoryControl
+    partial class ExercisesControl
     {
         /// <summary> 
         /// Required designer variable.
@@ -33,20 +33,21 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(353, 201);
+            this.textBox1.Location = new System.Drawing.Point(355, 190);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(110, 20);
             this.textBox1.TabIndex = 1;
-            this.textBox1.Text = "history";
+            this.textBox1.Text = "exercises";
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // HistoryControl
+            // ExercisesControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.textBox1);
-            this.Name = "HistoryControl";
+            this.Name = "ExercisesControl";
             this.Size = new System.Drawing.Size(817, 423);
+            this.Load += new System.EventHandler(this.ExercisesControl_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

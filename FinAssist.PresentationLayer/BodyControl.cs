@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace FinAssist.PresentationLayer
 {
-    public partial class HistoryControl : UserControl
+    public partial class BodyControl : UserControl
     {
-        public HistoryControl()
+        public BodyControl()
         {
             InitializeComponent();
         }

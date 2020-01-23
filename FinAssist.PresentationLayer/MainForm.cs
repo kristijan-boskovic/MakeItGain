@@ -39,7 +39,7 @@ namespace FinAssist.PresentationLayer
         {
             SidePanel.Height = button3.Height;
             SidePanel.Top = button3.Top;
-            historyControl.BringToFront();
+            trainerControl.BringToFront();
 
         }
 
@@ -47,7 +47,7 @@ namespace FinAssist.PresentationLayer
         {
             SidePanel.Height = button4.Height;
             SidePanel.Top = button4.Top;
-            historyControl.BringToFront();
+            exercisesControl.BringToFront();
 
         }
 
@@ -55,7 +55,7 @@ namespace FinAssist.PresentationLayer
         {
             SidePanel.Height = button5.Height;
             SidePanel.Top = button5.Top;
-            historyControl.BringToFront();
+            bodyControl.BringToFront();
 
         }
 

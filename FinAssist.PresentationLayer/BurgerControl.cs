@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace FinAssist.PresentationLayer
 {
-    public partial class HistoryControl : UserControl
+    public partial class BurgerControl : UserControl
     {
-        public HistoryControl()
+        public BurgerControl()
         {
             InitializeComponent();
+        }
+
+        private void BurgerControl_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

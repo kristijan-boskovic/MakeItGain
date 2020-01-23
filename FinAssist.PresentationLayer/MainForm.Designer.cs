@@ -38,8 +38,11 @@
             this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button13 = new System.Windows.Forms.Button();
-            this.historyControl = new FinAssist.PresentationLayer.HistoryControl();
             this.scheduleControl = new FinAssist.PresentationLayer.ScheduleControl();
+            this.historyControl = new FinAssist.PresentationLayer.HistoryControl();
+            this.trainerControl = new FinAssist.PresentationLayer.TrainerControl();
+            this.exercisesControl = new FinAssist.PresentationLayer.ExercisesControl();
+            this.bodyControl = new FinAssist.PresentationLayer.BodyControl();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -177,13 +180,6 @@
             this.button13.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button13.UseVisualStyleBackColor = true;
             // 
-            // historyControl
-            // 
-            this.historyControl.Location = new System.Drawing.Point(208, 156);
-            this.historyControl.Name = "historyControl";
-            this.historyControl.Size = new System.Drawing.Size(818, 406);
-            this.historyControl.TabIndex = 6;
-            // 
             // scheduleControl
             // 
             this.scheduleControl.Location = new System.Drawing.Point(209, 156);
@@ -191,13 +187,44 @@
             this.scheduleControl.Size = new System.Drawing.Size(805, 423);
             this.scheduleControl.TabIndex = 5;
             // 
+            // historyControl
+            // 
+            this.historyControl.Location = new System.Drawing.Point(209, 156);
+            this.historyControl.Name = "historyControl";
+            this.historyControl.Size = new System.Drawing.Size(805, 423);
+            this.historyControl.TabIndex = 5;
+            // 
+            // trainerControl
+            // 
+            this.trainerControl.Location = new System.Drawing.Point(209, 156);
+            this.trainerControl.Name = "trainerControl";
+            this.trainerControl.Size = new System.Drawing.Size(805, 423);
+            this.trainerControl.TabIndex = 5;
+            // 
+            // exercisesControl
+            // 
+            this.exercisesControl.Location = new System.Drawing.Point(209, 156);
+            this.exercisesControl.Name = "exercisesControl";
+            this.exercisesControl.Size = new System.Drawing.Size(805, 423);
+            this.exercisesControl.TabIndex = 5;
+            // 
+            // bodyControl
+            // 
+            this.bodyControl.Location = new System.Drawing.Point(209, 156);
+            this.bodyControl.Name = "bodyControl";
+            this.bodyControl.Size = new System.Drawing.Size(805, 423);
+            this.bodyControl.TabIndex = 5;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1026, 583);
-            this.Controls.Add(this.historyControl);
             this.Controls.Add(this.scheduleControl);
+            this.Controls.Add(this.historyControl);
+            this.Controls.Add(this.trainerControl);
+            this.Controls.Add(this.exercisesControl);
+            this.Controls.Add(this.bodyControl);
             this.Controls.Add(this.button13);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -224,6 +251,9 @@
         private System.Windows.Forms.Button button13;
         private ScheduleControl scheduleControl;
         private HistoryControl historyControl;
+        private TrainerControl trainerControl;
+        private ExercisesControl exercisesControl;
+        private BodyControl bodyControl;
     }
 }
 

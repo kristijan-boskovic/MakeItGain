@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace FinAssist.PresentationLayer
 {
-    public partial class HistoryControl : UserControl
+    public partial class TrainerControl : UserControl
     {
-        public HistoryControl()
+        public TrainerControl()
         {
             InitializeComponent();
+        }
+
+        private void TrainerControl_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
