@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace FinAssist.PresentationLayer
 {
-    public partial class FirstCustomControl : UserControl
+    public partial class ScheduleControl : UserControl
     {
-        public FirstCustomControl()
+        public ScheduleControl()
         {
             InitializeComponent();
         }
 
-        private void FirstCustomControl_Load(object sender, EventArgs e)
+        private void ScheduleControl_Load(object sender, EventArgs e)
         {
 
         }

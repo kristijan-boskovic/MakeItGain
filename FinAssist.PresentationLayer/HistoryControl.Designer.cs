@@ -1,6 +1,6 @@
 ﻿namespace FinAssist.PresentationLayer
 {
-    partial class MySecondCustmControl
+    partial class HistoryControl
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MySecondCustmControl));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HistoryControl));
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -291,16 +291,16 @@
             this.label12.TabIndex = 1;
             this.label12.Text = "Pizza";
             // 
-            // MySecondCustmControl
+            // HistoryControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Name = "MySecondCustmControl";
+            this.Name = "HistoryControl";
             this.Size = new System.Drawing.Size(817, 406);
-            this.Load += new System.EventHandler(this.MySecondCustmControl_Load);
+            this.Load += new System.EventHandler(this.HistoryControl_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

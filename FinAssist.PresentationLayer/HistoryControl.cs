@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace FinAssist.PresentationLayer
 {
-    public partial class MySecondCustmControl : UserControl
+    public partial class HistoryControl : UserControl
     {
-        public MySecondCustmControl()
+        public HistoryControl()
         {
             InitializeComponent();
         }
 
-        private void MySecondCustmControl_Load(object sender, EventArgs e)
+        private void HistoryControl_Load(object sender, EventArgs e)
         {
 
         }
