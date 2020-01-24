@@ -15,6 +15,8 @@ namespace FinAssist.BaseLib
         IShowExercisesListView CreateShowExercisesListView();
         IShowExerciseDetails CreateShowExercisesDetails();
         IShowWorkoutsListView CreateShowWorkoutsListView();
+        IAddNewWorkoutView CreateAddNewWorkoutView();
+
 
     }
 }

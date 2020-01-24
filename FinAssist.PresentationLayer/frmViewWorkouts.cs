@@ -36,10 +36,6 @@ namespace FinAssist.PresentationLayer
             this.Show();
         }
 
-        private void btnAddNewWorkout_Click(object sender, EventArgs e)
-        {
-            //_mainController.AddAccount();
-        }
         private void listWorkouts_DoubleClick(object sender, EventArgs e)
         {
             //if (listWorkouts.SelectedItems[0] != null)
@@ -51,12 +47,8 @@ namespace FinAssist.PresentationLayer
             //    //_mainController.EditAccount(accountName);
             //}
         }
-        private void btnClose_Click(object sender, EventArgs e)
-		{
-			this.Close();
-		}
 
-        private void UpdateList()
+        public void UpdateList()
         {
             for (int i = 0; i < _workouts.Count(); i++)
             {
@@ -97,9 +89,24 @@ namespace FinAssist.PresentationLayer
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnAddNewWorkout_Click(object sender, EventArgs e)
+        {
+            _mainController.AddWorkout();
+        }
+
+        private void btnDeleteWorkout_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnEditWorkout_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

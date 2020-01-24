@@ -17,15 +17,6 @@ namespace FinAssist.PresentationLayer
 {
     public partial class frmViewExerciseDetails : Form, IShowExerciseDetails
     {
-	    private List<Exercise> _exercises = null;
-	    private IMainController _mainController = null;
-
-        public string AccountName => throw new NotImplementedException();
-
-        public string AccountType => throw new NotImplementedException();
-
-        public float InitialBalance => throw new NotImplementedException();
-
         public frmViewExerciseDetails()
         {
             InitializeComponent();
@@ -84,21 +75,21 @@ namespace FinAssist.PresentationLayer
 
         public void ShowExerciseDetails(Exercise exercise)
         {
-            exerciseDescriptionLabel.Text = exercise.Description;
+            labelExerciseDescription.Text = exercise.Description;
             var photoName = exercise.PhotoAbbv;
             switch (photoName)
             {
                 case "bench_press":
-                    pictureBox1.Image = Properties.Resources.bench_press;
+                    pictureBoxExercise.Image = Properties.Resources.bench_press;
                     break;
                 case "military_press":
-                    pictureBox1.Image = Properties.Resources.military_press;
+                    pictureBoxExercise.Image = Properties.Resources.military_press;
                     break;
                 case "deadlift":
-                    pictureBox1.Image = Properties.Resources.deadlift;
+                    pictureBoxExercise.Image = Properties.Resources.deadlift;
                     break;
                 case "squat":
-                    pictureBox1.Image = Properties.Resources.squat;
+                    pictureBoxExercise.Image = Properties.Resources.squat;
                     break;
             }
             this.Text = exercise.ExerciseName;

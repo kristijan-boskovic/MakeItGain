@@ -9,7 +9,7 @@ namespace FinAssist.DAL.MemoryBased
 	// Ilustracija implementacije In-Memory repozitorija korištenjem Singleton patterna
 	public class WorkoutRepository : IWorkoutRepository
     {
-		private static int _nextID = 1;
+		private static int _nextId = 1;
 		private static WorkoutRepository _instance;
 
 		private readonly List<Workout>	_listWorkouts = new List<Workout>();
@@ -54,7 +54,7 @@ namespace FinAssist.DAL.MemoryBased
 		public List<Workout> getAllWorkouts()
 		{
 			List<Workout> workouts = _listWorkouts.OfType<Workout>().ToList();
-
+            _nextId = workouts.Count + 1;
 			return workouts;
 		}
 
@@ -70,9 +70,9 @@ namespace FinAssist.DAL.MemoryBased
 
 		public int getNewId()
 		{
-			int nextID = _nextID;
+			int nextID = _nextId;
 
-			_nextID++;
+			_nextId++;
 
 			return nextID;
 		}

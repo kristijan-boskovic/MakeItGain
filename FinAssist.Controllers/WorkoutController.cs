@@ -52,9 +52,37 @@ namespace FinAssist.Controllers
             form.ShowWorkouts(mainController, workouts);
         }
 
-        //public void ViewExerciseDetails(IShowExerciseDetails form, DisplayExercise exercise)
-        //{
-        //    form.ShowExerciseDetails(exercise);
-        //}
+        public void AddNewWorkout(IAddNewWorkoutView inForm, IWorkoutRepository workoutRepository, IExerciseRepository exerciseRepository)
+        {
+            if (inForm.ShowViewModal() == true)
+            {
+                try
+                {
+                    string workoutName = inForm.WorkoutName;
+                    if (String.IsNullOrEmpty(workoutName))
+                    {
+                        MessageBox.Show("Please input your workout name!");
+                        return;
+                    }
+                    List<string> exerciseNames = inForm.ExerciseNames;
+                    int workoutId = workoutRepository.getNewId();
+                    List<Exercise> exercises = new List<Exercise>();
+
+                    foreach (var exerciseName in exerciseNames)
+                    {
+                        var exercise = exerciseRepository.getExerciseByName(exerciseName);
+                        exercises.Add(exercise);
+                    }
+                    //Account newAccount = AccountFactory.CreateAccount(ID, Name, AccType, Balance);
+                    Workout newWorkout = new Workout(workoutId, workoutName, exercises, false, "", 0);
+                    workoutRepository.addWorkout(newWorkout);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("EXCEPTION: " + ex.Message);
+                    throw;
+                }
+            }
+        }
     }
 }

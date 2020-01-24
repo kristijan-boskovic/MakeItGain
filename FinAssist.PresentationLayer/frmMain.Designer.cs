@@ -28,73 +28,73 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.exercisesButton = new System.Windows.Forms.Button();
-            this.workoutsButton = new System.Windows.Forms.Button();
-            this.bodyButton = new System.Windows.Forms.Button();
-            this.trainerButton = new System.Windows.Forms.Button();
-            this.historyButton = new System.Windows.Forms.Button();
+            this.btnExercises = new System.Windows.Forms.Button();
+            this.btnWorkouts = new System.Windows.Forms.Button();
+            this.btnBody = new System.Windows.Forms.Button();
+            this.btnTrainer = new System.Windows.Forms.Button();
+            this.btnHistory = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // exercisesButton
+            // btnExercises
             // 
-            this.exercisesButton.Location = new System.Drawing.Point(98, 177);
-            this.exercisesButton.Name = "exercisesButton";
-            this.exercisesButton.Size = new System.Drawing.Size(158, 54);
-            this.exercisesButton.TabIndex = 1;
-            this.exercisesButton.Text = "Exercises";
-            this.exercisesButton.UseVisualStyleBackColor = true;
-            this.exercisesButton.Click += new System.EventHandler(this.exercisesButton_Click);
+            this.btnExercises.Location = new System.Drawing.Point(98, 177);
+            this.btnExercises.Name = "btnExercises";
+            this.btnExercises.Size = new System.Drawing.Size(158, 54);
+            this.btnExercises.TabIndex = 1;
+            this.btnExercises.Text = "Exercises";
+            this.btnExercises.UseVisualStyleBackColor = true;
+            this.btnExercises.Click += new System.EventHandler(this.exercisesButton_Click);
             // 
-            // workoutsButton
+            // btnWorkouts
             // 
-            this.workoutsButton.Location = new System.Drawing.Point(98, 82);
-            this.workoutsButton.Name = "workoutsButton";
-            this.workoutsButton.Size = new System.Drawing.Size(158, 54);
-            this.workoutsButton.TabIndex = 2;
-            this.workoutsButton.Text = "Workouts";
-            this.workoutsButton.UseVisualStyleBackColor = true;
-            this.workoutsButton.Click += new System.EventHandler(this.workoutsButton_Click);
+            this.btnWorkouts.Location = new System.Drawing.Point(98, 82);
+            this.btnWorkouts.Name = "btnWorkouts";
+            this.btnWorkouts.Size = new System.Drawing.Size(158, 54);
+            this.btnWorkouts.TabIndex = 2;
+            this.btnWorkouts.Text = "Workouts";
+            this.btnWorkouts.UseVisualStyleBackColor = true;
+            this.btnWorkouts.Click += new System.EventHandler(this.workoutsButton_Click);
             // 
-            // bodyButton
+            // btnBody
             // 
-            this.bodyButton.Location = new System.Drawing.Point(216, 266);
-            this.bodyButton.Name = "bodyButton";
-            this.bodyButton.Size = new System.Drawing.Size(158, 54);
-            this.bodyButton.TabIndex = 3;
-            this.bodyButton.Text = "Body";
-            this.bodyButton.UseVisualStyleBackColor = true;
-            this.bodyButton.Click += new System.EventHandler(this.bodyButton_Click);
+            this.btnBody.Location = new System.Drawing.Point(216, 266);
+            this.btnBody.Name = "btnBody";
+            this.btnBody.Size = new System.Drawing.Size(158, 54);
+            this.btnBody.TabIndex = 3;
+            this.btnBody.Text = "Body";
+            this.btnBody.UseVisualStyleBackColor = true;
+            this.btnBody.Click += new System.EventHandler(this.bodyButton_Click);
             // 
-            // trainerButton
+            // btnTrainer
             // 
-            this.trainerButton.Location = new System.Drawing.Point(335, 177);
-            this.trainerButton.Name = "trainerButton";
-            this.trainerButton.Size = new System.Drawing.Size(158, 54);
-            this.trainerButton.TabIndex = 4;
-            this.trainerButton.Text = "Trainer";
-            this.trainerButton.UseVisualStyleBackColor = true;
-            this.trainerButton.Click += new System.EventHandler(this.trainerButton_Click);
+            this.btnTrainer.Location = new System.Drawing.Point(335, 177);
+            this.btnTrainer.Name = "btnTrainer";
+            this.btnTrainer.Size = new System.Drawing.Size(158, 54);
+            this.btnTrainer.TabIndex = 4;
+            this.btnTrainer.Text = "Trainer";
+            this.btnTrainer.UseVisualStyleBackColor = true;
+            this.btnTrainer.Click += new System.EventHandler(this.trainerButton_Click);
             // 
-            // historyButton
+            // btnHistory
             // 
-            this.historyButton.Location = new System.Drawing.Point(335, 82);
-            this.historyButton.Name = "historyButton";
-            this.historyButton.Size = new System.Drawing.Size(158, 54);
-            this.historyButton.TabIndex = 5;
-            this.historyButton.Text = "History";
-            this.historyButton.UseVisualStyleBackColor = true;
-            this.historyButton.Click += new System.EventHandler(this.historyButton_Click);
+            this.btnHistory.Location = new System.Drawing.Point(335, 82);
+            this.btnHistory.Name = "btnHistory";
+            this.btnHistory.Size = new System.Drawing.Size(158, 54);
+            this.btnHistory.TabIndex = 5;
+            this.btnHistory.Text = "History";
+            this.btnHistory.UseVisualStyleBackColor = true;
+            this.btnHistory.Click += new System.EventHandler(this.historyButton_Click);
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(629, 415);
-            this.Controls.Add(this.historyButton);
-            this.Controls.Add(this.trainerButton);
-            this.Controls.Add(this.bodyButton);
-            this.Controls.Add(this.workoutsButton);
-            this.Controls.Add(this.exercisesButton);
+            this.Controls.Add(this.btnHistory);
+            this.Controls.Add(this.btnTrainer);
+            this.Controls.Add(this.btnBody);
+            this.Controls.Add(this.btnWorkouts);
+            this.Controls.Add(this.btnExercises);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmMain";
@@ -105,10 +105,10 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button exercisesButton;
-        private System.Windows.Forms.Button workoutsButton;
-        private System.Windows.Forms.Button bodyButton;
-        private System.Windows.Forms.Button trainerButton;
-        private System.Windows.Forms.Button historyButton;
+        private System.Windows.Forms.Button btnExercises;
+        private System.Windows.Forms.Button btnWorkouts;
+        private System.Windows.Forms.Button btnBody;
+        private System.Windows.Forms.Button btnTrainer;
+        private System.Windows.Forms.Button btnHistory;
     }
 }

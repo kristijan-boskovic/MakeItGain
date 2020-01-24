@@ -32,7 +32,7 @@
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnClose = new System.Windows.Forms.Button();
-            this.exerciseDescriptionLabel = new System.Windows.Forms.Label();
+            this.labelExerciseDescription = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // listExercises
@@ -72,20 +72,20 @@
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // exerciseDescriptionLabel
+            // labelExerciseDescription
             // 
-            this.exerciseDescriptionLabel.Location = new System.Drawing.Point(319, 196);
-            this.exerciseDescriptionLabel.Name = "exerciseDescriptionLabel";
-            this.exerciseDescriptionLabel.Size = new System.Drawing.Size(147, 34);
-            this.exerciseDescriptionLabel.TabIndex = 4;
-            this.exerciseDescriptionLabel.Text = "Hint: double-click on exercise name to see exercise details.";
+            this.labelExerciseDescription.Location = new System.Drawing.Point(319, 196);
+            this.labelExerciseDescription.Name = "labelExerciseDescription";
+            this.labelExerciseDescription.Size = new System.Drawing.Size(147, 34);
+            this.labelExerciseDescription.TabIndex = 4;
+            this.labelExerciseDescription.Text = "Hint: double-click on exercise name to see exercise details.";
             // 
             // frmViewExercises
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(487, 287);
-            this.Controls.Add(this.exerciseDescriptionLabel);
+            this.Controls.Add(this.labelExerciseDescription);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.listExercises);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
@@ -103,6 +103,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.Button btnClose;
-        private System.Windows.Forms.Label exerciseDescriptionLabel;
+        private System.Windows.Forms.Label labelExerciseDescription;
     }
 }

@@ -92,5 +92,15 @@ namespace FinAssist.Controllers
             var newFrm = _formsFactory.CreateShowWorkoutsListView();
             workoutController.ViewWorkouts(newFrm, _workoutRepository, this);
         }
+
+        public void AddWorkout()
+        {
+            var workoutController = new WorkoutController();
+
+            var newFrm = _formsFactory.CreateAddNewWorkoutView();
+
+            workoutController.AddNewWorkout(newFrm, _workoutRepository, _exerciseRepository);
+        }
+
     }
 }
