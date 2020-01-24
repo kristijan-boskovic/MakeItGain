@@ -96,10 +96,15 @@ namespace FinAssist.Controllers
         public void AddWorkout()
         {
             var workoutController = new WorkoutController();
-
             var newFrm = _formsFactory.CreateAddNewWorkoutView();
-
             workoutController.AddNewWorkout(newFrm, _workoutRepository, _exerciseRepository);
+        }
+
+        public void EditWorkout(Workout workout)
+        {
+            var workoutController = new WorkoutController();
+            var newFrm = _formsFactory.CreateEditWorkoutView();
+            workoutController.EditWorkout(newFrm, workout, _workoutRepository, _exerciseRepository);
         }
 
     }

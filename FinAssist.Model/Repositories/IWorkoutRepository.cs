@@ -16,6 +16,7 @@ namespace FinAssist.Model.Repositories
 		//ExpenditureSinkAccount getExpSinkAccount();
 
 		void addWorkout(Workout workout);
-		void deleteWorkout(int workoutId);
+        void editWorkout(Workout workout);
+        void deleteWorkout(int workoutId);
 	}
 }

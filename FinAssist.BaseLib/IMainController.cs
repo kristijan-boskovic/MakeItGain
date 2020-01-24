@@ -14,5 +14,6 @@ namespace FinAssist.BaseLib
         //void EditAccount(string accountName);
         void ViewExerciseDetails(Exercise exercise);
         void AddWorkout();
-	}
+        void EditWorkout(Workout workout);
+    }
 }

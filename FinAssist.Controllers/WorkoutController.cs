@@ -52,19 +52,20 @@ namespace FinAssist.Controllers
             form.ShowWorkouts(mainController, workouts);
         }
 
-        public void AddNewWorkout(IAddNewWorkoutView inForm, IWorkoutRepository workoutRepository, IExerciseRepository exerciseRepository)
+        public void AddNewWorkout(IAddNewWorkoutView form, IWorkoutRepository workoutRepository, IExerciseRepository exerciseRepository)
         {
-            if (inForm.ShowViewModal() == true)
+
+            if (form.ShowViewModal() == true)
             {
                 try
                 {
-                    string workoutName = inForm.WorkoutName;
+                    string workoutName = form.WorkoutName;
                     if (String.IsNullOrEmpty(workoutName))
                     {
-                        MessageBox.Show("Please input your workout name!");
+                        MessageBox.Show("Please input your workout name.");
                         return;
                     }
-                    List<string> exerciseNames = inForm.ExerciseNames;
+                    List<string> exerciseNames = form.ExerciseNames;
                     int workoutId = workoutRepository.getNewId();
                     List<Exercise> exercises = new List<Exercise>();
 
@@ -76,6 +77,40 @@ namespace FinAssist.Controllers
                     //Account newAccount = AccountFactory.CreateAccount(ID, Name, AccType, Balance);
                     Workout newWorkout = new Workout(workoutId, workoutName, exercises, false, "", 0);
                     workoutRepository.addWorkout(newWorkout);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("EXCEPTION: " + ex.Message);
+                    throw;
+                }
+            }
+        }
+
+        public void EditWorkout(IEditWorkoutView form, Workout workout, IWorkoutRepository workoutRepository, IExerciseRepository exerciseRepository)
+        {
+            if (form.ShowViewModal(workout) == true)
+            {
+                try
+                {
+                    string workoutName = form.WorkoutName;
+                    if (String.IsNullOrEmpty(workoutName))
+                    {
+                        MessageBox.Show("Please input your workout name.");
+                        return;
+                    }
+                    List<string> exerciseNames = form.ExerciseNames;
+                    //int workoutId = workoutRepository.getNewId();
+                    int workoutId = workout.Id;
+                    List<Exercise> exercises = new List<Exercise>();
+
+                    foreach (var exerciseName in exerciseNames)
+                    {
+                        var exercise = exerciseRepository.getExerciseByName(exerciseName);
+                        exercises.Add(exercise);
+                    }
+                    workout.WorkoutName = workoutName;
+                    workout.Exercises = exercises;
+                    workoutRepository.editWorkout(workout);
                 }
                 catch (Exception ex)
                 {

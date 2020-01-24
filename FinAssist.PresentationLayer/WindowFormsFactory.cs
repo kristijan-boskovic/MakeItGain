@@ -54,5 +54,11 @@ namespace FinAssist.PresentationLayer
             return newFrm;
         }
 
+        public IEditWorkoutView CreateEditWorkoutView()
+        {
+            var newFrm = new frmEditWorkout();
+
+            return newFrm;
+        }
     }
 }

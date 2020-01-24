@@ -73,6 +73,12 @@
     <Compile Include="BurgerControl.Designer.cs">
       <DependentUpon>BurgerControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmEditWorkout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditWorkout.Designer.cs">
+      <DependentUpon>frmEditWorkout.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAddWorkout.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -211,6 +217,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BurgerControl.resx">
       <DependentUpon>BurgerControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditWorkout.resx">
+      <DependentUpon>frmEditWorkout.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAddWorkout.resx">
       <DependentUpon>frmAddWorkout.cs</DependentUpon>

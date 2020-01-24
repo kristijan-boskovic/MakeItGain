@@ -109,10 +109,15 @@ namespace FinAssist.DAL.MemoryBased
 			_listWorkouts.Add(workout);
 		}
 
-		public void deleteWorkout(int workoutId)
-		{
-			
-		}
+        public void editWorkout(Workout workout)
+        {
+            _listWorkouts.Find(x => x.Id == workout.Id).WorkoutName = workout.WorkoutName;
+            _listWorkouts.Find(x => x.Id == workout.Id).Exercises = workout.Exercises;
+        }
 
-	}
+        public void deleteWorkout(int workoutId)
+        {
+
+        }
+    }
 }

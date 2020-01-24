@@ -12,9 +12,7 @@ using FinAssist.Model;
 namespace FinAssist.PresentationLayer
 {
 	public partial class frmAddWorkout : Form, IAddNewWorkoutView
-	{
-		//private readonly List<string> _accountTypes = null;
-		 
+	{		 
 		public frmAddWorkout()
 		{
 			InitializeComponent();
@@ -22,8 +20,7 @@ namespace FinAssist.PresentationLayer
 
 		private void frmAddWorkout_Load(object sender, EventArgs e)
 		{
-			//foreach (string s in _accountTypes)
-			//	cmbAccountType.Items.Add(s);
+
 		}
 
 		public bool ShowViewModal()
@@ -34,30 +31,12 @@ namespace FinAssist.PresentationLayer
 				return false;
 		}
 
-		//public string AccountName => txtWorkoutName.Text;
-		//public string AccountType => cmbAccountType.SelectedItem.ToString();
         public string WorkoutName => txtWorkoutName.Text;
-
-        // ekvivalent
-        // public string AccountType
-        // {
-        //  get
-        //  {
-        //return cmbAccountType.SelectedText;
-        //  }
-        // }
 
         public List<string> ExerciseNames
         {
 			get
 			{
-				//float balanceValue = 0;
-
-				////if( Single.TryParse(txtInitialBalance.Text, out balanceValue) == true )
-				//	return balanceValue;
-
-				//throw new ArgumentException();
-
                 var checkedItems = chkdListBoxExercises.CheckedItems;
                 List<string> exerciseNames = new List<string>();
                 foreach(var checkedItem in checkedItems)

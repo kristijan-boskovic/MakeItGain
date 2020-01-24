@@ -105,7 +105,7 @@
             this.btnEditWorkout.TabIndex = 4;
             this.btnEditWorkout.Text = "Edit workout";
             this.btnEditWorkout.UseVisualStyleBackColor = true;
-            this.btnAddNewWorkout.Click += new System.EventHandler(this.btnEditWorkout_Click);
+            this.btnEditWorkout.Click += new System.EventHandler(this.btnEditWorkout_Click);
             // 
             // btnDeleteWorkout
             // 
