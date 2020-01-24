@@ -72,8 +72,8 @@ namespace FinAssist.PresentationLayer
                         workoutExercises += ", " + exercise.ExerciseName;
                     }
                 }
+                lvt.SubItems.Add(workout.SetsPerExercise.ToString());
                 lvt.SubItems.Add(workoutExercises);
-                //lvt.SubItems.Add(accInitialBalance);
 
                 listWorkouts.Items.Add(lvt);
             }
@@ -126,6 +126,24 @@ namespace FinAssist.PresentationLayer
             catch (Exception)
             {
                 MessageBox.Show("Please choose a workout you want to edit.");
+                return;
+            }
+        }
+
+        private void btnStartWorkout_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (listWorkouts.SelectedItems[0] != null)
+                {
+                    var index = listWorkouts.SelectedItems[0].Index;
+                    var chosenWorkout = _workouts[index];
+                    _mainController.StartWorkout(chosenWorkout);
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Please choose a workout you want to start.");
                 return;
             }
         }

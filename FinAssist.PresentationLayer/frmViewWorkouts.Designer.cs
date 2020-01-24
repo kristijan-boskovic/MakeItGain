@@ -36,7 +36,8 @@
             this.btnAddNewWorkout = new System.Windows.Forms.Button();
             this.btnEditWorkout = new System.Windows.Forms.Button();
             this.btnDeleteWorkout = new System.Windows.Forms.Button();
-            this.btnStartWorkout = new System.Windows.Forms.Button();
+            this.btnSetUpWorkout = new System.Windows.Forms.Button();
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // listWorkouts
@@ -44,7 +45,8 @@
             this.listWorkouts.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
-            this.columnHeader3});
+            this.columnHeader3,
+            this.columnHeader4});
             this.listWorkouts.HideSelection = false;
             this.listWorkouts.Location = new System.Drawing.Point(11, 11);
             this.listWorkouts.Margin = new System.Windows.Forms.Padding(2);
@@ -64,12 +66,12 @@
             // columnHeader2
             // 
             this.columnHeader2.Text = "Workout";
-            this.columnHeader2.Width = 90;
+            this.columnHeader2.Width = 80;
             // 
             // columnHeader3
             // 
-            this.columnHeader3.Text = "Exercises";
-            this.columnHeader3.Width = 331;
+            this.columnHeader3.Text = "Sets";
+            this.columnHeader3.Width = 40;
             // 
             // btnClose
             // 
@@ -119,23 +121,29 @@
             this.btnDeleteWorkout.UseVisualStyleBackColor = true;
             this.btnDeleteWorkout.Click += new System.EventHandler(this.btnDeleteWorkout_Click);
             // 
-            // btnStartWorkout
+            // btnSetUpWorkout
             // 
-            this.btnStartWorkout.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.btnStartWorkout.Location = new System.Drawing.Point(367, 189);
-            this.btnStartWorkout.Margin = new System.Windows.Forms.Padding(2);
-            this.btnStartWorkout.Name = "btnStartWorkout";
-            this.btnStartWorkout.Size = new System.Drawing.Size(109, 41);
-            this.btnStartWorkout.TabIndex = 6;
-            this.btnStartWorkout.Text = "Start workout session";
-            this.btnStartWorkout.UseVisualStyleBackColor = true;
+            this.btnSetUpWorkout.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.btnSetUpWorkout.Location = new System.Drawing.Point(367, 189);
+            this.btnSetUpWorkout.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSetUpWorkout.Name = "btnSetUpWorkout";
+            this.btnSetUpWorkout.Size = new System.Drawing.Size(109, 41);
+            this.btnSetUpWorkout.TabIndex = 6;
+            this.btnSetUpWorkout.Text = "Start workout session";
+            this.btnSetUpWorkout.UseVisualStyleBackColor = true;
+            this.btnSetUpWorkout.Click += new System.EventHandler(this.btnStartWorkout_Click);
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Exercises";
+            this.columnHeader4.Width = 221;
             // 
             // frmViewWorkouts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(487, 287);
-            this.Controls.Add(this.btnStartWorkout);
+            this.Controls.Add(this.btnSetUpWorkout);
             this.Controls.Add(this.btnDeleteWorkout);
             this.Controls.Add(this.btnEditWorkout);
             this.Controls.Add(this.btnAddNewWorkout);
@@ -160,6 +168,7 @@
         private System.Windows.Forms.Button btnAddNewWorkout;
         private System.Windows.Forms.Button btnEditWorkout;
         private System.Windows.Forms.Button btnDeleteWorkout;
-        private System.Windows.Forms.Button btnStartWorkout;
+        private System.Windows.Forms.Button btnSetUpWorkout;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
     }
 }

@@ -54,12 +54,27 @@ namespace FinAssist.Controllers
 
         public void AddNewWorkout(IAddNewWorkoutView form, IWorkoutRepository workoutRepository, IExerciseRepository exerciseRepository)
         {
-
             if (form.ShowViewModal() == true)
             {
                 try
                 {
                     string workoutName = form.WorkoutName;
+                    int setsPerExercise;
+
+                    try
+                    {
+                        setsPerExercise = form.SetsPerExercise;
+                        if (setsPerExercise < 1)
+                        {
+                            throw new Exception();
+                        }
+                    }
+                    catch (Exception)
+                    {
+                        MessageBox.Show("Please input valid number of sets per exercise.");
+                        return;
+                    }
+
                     if (String.IsNullOrEmpty(workoutName))
                     {
                         MessageBox.Show("Please input your workout name.");
@@ -75,7 +90,7 @@ namespace FinAssist.Controllers
                         exercises.Add(exercise);
                     }
                     //Account newAccount = AccountFactory.CreateAccount(ID, Name, AccType, Balance);
-                    Workout newWorkout = new Workout(workoutId, workoutName, exercises, false, "", 0);
+                    Workout newWorkout = new Workout(workoutId, workoutName, exercises, false, "", 0, setsPerExercise);
                     workoutRepository.addWorkout(newWorkout);
                 }
                 catch (Exception ex)
@@ -93,6 +108,22 @@ namespace FinAssist.Controllers
                 try
                 {
                     string workoutName = form.WorkoutName;
+                    int setsPerExercise;
+
+                    try
+                    {
+                        setsPerExercise = form.SetsPerExercise;
+                        if (setsPerExercise < 1)
+                        {
+                            throw new Exception();
+                        }
+                    }
+                    catch (Exception)
+                    {
+                        MessageBox.Show("Please input valid number of sets per exercise.");
+                        return;
+                    }
+
                     if (String.IsNullOrEmpty(workoutName))
                     {
                         MessageBox.Show("Please input your workout name.");
@@ -110,6 +141,7 @@ namespace FinAssist.Controllers
                     }
                     workout.WorkoutName = workoutName;
                     workout.Exercises = exercises;
+                    workout.SetsPerExercise = setsPerExercise;
                     workoutRepository.editWorkout(workout);
                 }
                 catch (Exception ex)
@@ -123,6 +155,11 @@ namespace FinAssist.Controllers
         public void DeleteWorkout(Workout workout, IWorkoutRepository workoutRepository)
         {
             workoutRepository.deleteWorkout(workout);
+        }
+
+        public void StartWorkout(IStartWorkoutView form, Workout workout, IWorkoutRepository workoutRepository)
+        {
+            form.ShowWorkoutSession(workout);
         }
     }
 }

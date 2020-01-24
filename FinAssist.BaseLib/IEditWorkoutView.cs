@@ -12,5 +12,6 @@ namespace FinAssist.BaseLib
 		bool ShowViewModal(Workout workout);
 		string	WorkoutName { get; }
 		List<string> ExerciseNames { get; }
-	}
+        int SetsPerExercise { get; }
+    }
 }

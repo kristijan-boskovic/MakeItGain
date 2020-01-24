@@ -18,5 +18,7 @@ namespace FinAssist.Model.Repositories
 		void addWorkout(Workout workout);
         void editWorkout(Workout workout);
         void deleteWorkout(Workout workout);
-	}
+        void startWorkout(Workout workout);
+
+    }
 }

@@ -34,6 +34,8 @@
             this.txtWorkoutName = new System.Windows.Forms.TextBox();
             this.labelExercises = new System.Windows.Forms.Label();
             this.chkdListBoxExercises = new System.Windows.Forms.CheckedListBox();
+            this.labelSetsPerExercise = new System.Windows.Forms.Label();
+            this.txtSetsPerExercise = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // labelWorkoutName
@@ -49,7 +51,7 @@
             // btnAddNewWorkout
             // 
             this.btnAddNewWorkout.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.btnAddNewWorkout.Location = new System.Drawing.Point(28, 149);
+            this.btnAddNewWorkout.Location = new System.Drawing.Point(14, 153);
             this.btnAddNewWorkout.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddNewWorkout.Name = "btnAddNewWorkout";
             this.btnAddNewWorkout.Size = new System.Drawing.Size(75, 35);
@@ -61,7 +63,7 @@
             // btnCancel
             // 
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancel.Location = new System.Drawing.Point(160, 149);
+            this.btnCancel.Location = new System.Drawing.Point(175, 153);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 35);
@@ -100,12 +102,33 @@
             this.chkdListBoxExercises.Name = "chkdListBoxExercises";
             this.chkdListBoxExercises.Size = new System.Drawing.Size(144, 64);
             this.chkdListBoxExercises.TabIndex = 5;
+            this.chkdListBoxExercises.SelectedIndexChanged += new System.EventHandler(this.chkdListBoxExercises_SelectedIndexChanged);
+            // 
+            // labelSetsPerExercise
+            // 
+            this.labelSetsPerExercise.AutoSize = true;
+            this.labelSetsPerExercise.Location = new System.Drawing.Point(11, 126);
+            this.labelSetsPerExercise.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelSetsPerExercise.Name = "labelSetsPerExercise";
+            this.labelSetsPerExercise.Size = new System.Drawing.Size(91, 13);
+            this.labelSetsPerExercise.TabIndex = 6;
+            this.labelSetsPerExercise.Text = "Sets per exercise:";
+            // 
+            // txtSetsPerExercise
+            // 
+            this.txtSetsPerExercise.Location = new System.Drawing.Point(106, 123);
+            this.txtSetsPerExercise.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSetsPerExercise.Name = "txtSetsPerExercise";
+            this.txtSetsPerExercise.Size = new System.Drawing.Size(31, 20);
+            this.txtSetsPerExercise.TabIndex = 7;
             // 
             // frmAddWorkout
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(268, 199);
+            this.Controls.Add(this.txtSetsPerExercise);
+            this.Controls.Add(this.labelSetsPerExercise);
             this.Controls.Add(this.chkdListBoxExercises);
             this.Controls.Add(this.txtWorkoutName);
             this.Controls.Add(this.btnCancel);
@@ -130,5 +153,7 @@
         private System.Windows.Forms.TextBox txtWorkoutName;
         private System.Windows.Forms.Label labelExercises;
         private System.Windows.Forms.CheckedListBox chkdListBoxExercises;
+        private System.Windows.Forms.Label labelSetsPerExercise;
+        private System.Windows.Forms.TextBox txtSetsPerExercise;
     }
 }

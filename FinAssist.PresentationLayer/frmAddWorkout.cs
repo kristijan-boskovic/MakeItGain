@@ -32,6 +32,7 @@ namespace FinAssist.PresentationLayer
 		}
 
         public string WorkoutName => txtWorkoutName.Text;
+        public int SetsPerExercise => Int32.Parse(txtSetsPerExercise.Text);
 
         public List<string> ExerciseNames
         {
@@ -53,6 +54,11 @@ namespace FinAssist.PresentationLayer
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chkdListBoxExercises_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

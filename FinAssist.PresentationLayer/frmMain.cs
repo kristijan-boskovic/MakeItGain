@@ -12,59 +12,27 @@ namespace FinAssist.PresentationLayer
 
 		public frmMain(MainController inController)
 		{
-			_controller = inController;
+            //var n = 5;
+            //for (int i = 0; i < n; i++)
+            //{
+            //    //Create label
+            //    Label label = new Label();
+            //    label.Text = String.Format("Label {0}", i);
+            //    //Position label on screen
+            //    label.Left = 10;
+            //    label.Top = (i + 1) * 20;
+            //    //Create textbox
+            //    TextBox textBox = new TextBox();
+            //    //Position textbox on screen
+            //    textBox.Left = 120;
+            //    textBox.Top = (i + 1) * 20;
+            //    //Add controls to form
+            //    this.Controls.Add(label);
+            //    this.Controls.Add(textBox);
+            //}
+            _controller = inController;
             _controller.LoadDefaultModel();
             InitializeComponent();
-		}
-
-		private void loadDefaultModelToolStripMenuItem_Click(object sender, EventArgs e)
-		{
-			//_controller.LoadDefaultModel();
-		}
-
-		private void addAccountToolStripMenuItem_Click(object sender, EventArgs e)
-		{
-			//_controller.AddAccount();
-		}
-
-		private void viewExercisesToolStripMenuItem_Click(object sender, EventArgs e)
-		{
-			//_controller.ShowExercises();
-		}
-
-        private void addExpenditureToolStripMenuItem_Click(object sender, EventArgs e)
-		{
-			//_controller.AddExpenditureTransaction();
-		}
-
-		private void addIncomeToolStripMenuItem_Click(object sender, EventArgs e)
-		{
-			// _controller.AddIncomeTransaction();
-		}
-
-		private void addTransferToolStripMenuItem_Click(object sender, EventArgs e)
-		{
-			//_controller.AddTransferTransaction();
-		}
-
-		private void showSummaryReportToolStripMenuItem_Click(object sender, EventArgs e)
-		{
-			//_controller.ShowSummaryReport();
-		}
-
-		private void viewTransactionsToolStripMenuItem_Click(object sender, EventArgs e)
-		{
-			//_controller.ShowTransactions();
-		}
-
-		private void categoriesToolStripMenuItem_Click(object sender, EventArgs e)
-		{
-			//_controller.ShowExpenditureCategories();
-		}
-
-		private void placesToolStripMenuItem_Click(object sender, EventArgs e)
-		{
-			// _controller.ShowExpenditurePlaces();
 		}
 
         private void frmMain_Load(object sender, EventArgs e)

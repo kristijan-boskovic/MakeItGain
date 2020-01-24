@@ -119,5 +119,10 @@ namespace FinAssist.DAL.MemoryBased
         {
             _listWorkouts.RemoveAll(x => x.Id == workout.Id);
         }
+
+        public void startWorkout(Workout workout)
+        {
+            //_listWorkouts.RemoveAll(x => x.Id == workout.Id);
+        }
     }
 }

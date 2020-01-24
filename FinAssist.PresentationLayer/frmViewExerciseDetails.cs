@@ -22,56 +22,10 @@ namespace FinAssist.PresentationLayer
             InitializeComponent();
         }
 
-        //public void ShowModaless()
-        //{
-        //    //_mainController = mainController;
-        //    //_displayExercises = displayExercises;
-
-        //    //UpdateList();
-
-        //    this.Show();
-        //}
-
-        //private void btnAddNewExercise_Click(object sender, EventArgs e)
-        //{
-        //    //_mainController.AddAccount();
-        //}
-        //private void listExercises_DoubleClick(object sender, EventArgs e)
-        //{
-        //    if (listExercises.SelectedItems[0] != null)
-        //    {
-        //        int index = listExercises.SelectedItems[0].Index;
-        //        string accountName = listExercises.SelectedItems[0].SubItems[0].Text;
-
-        //        //_mainController.EditAccount(accountName);
-        //    }
-        //}
         private void btnClose_Click(object sender, EventArgs e)
 		{
 			this.Close();
 		}
-
-        //private void UpdateList()
-        //{
-        //    for (int i = 0; i < _displayExercises.Count(); i++)
-        //    {
-        //        DisplayExercise displayExercise = _displayExercises[i];
-
-        //        string muscleGroup = displayExercise.MuscleGroup.ToString().ToLower();
-        //        //string accInitialBalance = acc.InitialBalance.ToString(CultureInfo.InvariantCulture);
-
-        //        ListViewItem lvt = new ListViewItem(displayExercise.ExerciseName);
-        //        lvt.SubItems.Add(muscleGroup);
-        //        //lvt.SubItems.Add(accInitialBalance);
-
-        //        listExercises.Items.Add(lvt);
-        //    }
-        //}
-
-        //private void listExercises_SelectedIndexChanged(object sender, EventArgs e)
-        //{
-
-        //}
 
         public void ShowExerciseDetails(Exercise exercise)
         {

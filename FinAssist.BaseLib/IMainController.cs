@@ -16,5 +16,7 @@ namespace FinAssist.BaseLib
         void AddWorkout();
         void EditWorkout(Workout workout);
         void DeleteWorkout(Workout workout);
+        void StartWorkout(Workout workout);
+
     }
 }

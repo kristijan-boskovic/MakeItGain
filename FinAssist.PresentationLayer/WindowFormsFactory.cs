@@ -60,5 +60,12 @@ namespace FinAssist.PresentationLayer
 
             return newFrm;
         }
+
+        public IStartWorkoutView CreateStartWorkoutView()
+        {
+            var newFrm = new frmStartWorkout();
+
+            return newFrm;
+        }
     }
 }

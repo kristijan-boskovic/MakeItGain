@@ -34,6 +34,8 @@
             this.txtWorkoutName = new System.Windows.Forms.TextBox();
             this.labelExercises = new System.Windows.Forms.Label();
             this.chkdListBoxExercises = new System.Windows.Forms.CheckedListBox();
+            this.txtSetsPerExercise = new System.Windows.Forms.TextBox();
+            this.labelSetsPerExercise = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // labelWorkoutName
@@ -49,22 +51,22 @@
             // btnEditWorkout
             // 
             this.btnEditWorkout.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.btnEditWorkout.Location = new System.Drawing.Point(28, 149);
+            this.btnEditWorkout.Location = new System.Drawing.Point(12, 154);
             this.btnEditWorkout.Margin = new System.Windows.Forms.Padding(2);
             this.btnEditWorkout.Name = "btnEditWorkout";
-            this.btnEditWorkout.Size = new System.Drawing.Size(75, 35);
+            this.btnEditWorkout.Size = new System.Drawing.Size(67, 34);
             this.btnEditWorkout.TabIndex = 3;
-            this.btnEditWorkout.Text = "Edit";
+            this.btnEditWorkout.Text = "Apply";
             this.btnEditWorkout.UseVisualStyleBackColor = true;
             this.btnEditWorkout.Click += new System.EventHandler(this.btnEditWorkout_Click);
             // 
             // btnCancel
             // 
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancel.Location = new System.Drawing.Point(160, 149);
+            this.btnCancel.Location = new System.Drawing.Point(183, 154);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(75, 35);
+            this.btnCancel.Size = new System.Drawing.Size(67, 34);
             this.btnCancel.TabIndex = 4;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -101,11 +103,31 @@
             this.chkdListBoxExercises.Size = new System.Drawing.Size(144, 64);
             this.chkdListBoxExercises.TabIndex = 5;
             // 
+            // txtSetsPerExercise
+            // 
+            this.txtSetsPerExercise.Location = new System.Drawing.Point(106, 125);
+            this.txtSetsPerExercise.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSetsPerExercise.Name = "txtSetsPerExercise";
+            this.txtSetsPerExercise.Size = new System.Drawing.Size(31, 20);
+            this.txtSetsPerExercise.TabIndex = 9;
+            // 
+            // labelSetsPerExercise
+            // 
+            this.labelSetsPerExercise.AutoSize = true;
+            this.labelSetsPerExercise.Location = new System.Drawing.Point(11, 128);
+            this.labelSetsPerExercise.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelSetsPerExercise.Name = "labelSetsPerExercise";
+            this.labelSetsPerExercise.Size = new System.Drawing.Size(91, 13);
+            this.labelSetsPerExercise.TabIndex = 8;
+            this.labelSetsPerExercise.Text = "Sets per exercise:";
+            // 
             // frmEditWorkout
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(268, 199);
+            this.Controls.Add(this.txtSetsPerExercise);
+            this.Controls.Add(this.labelSetsPerExercise);
             this.Controls.Add(this.chkdListBoxExercises);
             this.Controls.Add(this.txtWorkoutName);
             this.Controls.Add(this.btnCancel);
@@ -130,5 +152,7 @@
         private System.Windows.Forms.TextBox txtWorkoutName;
         private System.Windows.Forms.Label labelExercises;
         private System.Windows.Forms.CheckedListBox chkdListBoxExercises;
+        private System.Windows.Forms.TextBox txtSetsPerExercise;
+        private System.Windows.Forms.Label labelSetsPerExercise;
     }
 }

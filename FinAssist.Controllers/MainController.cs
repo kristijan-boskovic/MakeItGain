@@ -47,8 +47,8 @@ namespace FinAssist.Controllers
                 _exerciseRepository.addExercise(squat);
                 _exerciseRepository.addExercise(deadlift);
 
-                _workoutRepository.addWorkout(new Workout(1, "Upper body", new List<Exercise>() { benchPress, militaryPress }, false, "", 0));
-                _workoutRepository.addWorkout(new Workout(2, "Lower body", new List<Exercise>() { squat, deadlift }, false, "", 0));
+                _workoutRepository.addWorkout(new Workout(1, "Upper body", new List<Exercise>() { benchPress, militaryPress }, false, "", 0, 4));
+                _workoutRepository.addWorkout(new Workout(2, "Lower body", new List<Exercise>() { squat, deadlift }, false, "", 0, 5));
 
                 _defaultModelLoaded = true;
 			}
@@ -112,6 +112,13 @@ namespace FinAssist.Controllers
             var workoutController = new WorkoutController();
             //var newFrm = _formsFactory.CreateEditWorkoutView();
             workoutController.DeleteWorkout(workout, _workoutRepository);
+        }
+
+        public void StartWorkout(Workout workout)
+        {
+            var workoutController = new WorkoutController();
+            var newFrm = _formsFactory.CreateStartWorkoutView();
+            workoutController.StartWorkout(newFrm, workout, _workoutRepository);
         }
     }
 }

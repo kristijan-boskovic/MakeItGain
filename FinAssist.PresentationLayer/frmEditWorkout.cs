@@ -27,6 +27,8 @@ namespace FinAssist.PresentationLayer
 		public bool ShowViewModal(Workout workout)
 		{
             txtWorkoutName.Text = workout.WorkoutName;
+            txtSetsPerExercise.Text = workout.SetsPerExercise.ToString();
+
             List<int> exerciseIds = new List<int>();
 
             foreach (var exercise in workout.Exercises)
@@ -48,6 +50,7 @@ namespace FinAssist.PresentationLayer
 		//public string AccountName => txtWorkoutName.Text;
 		//public string AccountType => cmbAccountType.SelectedItem.ToString();
         public string WorkoutName => txtWorkoutName.Text;
+        public int SetsPerExercise => Int32.Parse(txtSetsPerExercise.Text);
 
         // ekvivalent
         // public string AccountType

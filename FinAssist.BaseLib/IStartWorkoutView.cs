@@ -7,11 +7,8 @@ using System.Threading.Tasks;
 
 namespace FinAssist.BaseLib
 {
-	public interface IAddNewWorkoutView
+	public interface IStartWorkoutView
 	{
-		bool ShowViewModal();
-		string	WorkoutName { get; }
-		List<string> ExerciseNames { get; }
-        int SetsPerExercise { get; }
+        void ShowWorkoutSession(Workout workout);
     }
 }
