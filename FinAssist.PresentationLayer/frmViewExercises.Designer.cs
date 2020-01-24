@@ -48,7 +48,6 @@
             this.listExercises.TabIndex = 0;
             this.listExercises.UseCompatibleStateImageBehavior = false;
             this.listExercises.View = System.Windows.Forms.View.Details;
-            this.listExercises.SelectedIndexChanged += new System.EventHandler(this.listExercises_SelectedIndexChanged);
             this.listExercises.DoubleClick += new System.EventHandler(this.listExercises_DoubleClick);
             // 
             // columnHeader1

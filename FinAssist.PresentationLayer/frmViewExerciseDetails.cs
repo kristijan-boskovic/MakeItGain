@@ -101,6 +101,7 @@ namespace FinAssist.PresentationLayer
                     pictureBox1.Image = Properties.Resources.squat;
                     break;
             }
+            this.Text = exercise.ExerciseName;
             this.Show();
         }
 

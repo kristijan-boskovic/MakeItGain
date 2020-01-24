@@ -67,6 +67,20 @@ namespace FinAssist.PresentationLayer
 
                 ListViewItem lvt = new ListViewItem((i+1).ToString());
                 lvt.SubItems.Add(workout.WorkoutName);
+
+                string workoutExercises = "";
+                foreach (var exercise in workout.Exercises)
+                {
+                    if (workoutExercises.Equals(""))
+                    {
+                        workoutExercises = exercise.ExerciseName.ToLower();
+                    }
+                    else
+                    {
+                        workoutExercises += ", " + exercise.ExerciseName.ToLower();
+                    }
+                }
+                lvt.SubItems.Add(workoutExercises);
                 //lvt.SubItems.Add(accInitialBalance);
 
                 listWorkouts.Items.Add(lvt);
@@ -79,6 +93,11 @@ namespace FinAssist.PresentationLayer
         }
 
         private void frmViewWorkouts_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
         {
 
         }
