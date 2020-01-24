@@ -96,7 +96,20 @@ namespace FinAssist.PresentationLayer
 
         private void btnDeleteWorkout_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                if (listWorkouts.SelectedItems[0] != null)
+                {
+                    var index = listWorkouts.SelectedItems[0].Index;
+                    var chosenWorkout = _workouts[index];
+                    _mainController.DeleteWorkout(chosenWorkout);
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Please choose a workout you want to delete.");
+                return;
+            }
         }
 
         private void btnEditWorkout_Click(object sender, EventArgs e)

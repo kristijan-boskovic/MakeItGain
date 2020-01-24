@@ -107,5 +107,11 @@ namespace FinAssist.Controllers
             workoutController.EditWorkout(newFrm, workout, _workoutRepository, _exerciseRepository);
         }
 
+        public void DeleteWorkout(Workout workout)
+        {
+            var workoutController = new WorkoutController();
+            //var newFrm = _formsFactory.CreateEditWorkoutView();
+            workoutController.DeleteWorkout(workout, _workoutRepository);
+        }
     }
 }

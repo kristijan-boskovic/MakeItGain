@@ -119,5 +119,10 @@ namespace FinAssist.Controllers
                 }
             }
         }
+
+        public void DeleteWorkout(Workout workout, IWorkoutRepository workoutRepository)
+        {
+            workoutRepository.deleteWorkout(workout);
+        }
     }
 }
