@@ -8,17 +8,13 @@ namespace FinAssist.Model.Repositories
         Workout getWorkoutById(int workoutId);
         Workout getWorkoutByName(string workoutName);
 		List<Workout> getAllWorkouts();
+        List<HistoryWorkout> getAllHistoryWorkouts();
         List<int> getAllWorkoutsIds();
-		//List<int> getAllAccountsOfType(AccountTypesList.AccountTypesEnum inType);
-
 		int	getNewId();
-		//bool doesExerciseExist(string exerciseName);
-		//ExpenditureSinkAccount getExpSinkAccount();
-
 		void addWorkout(Workout workout);
         void editWorkout(Workout workout);
         void deleteWorkout(Workout workout);
         void startWorkout(Workout workout);
-
+        void finishWorkout(Workout workout, string duration, string date, int caloriesBurned, List<int> reps);
     }
 }

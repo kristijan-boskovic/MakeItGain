@@ -67,5 +67,19 @@ namespace FinAssist.PresentationLayer
 
             return newFrm;
         }
+
+        public IShowHistoryWorkoutsListView CreateShowHistoryWorkoutsListView()
+        {
+            var newFrm = new frmViewHistoryWorkouts();
+
+            return newFrm;
+        }
+
+        public IShowHistoryWorkoutDetails CreateShowHistoryWorkoutDetails()
+        {
+            var newFrm = new frmViewHistoryWorkoutDetails();
+
+            return newFrm;
+        }
     }
 }

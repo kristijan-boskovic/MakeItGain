@@ -47,8 +47,9 @@ namespace FinAssist.Controllers
                 _exerciseRepository.addExercise(squat);
                 _exerciseRepository.addExercise(deadlift);
 
-                _workoutRepository.addWorkout(new Workout(1, "Upper body", new List<Exercise>() { benchPress, militaryPress }, false, "", 0, 4));
-                _workoutRepository.addWorkout(new Workout(2, "Lower body", new List<Exercise>() { squat, deadlift }, false, "", 0, 5));
+                _workoutRepository.addWorkout(new Workout(1, "Upper body", new List<Exercise>() { benchPress, militaryPress }, 4));
+                _workoutRepository.addWorkout(new Workout(2, "Lower body", new List<Exercise>() { squat, deadlift }, 5));
+                _workoutRepository.addWorkout(new Workout(2, "Full body", new List<Exercise>() { benchPress, militaryPress, squat, deadlift }, 5));
 
                 _defaultModelLoaded = true;
 			}
@@ -118,7 +119,28 @@ namespace FinAssist.Controllers
         {
             var workoutController = new WorkoutController();
             var newFrm = _formsFactory.CreateStartWorkoutView();
-            workoutController.StartWorkout(newFrm, workout, _workoutRepository);
+            workoutController.StartWorkout(newFrm, workout, _workoutRepository, this);
+        }
+
+        public void FinishWorkout(Workout workout, string duration, string date, int caloriesBurned, List<int> reps)
+        {
+            var workoutController = new WorkoutController();
+            //var newFrm = _formsFactory.CreateEditWorkoutView();
+            workoutController.FinishWorkout(workout, duration, date, caloriesBurned, _workoutRepository, reps);
+        }
+
+        public void ShowHistoryWorkouts()
+        {
+            var workoutController = new WorkoutController();
+            var newFrm = _formsFactory.CreateShowHistoryWorkoutsListView();
+            workoutController.ViewHistoryWorkouts(newFrm, _workoutRepository, this);
+        }
+
+        public void ViewHistoryWorkoutDetails(HistoryWorkout historyWorkout)
+        {
+            var workoutController = new WorkoutController();
+            var newFrm = _formsFactory.CreateShowHistoryWorkoutDetails();
+            workoutController.ViewHistoryWorkoutDetails(newFrm, historyWorkout);
         }
     }
 }

@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="HistoryWorkout.cs" />
     <Compile Include="Workout.cs" />
     <Compile Include="Repositories\IWorkoutRepository.cs" />
     <Compile Include="Repositories\IExerciseRepository.cs" />

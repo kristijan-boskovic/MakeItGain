@@ -11,21 +11,15 @@ namespace FinAssist.Model
 		{
 		}
 
-		public Workout(int workoutId, string workoutName, List<Exercise> exercises, bool isActive, string time, int caloriesBurned, int setsPerExercise) : base(workoutId)
+		public Workout(int workoutId, string workoutName, List<Exercise> exercises, int setsPerExercise) : base(workoutId)
 		{
 			WorkoutName = workoutName;
             Exercises = exercises;
-            IsActive = isActive;
-            Time = time;
-            CaloriesBurned = caloriesBurned;
             SetsPerExercise = setsPerExercise;
         }
 
 		public string WorkoutName { get; set; }
         public List<Exercise> Exercises { get; set; }
-        public bool IsActive { get; set; }
-        public string Time { get; set; }
-        public int CaloriesBurned { get; set; }
         public int SetsPerExercise { get; set; }
     }
 }

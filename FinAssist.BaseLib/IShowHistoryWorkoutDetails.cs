@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace FinAssist.BaseLib
 {
-	public interface IStartWorkoutView
+	public interface IShowHistoryWorkoutDetails
 	{
-        void ShowWorkoutSession(IMainController mainController, Workout workout);
-    }
+		void ShowHistoryWorkoutDetails(HistoryWorkout historyWorkout);
+	}
 }

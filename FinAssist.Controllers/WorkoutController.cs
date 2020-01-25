@@ -13,35 +13,6 @@ namespace FinAssist.Controllers
 {
     public class WorkoutController
     {
-        //public void AddNewAccount(IAddNewAccountView inForm, IAccountRepository accountRepository)
-        //{
-        //	if (inForm.ShowViewModal() == true)
-        //	{
-        //		try
-        //		{
-        //			string Name = inForm.AccountName;
-        //			string AccType = inForm.AccountType;
-        //			float Balance = inForm.InitialBalance;
-
-        //			int ID = accountRepository.getNewID();
-
-        //			Account newAccount = AccountFactory.CreateAccount(ID, Name, AccType, Balance);
-
-        //			accountRepository.addAccount(newAccount);
-        //		}
-        //		catch (Exception ex)
-        //		{
-        //			MessageBox.Show("EXCEPTION: " + ex.Message);
-        //			throw;
-        //		}
-        //	}
-        //}
-
-        //public void EditAccount(IEditAccountView inForm, string accountName, IAccountRepository inRepo)
-        //{
-
-        //}
-
         public void ViewWorkouts(IShowWorkoutsListView form, IWorkoutRepository workoutRepository, IMainController mainController)
         {
             // dohvati sve accounte i proslijedi ih View-u
@@ -50,6 +21,11 @@ namespace FinAssist.Controllers
             // zašto proslijeđujemo i mainController?
             // zato što na ovom View-u imamo "Add new account" i "Edit new account" funkcionalnost!
             form.ShowWorkouts(mainController, workouts);
+        }
+
+        public void ViewHistoryWorkoutDetails(IShowHistoryWorkoutDetails form, HistoryWorkout historyWorkout)
+        {
+            form.ShowHistoryWorkoutDetails(historyWorkout);
         }
 
         public void AddNewWorkout(IAddNewWorkoutView form, IWorkoutRepository workoutRepository, IExerciseRepository exerciseRepository)
@@ -90,7 +66,7 @@ namespace FinAssist.Controllers
                         exercises.Add(exercise);
                     }
                     //Account newAccount = AccountFactory.CreateAccount(ID, Name, AccType, Balance);
-                    Workout newWorkout = new Workout(workoutId, workoutName, exercises, false, "", 0, setsPerExercise);
+                    Workout newWorkout = new Workout(workoutId, workoutName, exercises, setsPerExercise);
                     workoutRepository.addWorkout(newWorkout);
                 }
                 catch (Exception ex)
@@ -157,9 +133,24 @@ namespace FinAssist.Controllers
             workoutRepository.deleteWorkout(workout);
         }
 
-        public void StartWorkout(IStartWorkoutView form, Workout workout, IWorkoutRepository workoutRepository)
+        public void StartWorkout(IStartWorkoutView form, Workout workout, IWorkoutRepository workoutRepository, IMainController mainController)
         {
-            form.ShowWorkoutSession(workout);
+            form.ShowWorkoutSession(mainController, workout);
+        }
+
+        public void FinishWorkout(Workout workout, string duration, string date, int caloriesBurned, IWorkoutRepository workoutRepository, List<int> reps)
+        {
+            workoutRepository.finishWorkout(workout, duration, date, caloriesBurned, reps);
+        }
+
+        public void ViewHistoryWorkouts(IShowHistoryWorkoutsListView form, IWorkoutRepository workoutRepository, IMainController mainController)
+        {
+            // dohvati sve accounte i proslijedi ih View-u
+            List<HistoryWorkout> historyWorkouts = workoutRepository.getAllHistoryWorkouts();
+
+            // zašto proslijeđujemo i mainController?
+            // zato što na ovom View-u imamo "Add new account" i "Edit new account" funkcionalnost!
+            form.ShowHistoryWorkouts(mainController, historyWorkouts);
         }
     }
 }

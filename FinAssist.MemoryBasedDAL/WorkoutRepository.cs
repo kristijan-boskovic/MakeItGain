@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 using FinAssist.Model;
@@ -13,9 +14,11 @@ namespace FinAssist.DAL.MemoryBased
 		private static WorkoutRepository _instance;
 
 		private readonly List<Workout>	_listWorkouts = new List<Workout>();
+        private readonly List<HistoryWorkout> _listHistoryWorkouts = new List<HistoryWorkout>();
 
-		private WorkoutRepository()
+        private WorkoutRepository()
 		{
+
 		}
 
 		public static WorkoutRepository getInstance()
@@ -31,10 +34,6 @@ namespace FinAssist.DAL.MemoryBased
 
 		public Workout getWorkoutByName(string workoutName)
 		{
-			//foreach (var acc in _listAccounts)
-			//	if (acc.Name == inAccName)
-			//		return acc;
-
 			var workout = (from l in _listWorkouts where l.WorkoutName == workoutName select l).First();
 
 			if (workout != null)
@@ -58,15 +57,18 @@ namespace FinAssist.DAL.MemoryBased
 			return workouts;
 		}
 
+        public List<HistoryWorkout> getAllHistoryWorkouts()
+        {
+            List<HistoryWorkout> historyWorkouts = _listHistoryWorkouts.OfType<HistoryWorkout>().ToList();
+            //_nextId = workouts.Count + 1;
+            return historyWorkouts;
+        }
+
+
         public List<int> getAllWorkoutsIds()
 		{
 			return _listWorkouts.Select(x => x.Id).ToList();
 		}
-
-		//public List<int> getAllAccountsOfType(AccountTypesList.AccountTypesEnum inType)
-		//{
-		//	return (from acc in _listExercises where AccountTypesList.isAccountOfType(acc, inType) == true select acc.Id).ToList();
-		//}
 
 		public int getNewId()
 		{
@@ -76,22 +78,6 @@ namespace FinAssist.DAL.MemoryBased
 
 			return nextID;
 		}
-
-		//public bool doesAccountExists(string inAccName)
-		//{
-		//	var acc = (from l in _listExercises where l.Name == inAccName select l).First();
-
-		//	return acc != null;
-		//}
-
-		//public ExpenditureSinkAccount getExpSinkAccount()
-		//{
-		//	foreach (var acc in _listExercises)
-		//		if (acc is ExpenditureSinkAccount)
-		//			return acc as ExpenditureSinkAccount;
-
-		//	throw new NoExpSinkAccountException();
-		//}
 
 		public void addWorkout(Workout workout)
 		{
@@ -122,7 +108,13 @@ namespace FinAssist.DAL.MemoryBased
 
         public void startWorkout(Workout workout)
         {
-            //_listWorkouts.RemoveAll(x => x.Id == workout.Id);
+            
+        }
+
+        public void finishWorkout(Workout workout, string duration, string date, int caloriesBurned, List<int> reps)
+        {
+            HistoryWorkout historyWorkout = new HistoryWorkout(workout.Id, workout.WorkoutName, workout.Exercises, workout.SetsPerExercise, duration, date, caloriesBurned, reps);
+            _listHistoryWorkouts.Add(historyWorkout);
         }
     }
 }

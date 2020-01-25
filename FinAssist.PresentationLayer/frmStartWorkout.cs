@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,40 +13,56 @@ using FinAssist.Model;
 namespace FinAssist.PresentationLayer
 {
 	public partial class frmStartWorkout : Form, IStartWorkoutView
-	{		 
-		public frmStartWorkout()
+	{
+        private IMainController _mainController = null;
+        private Workout _workout = null;
+        private int caloriesBurned;
+        private Stopwatch stopWatch = new Stopwatch();
+        private Dictionary<string, List<int>> setsAndReps = new Dictionary<string, List<int>>();
+        private List<TextBox> repsInputs = new List<TextBox>();
+
+        public frmStartWorkout()
 		{
 			InitializeComponent();
 		}
 
 		private void frmStartWorkout_Load(object sender, EventArgs e)
 		{
+            stopWatch.Start();
+        }
 
-		}
-
-        public void ShowWorkoutSession(Workout workout)
+        public void ShowWorkoutSession(IMainController mainController, Workout workout)
         {
-            //labelExerciseDescription.Text = exercise.Description;
-            //var photoName = exercise.PhotoAbbv;
-            //switch (photoName)
-            //{
-            //    case "bench_press":
-            //        pictureBoxExercise.Image = Properties.Resources.bench_press;
-            //        break;
-            //    case "military_press":
-            //        pictureBoxExercise.Image = Properties.Resources.military_press;
-            //        break;
-            //    case "deadlift":
-            //        pictureBoxExercise.Image = Properties.Resources.deadlift;
-            //        break;
-            //    case "squat":
-            //        pictureBoxExercise.Image = Properties.Resources.squat;
-            //        break;
-            //}
-            //this.Text = exercise.ExerciseName;
+            _workout = workout;
+            _mainController = mainController;
+            var numberOfExercises = workout.Exercises.Count; 
+
+            for (int i = 0; i < numberOfExercises; i++)
+            {
+                setsAndReps.Add(workout.Exercises[i].ExerciseName, new List<int>());
+                var numberOfSets = workout.SetsPerExercise;
+
+                for (int j = 1; j <= numberOfSets; j++)
+                {
+                    Label label = new Label();
+                    label.AutoSize = true;
+                    label.Text = workout.Exercises[i].ExerciseName +  " set " + j + ":";
+                    label.Left = 10;
+                    label.Top = (j) * 20 + (i) * 120 + 3;
+
+                    TextBox textBox = new TextBox();
+                    textBox.Left = 110;
+                    textBox.Width = 35;
+                    textBox.Height = 20;
+                    textBox.Top = (j) * 20 + (i) * 120;
+
+                    this.Controls.Add(label);
+                    this.Controls.Add(textBox);
+                    repsInputs.Add(textBox);
+                }
+            }
+
             this.Show();
-
-
         }
 
         //public string WorkoutName => txtSetsPerExercise.Text;
@@ -66,7 +83,30 @@ namespace FinAssist.PresentationLayer
 
         private void btnFinishWorkout_Click(object sender, EventArgs e)
         {
+            List<int> reps = new List<int>();
+            foreach (var repsInput in repsInputs)
+            {
+                if (String.IsNullOrEmpty(repsInput.Text) || repsInput.Text.StartsWith("-"))
+                {
+                    repsInput.Text = "0";
+                }
+                try
+                {
+                    reps.Add(Int32.Parse(repsInput.Text));
+                }
+                catch (Exception)
+                {
+                    repsInput.Text = "0";
+                    reps.Add(Int32.Parse(repsInput.Text));
+                }
+            }
+            stopWatch.Stop();
+            TimeSpan timeElapsed = stopWatch.Elapsed;
+            string duration = String.Format("{0:00}:{1:00}:{2:00}", timeElapsed.Hours, timeElapsed.Minutes, timeElapsed.Seconds);
+            caloriesBurned = timeElapsed.Seconds * 2;
 
+            _mainController.FinishWorkout(_workout, duration, DateTime.Now.ToString("dd/MM/yyyy"), caloriesBurned, reps);
+            this.Close();
         }
     }
 }

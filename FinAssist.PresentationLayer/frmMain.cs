@@ -52,7 +52,7 @@ namespace FinAssist.PresentationLayer
 
         private void historyButton_Click(object sender, EventArgs e)
         {
-            //_controller.ShowExercises();
+            _controller.ShowHistoryWorkouts();
         }
 
         private void exercisesButton_Click(object sender, EventArgs e)

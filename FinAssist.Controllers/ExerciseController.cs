@@ -13,35 +13,6 @@ namespace FinAssist.Controllers
 {
     public class ExerciseController
     {
-        //public void AddNewAccount(IAddNewAccountView inForm, IAccountRepository accountRepository)
-        //{
-        //	if (inForm.ShowViewModal() == true)
-        //	{
-        //		try
-        //		{
-        //			string Name = inForm.AccountName;
-        //			string AccType = inForm.AccountType;
-        //			float Balance = inForm.InitialBalance;
-
-        //			int ID = accountRepository.getNewID();
-
-        //			Account newAccount = AccountFactory.CreateAccount(ID, Name, AccType, Balance);
-
-        //			accountRepository.addAccount(newAccount);
-        //		}
-        //		catch (Exception ex)
-        //		{
-        //			MessageBox.Show("EXCEPTION: " + ex.Message);
-        //			throw;
-        //		}
-        //	}
-        //}
-
-        //public void EditAccount(IEditAccountView inForm, string accountName, IAccountRepository inRepo)
-        //{
-
-        //}
-
         public void ViewExercises(IShowExercisesListView form, IExerciseRepository exerciseRepository, IMainController mainController)
         {
             // dohvati sve accounte i proslijedi ih View-u
