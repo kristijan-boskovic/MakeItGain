@@ -46,9 +46,10 @@
             // 
             // txtHistoryWorkoutDetails
             // 
+            this.txtHistoryWorkoutDetails.AutoSize = true;
             this.txtHistoryWorkoutDetails.Location = new System.Drawing.Point(12, 9);
             this.txtHistoryWorkoutDetails.Name = "txtHistoryWorkoutDetails";
-            this.txtHistoryWorkoutDetails.Size = new System.Drawing.Size(203, 197);
+            this.txtHistoryWorkoutDetails.Size = new System.Drawing.Size(35, 13);
             this.txtHistoryWorkoutDetails.TabIndex = 3;
             this.txtHistoryWorkoutDetails.Text = "label1";
             this.txtHistoryWorkoutDetails.Click += new System.EventHandler(this.labelhistoryWorkoutDescription_Click);
@@ -66,6 +67,7 @@
             this.Text = "View workout details";
             this.Load += new System.EventHandler(this.frmViewHistoryWorkoutDetails_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

@@ -37,7 +37,7 @@ namespace FinAssist.Model
                     counter++;
                     if (counter > SetsPerExercise)
                     {
-                        counter = 0;
+                        counter = 1;
                         i++;
                         sb.Append("\r\n" + Exercises[i].ExerciseName + " (reps per set): ");
                         if (i > Exercises.Count)
