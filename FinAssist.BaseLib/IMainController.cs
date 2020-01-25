@@ -19,5 +19,6 @@ namespace FinAssist.BaseLib
         void StartWorkout(Workout workout);
         void FinishWorkout(Workout workout, string duration, string date, int caloriesBurned, List<int> reps);
         void ViewHistoryWorkoutDetails(HistoryWorkout historyWorkout);
+        void AddWeightMeasure();
     }
 }

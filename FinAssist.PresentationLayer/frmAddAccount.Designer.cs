@@ -73,7 +73,7 @@
             // 
             this.button1.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.button1.Location = new System.Drawing.Point(26, 135);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(86, 29);
             this.button1.TabIndex = 3;
@@ -84,7 +84,7 @@
             // 
             this.button2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.button2.Location = new System.Drawing.Point(132, 135);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(78, 29);
             this.button2.TabIndex = 4;
@@ -94,7 +94,7 @@
             // txtAccountName
             // 
             this.txtAccountName.Location = new System.Drawing.Point(105, 18);
-            this.txtAccountName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtAccountName.Margin = new System.Windows.Forms.Padding(2);
             this.txtAccountName.Name = "txtAccountName";
             this.txtAccountName.Size = new System.Drawing.Size(114, 20);
             this.txtAccountName.TabIndex = 0;
@@ -103,7 +103,7 @@
             // 
             this.cmbAccountType.FormattingEnabled = true;
             this.cmbAccountType.Location = new System.Drawing.Point(105, 53);
-            this.cmbAccountType.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbAccountType.Margin = new System.Windows.Forms.Padding(2);
             this.cmbAccountType.Name = "cmbAccountType";
             this.cmbAccountType.Size = new System.Drawing.Size(114, 21);
             this.cmbAccountType.TabIndex = 1;
@@ -111,7 +111,7 @@
             // txtInitialBalance
             // 
             this.txtInitialBalance.Location = new System.Drawing.Point(105, 92);
-            this.txtInitialBalance.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtInitialBalance.Margin = new System.Windows.Forms.Padding(2);
             this.txtInitialBalance.Name = "txtInitialBalance";
             this.txtInitialBalance.Size = new System.Drawing.Size(92, 20);
             this.txtInitialBalance.TabIndex = 2;
@@ -130,6 +130,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(236, 175);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtInitialBalance);
@@ -141,7 +143,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmAddAccount";
             this.Text = "Add new account";
             this.Load += new System.EventHandler(this.frmAddAccount_Load);

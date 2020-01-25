@@ -55,23 +55,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BodyControl.cs">
-      <SubType>UserControl</SubType>
+    <Compile Include="frmAddWeightMeasure.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BodyControl.Designer.cs">
-      <DependentUpon>BodyControl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ExercisesControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="ExercisesControl.Designer.cs">
-      <DependentUpon>ExercisesControl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="BurgerControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="BurgerControl.Designer.cs">
-      <DependentUpon>BurgerControl.cs</DependentUpon>
+    <Compile Include="frmAddWeightMeasure.Designer.cs">
+      <DependentUpon>frmAddWeightMeasure.cs</DependentUpon>
     </Compile>
     <Compile Include="frmStartWorkout.cs">
       <SubType>Form</SubType>
@@ -115,6 +103,12 @@
     <Compile Include="frmViewHistoryWorkouts.Designer.cs">
       <DependentUpon>frmViewHistoryWorkouts.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmViewWeightMeasures.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmViewWeightMeasures.Designer.cs">
+      <DependentUpon>frmViewWeightMeasures.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmViewWorkouts.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,18 +120,6 @@
     </Compile>
     <Compile Include="frmViewExercises.Designer.cs">
       <DependentUpon>frmViewExercises.cs</DependentUpon>
-    </Compile>
-    <Compile Include="HistoryControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="HistoryControl.Designer.cs">
-      <DependentUpon>HistoryControl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="MainForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MainForm.Designer.cs">
-      <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="frmAddAccount.cs">
       <SubType>Form</SubType>
@@ -199,42 +181,18 @@
     <Compile Include="frmViewTransactions.Designer.cs">
       <DependentUpon>frmViewTransactions.cs</DependentUpon>
     </Compile>
-    <Compile Include="FoodControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="FoodControl.Designer.cs">
-      <DependentUpon>FoodControl.cs</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="ScheduleControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="ScheduleControl.Designer.cs">
-      <DependentUpon>ScheduleControl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="TrainerControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="TrainerControl.Designer.cs">
-      <DependentUpon>TrainerControl.cs</DependentUpon>
-    </Compile>
     <Compile Include="WindowFormsFactory.cs" />
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="BodyControl.resx">
-      <DependentUpon>BodyControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ExercisesControl.resx">
-      <DependentUpon>ExercisesControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BurgerControl.resx">
-      <DependentUpon>BurgerControl.cs</DependentUpon>
+    <EmbeddedResource Include="frmAddWeightMeasure.resx">
+      <DependentUpon>frmAddWeightMeasure.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmStartWorkout.resx">
       <DependentUpon>frmStartWorkout.cs</DependentUpon>
@@ -257,17 +215,14 @@
     <EmbeddedResource Include="frmViewHistoryWorkouts.resx">
       <DependentUpon>frmViewHistoryWorkouts.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmViewWeightMeasures.resx">
+      <DependentUpon>frmViewWeightMeasures.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmViewWorkouts.resx">
       <DependentUpon>frmViewWorkouts.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmViewExercises.resx">
       <DependentUpon>frmViewExercises.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="HistoryControl.resx">
-      <DependentUpon>HistoryControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MainForm.resx">
-      <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAddAccount.resx">
       <DependentUpon>frmAddAccount.cs</DependentUpon>
@@ -296,19 +251,10 @@
     <EmbeddedResource Include="frmViewTransactions.resx">
       <DependentUpon>frmViewTransactions.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FoodControl.resx">
-      <DependentUpon>FoodControl.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ScheduleControl.resx">
-      <DependentUpon>ScheduleControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TrainerControl.resx">
-      <DependentUpon>TrainerControl.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -354,6 +300,33 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\squat.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\deadlift.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\military_press.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bench_press.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\squat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\squat2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plank1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rope_pushdown1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dumbbell_curl1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pullup1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

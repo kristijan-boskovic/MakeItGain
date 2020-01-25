@@ -34,16 +34,28 @@ namespace FinAssist.PresentationLayer
             switch (photoName)
             {
                 case "bench_press":
-                    pictureBoxExercise.Image = Properties.Resources.bench_press;
+                    pictureBoxExercise.Image = Properties.Resources.bench_press1;
                     break;
                 case "military_press":
-                    pictureBoxExercise.Image = Properties.Resources.military_press;
+                    pictureBoxExercise.Image = Properties.Resources.military_press1;
                     break;
                 case "deadlift":
-                    pictureBoxExercise.Image = Properties.Resources.deadlift;
+                    pictureBoxExercise.Image = Properties.Resources.deadlift1;
                     break;
                 case "squat":
-                    pictureBoxExercise.Image = Properties.Resources.squat;
+                    pictureBoxExercise.Image = Properties.Resources.squat2;
+                    break;
+                case "dumbbell_curl":
+                    pictureBoxExercise.Image = Properties.Resources.dumbbell_curl1;
+                    break;
+                case "rope_pushdown":
+                    pictureBoxExercise.Image = Properties.Resources.rope_pushdown1;
+                    break;
+                case "pullup":
+                    pictureBoxExercise.Image = Properties.Resources.pullup1;
+                    break;
+                case "plank":
+                    pictureBoxExercise.Image = Properties.Resources.plank1;
                     break;
             }
             this.Text = exercise.ExerciseName;

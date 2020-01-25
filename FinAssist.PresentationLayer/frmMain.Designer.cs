@@ -31,13 +31,13 @@
             this.btnExercises = new System.Windows.Forms.Button();
             this.btnWorkouts = new System.Windows.Forms.Button();
             this.btnBody = new System.Windows.Forms.Button();
-            this.btnTrainer = new System.Windows.Forms.Button();
             this.btnHistory = new System.Windows.Forms.Button();
+            this.labelTitle = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnExercises
             // 
-            this.btnExercises.Location = new System.Drawing.Point(98, 177);
+            this.btnExercises.Location = new System.Drawing.Point(112, 221);
             this.btnExercises.Name = "btnExercises";
             this.btnExercises.Size = new System.Drawing.Size(158, 54);
             this.btnExercises.TabIndex = 1;
@@ -47,7 +47,7 @@
             // 
             // btnWorkouts
             // 
-            this.btnWorkouts.Location = new System.Drawing.Point(98, 82);
+            this.btnWorkouts.Location = new System.Drawing.Point(112, 126);
             this.btnWorkouts.Name = "btnWorkouts";
             this.btnWorkouts.Size = new System.Drawing.Size(158, 54);
             this.btnWorkouts.TabIndex = 2;
@@ -57,7 +57,7 @@
             // 
             // btnBody
             // 
-            this.btnBody.Location = new System.Drawing.Point(216, 266);
+            this.btnBody.Location = new System.Drawing.Point(336, 221);
             this.btnBody.Name = "btnBody";
             this.btnBody.Size = new System.Drawing.Size(158, 54);
             this.btnBody.TabIndex = 3;
@@ -65,19 +65,9 @@
             this.btnBody.UseVisualStyleBackColor = true;
             this.btnBody.Click += new System.EventHandler(this.bodyButton_Click);
             // 
-            // btnTrainer
-            // 
-            this.btnTrainer.Location = new System.Drawing.Point(335, 177);
-            this.btnTrainer.Name = "btnTrainer";
-            this.btnTrainer.Size = new System.Drawing.Size(158, 54);
-            this.btnTrainer.TabIndex = 4;
-            this.btnTrainer.Text = "Trainer";
-            this.btnTrainer.UseVisualStyleBackColor = true;
-            this.btnTrainer.Click += new System.EventHandler(this.trainerButton_Click);
-            // 
             // btnHistory
             // 
-            this.btnHistory.Location = new System.Drawing.Point(335, 82);
+            this.btnHistory.Location = new System.Drawing.Point(336, 126);
             this.btnHistory.Name = "btnHistory";
             this.btnHistory.Size = new System.Drawing.Size(158, 54);
             this.btnHistory.TabIndex = 5;
@@ -85,13 +75,24 @@
             this.btnHistory.UseVisualStyleBackColor = true;
             this.btnHistory.Click += new System.EventHandler(this.historyButton_Click);
             // 
+            // labelTitle
+            // 
+            this.labelTitle.AutoSize = true;
+            this.labelTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.labelTitle.Location = new System.Drawing.Point(179, 25);
+            this.labelTitle.Name = "labelTitle";
+            this.labelTitle.Size = new System.Drawing.Size(252, 25);
+            this.labelTitle.TabIndex = 6;
+            this.labelTitle.Text = "Welcome to Make It Gain";
+            this.labelTitle.Click += new System.EventHandler(this.labelTitle_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(629, 415);
+            this.Controls.Add(this.labelTitle);
             this.Controls.Add(this.btnHistory);
-            this.Controls.Add(this.btnTrainer);
             this.Controls.Add(this.btnBody);
             this.Controls.Add(this.btnWorkouts);
             this.Controls.Add(this.btnExercises);
@@ -101,6 +102,7 @@
             this.Text = "Make It Gain";
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -108,7 +110,7 @@
         private System.Windows.Forms.Button btnExercises;
         private System.Windows.Forms.Button btnWorkouts;
         private System.Windows.Forms.Button btnBody;
-        private System.Windows.Forms.Button btnTrainer;
         private System.Windows.Forms.Button btnHistory;
+        private System.Windows.Forms.Label labelTitle;
     }
 }

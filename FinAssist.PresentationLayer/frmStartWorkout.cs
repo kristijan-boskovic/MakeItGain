@@ -51,7 +51,7 @@ namespace FinAssist.PresentationLayer
                     label.Top = (j) * 20 + (i) * 120 + 3;
 
                     TextBox textBox = new TextBox();
-                    textBox.Left = 110;
+                    textBox.Left = 130;
                     textBox.Width = 35;
                     textBox.Height = 20;
                     textBox.Top = (j) * 20 + (i) * 120;
@@ -103,7 +103,7 @@ namespace FinAssist.PresentationLayer
             stopWatch.Stop();
             TimeSpan timeElapsed = stopWatch.Elapsed;
             string duration = String.Format("{0:00}:{1:00}:{2:00}", timeElapsed.Hours, timeElapsed.Minutes, timeElapsed.Seconds);
-            caloriesBurned = timeElapsed.Seconds * 2;
+            caloriesBurned = (int) Math.Round(timeElapsed.Seconds * 0.34);
 
             _mainController.FinishWorkout(_workout, duration, DateTime.Now.ToString("dd/MM/yyyy"), caloriesBurned, reps);
             this.Close();

@@ -42,6 +42,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Exceptions.cs" />
+    <Compile Include="IAddNewWeightMeasureView.cs" />
+    <Compile Include="IShowWeightMeasuresListView.cs" />
     <Compile Include="IShowHistoryWorkoutDetails.cs" />
     <Compile Include="IShowHistoryWorkoutsListView.cs" />
     <Compile Include="IStartWorkoutView.cs" />

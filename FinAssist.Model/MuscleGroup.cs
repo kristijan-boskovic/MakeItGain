@@ -12,6 +12,8 @@ namespace FinAssist.Model
         BACK,
         LEGS,
         SHOULDERS,
-        ABS
+        ABS,
+        BICEPS,
+        TRICEPS
     }
 }

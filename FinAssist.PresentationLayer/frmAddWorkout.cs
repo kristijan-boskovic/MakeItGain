@@ -62,5 +62,10 @@ namespace FinAssist.PresentationLayer
         {
 
         }
+
+        private void labelExercises_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

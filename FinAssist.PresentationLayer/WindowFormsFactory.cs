@@ -81,5 +81,19 @@ namespace FinAssist.PresentationLayer
 
             return newFrm;
         }
+
+        public IShowWeightMeasuresListView CreateShowWeightMeasuresListView()
+        {
+            var newFrm = new frmViewWeightMeasures();
+
+            return newFrm;
+        }
+
+        public IAddNewWeightMeasureView CreateAddNewWeightMeasureView()
+        {
+            var newFrm = new frmAddWeightMeasure();
+
+            return newFrm;
+        }
     }
 }

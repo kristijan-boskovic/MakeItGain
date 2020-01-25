@@ -89,6 +89,7 @@
             this.labelExercises.Size = new System.Drawing.Size(55, 13);
             this.labelExercises.TabIndex = 1;
             this.labelExercises.Text = "Exercises:";
+            this.labelExercises.Click += new System.EventHandler(this.labelExercises_Click);
             // 
             // chkdListBoxExercises
             // 
@@ -97,8 +98,12 @@
             "Bench press",
             "Military press",
             "Squat",
-            "Deadlift"});
-            this.chkdListBoxExercises.Location = new System.Drawing.Point(106, 55);
+            "Deadlift",
+            "Dumbbell curl",
+            "Rope pushdown",
+            "Pullup",
+            "Plank"});
+            this.chkdListBoxExercises.Location = new System.Drawing.Point(105, 54);
             this.chkdListBoxExercises.Name = "chkdListBoxExercises";
             this.chkdListBoxExercises.Size = new System.Drawing.Size(144, 64);
             this.chkdListBoxExercises.TabIndex = 5;
@@ -126,6 +131,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(268, 199);
             this.Controls.Add(this.txtSetsPerExercise);
             this.Controls.Add(this.labelSetsPerExercise);

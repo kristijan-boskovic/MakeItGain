@@ -97,7 +97,11 @@
             "Bench press",
             "Military press",
             "Squat",
-            "Deadlift"});
+            "Deadlift",
+            "Dumbbell curl",
+            "Rope pushdown",
+            "Pullup",
+            "Plank"});
             this.chkdListBoxExercises.Location = new System.Drawing.Point(106, 55);
             this.chkdListBoxExercises.Name = "chkdListBoxExercises";
             this.chkdListBoxExercises.Size = new System.Drawing.Size(144, 64);
@@ -125,6 +129,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(268, 199);
             this.Controls.Add(this.txtSetsPerExercise);
             this.Controls.Add(this.labelSetsPerExercise);

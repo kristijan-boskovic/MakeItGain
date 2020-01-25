@@ -68,7 +68,12 @@ namespace FinAssist.PresentationLayer
 
         private void bodyButton_Click(object sender, EventArgs e)
         {
-            //_controller.ShowExercises();
+            _controller.ShowWeightMeasures();
+        }
+
+        private void labelTitle_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

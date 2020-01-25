@@ -11,22 +11,16 @@ namespace FinAssist.Controllers
 		private bool _defaultModelLoaded = false;
 
 		private readonly IWindowFormsFactory	_formsFactory = null;
-		//private readonly IAccountRepository		_accountRepository = null;
         private readonly IExerciseRepository _exerciseRepository = null;
         private readonly IWorkoutRepository _workoutRepository = null;
-        //private readonly ITransactionRepository _transRepo = null;
+        private readonly IWeightMeasureRepository _weightMeasureRepository = null;
 
-        //public MainController(IWindowFormsFactory inFormFactory, IAccountRepository inAccountRepo, ITransactionRepository inTransRepo)
-        //{
-        //	_formsFactory = inFormFactory;
-        //	_accountRepository = inAccountRepo;
-        //    _transRepo = inTransRepo;
-        //}
-        public MainController(IWindowFormsFactory inFormFactory, IExerciseRepository exerciseRepository, IWorkoutRepository workoutRepository)
+        public MainController(IWindowFormsFactory inFormFactory, IExerciseRepository exerciseRepository, IWorkoutRepository workoutRepository, IWeightMeasureRepository weightMeasureRepository)
         {
             _formsFactory = inFormFactory;
             _exerciseRepository = exerciseRepository;
             _workoutRepository = workoutRepository;
+            _weightMeasureRepository = weightMeasureRepository;
         }
 
         public void LoadDefaultModel()
@@ -41,37 +35,32 @@ namespace FinAssist.Controllers
                 Exercise militaryPress = new Exercise(2, "Military press", MuscleGroup.SHOULDERS, "Stand up with a barbell resting on your upper chest. Press the weight straight up above your head, and then lower it back down.", "military_press");
                 Exercise squat = new Exercise(3, "Squat", MuscleGroup.LEGS, "Stand up with a barbell resting on your upper back. Squat down until your thighs are parallel to the floor and then stand back up.", "squat");
                 Exercise deadlift = new Exercise(4, "Deadlift", MuscleGroup.LEGS, "Stand up with a barbell resting on the floor in front of you. Squat down and grab onto the bar outside your thighs. Arch your back and then simply stand up.", "deadlift");
+                Exercise dumbbellCurl = new Exercise(5, "Dumbbell curl", MuscleGroup.BICEPS, "Stand up with one dumbbell in each hand. Curl the dumbbells up to shoulder level and then lower them back down.", "dumbbell_curl");
+                Exercise ropePushDown = new Exercise(6, "Rope pushdown", MuscleGroup.TRICEPS, "Stand up in a cable machine. Grab the rope with both hands with your elbows tucked in at your sides. Push the rope down then bring it back up.", "rope_pushdown");
+                Exercise pullUp = new Exercise(7, "Pullup", MuscleGroup.BACK, "Hang freely from a pullup bar with a little wider than shoulder width grip. Pull yourself up until your chin is above the bar, then lower yourself back down.", "pullup");
+                Exercise plank = new Exercise(8, "Plank", MuscleGroup.ABS, "Lie flat on the ground and put your elbows down. Stsand on your elbows and toes, keeping back and abs tight. Hold the position as long as you can.", "plank");
 
                 _exerciseRepository.addExercise(benchPress);
                 _exerciseRepository.addExercise(militaryPress);
                 _exerciseRepository.addExercise(squat);
                 _exerciseRepository.addExercise(deadlift);
+                _exerciseRepository.addExercise(dumbbellCurl);
+                _exerciseRepository.addExercise(ropePushDown);
+                _exerciseRepository.addExercise(pullUp);
+                _exerciseRepository.addExercise(plank);
 
                 _workoutRepository.addWorkout(new Workout(1, "Upper body", new List<Exercise>() { benchPress, militaryPress }, 4));
                 _workoutRepository.addWorkout(new Workout(2, "Lower body", new List<Exercise>() { squat, deadlift }, 5));
-                _workoutRepository.addWorkout(new Workout(2, "Full body", new List<Exercise>() { benchPress, militaryPress, squat, deadlift }, 5));
+                _workoutRepository.addWorkout(new Workout(3, "Full body", new List<Exercise>() { benchPress, militaryPress, squat, deadlift }, 5));
+
+                _workoutRepository.finishWorkout(new Workout(1, "Upper body", new List<Exercise>() { benchPress, militaryPress }, 4), "00:44:23", "20.01.2020", 342, new List<int>() { 10, 10, 9, 9, 10, 10, 10, 9 });
+
+                _weightMeasureRepository.addWeightMeasure(new WeightMeasure(1, 103.5, 90.0, "10.01.2020"));
+                _weightMeasureRepository.addWeightMeasure(new WeightMeasure(2, 102.0, 90.0, "20.01.2020"));
 
                 _defaultModelLoaded = true;
 			}
 		}
-
-		//public void AddAccount()
-		//{
-		//	var accController = new AccountController();
-
-		//	var newFrm = _formsFactory.CreateAddNewAccountView(AccountTypesList.getAccountTypesList());
-
-		//	accController.AddNewAccount(newFrm, _accountRepository);
-		//}
-
-		//public void EditAccount(string accountName)
-		//{
-		//	var accController = new AccountController();
-
-		//	var newFrm = _formsFactory.CreateEditAccountView();
-
-		//	accController.EditAccount(newFrm, accountName, _accountRepository);
-		//}
 
 		public void ShowExercises()
 		{
@@ -141,6 +130,20 @@ namespace FinAssist.Controllers
             var workoutController = new WorkoutController();
             var newFrm = _formsFactory.CreateShowHistoryWorkoutDetails();
             workoutController.ViewHistoryWorkoutDetails(newFrm, historyWorkout);
+        }
+
+        public void ShowWeightMeasures()
+        {
+            var weightMeasureController = new WeightMeasureController();
+            var newFrm = _formsFactory.CreateShowWeightMeasuresListView();
+            weightMeasureController.ViewWeightMeasures(newFrm, _weightMeasureRepository, this);
+        }
+
+        public void AddWeightMeasure()
+        {
+            var weightMeasureController = new WeightMeasureController();
+            var newFrm = _formsFactory.CreateAddNewWeightMeasureView();
+            weightMeasureController.AddNewWeightMeasure(newFrm, _weightMeasureRepository);
         }
     }
 }

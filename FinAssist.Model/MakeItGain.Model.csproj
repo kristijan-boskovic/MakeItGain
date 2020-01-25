@@ -43,6 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Repositories\IWeightMeasureRepository.cs" />
+    <Compile Include="WeightMeasure.cs" />
     <Compile Include="HistoryWorkout.cs" />
     <Compile Include="Workout.cs" />
     <Compile Include="Repositories\IWorkoutRepository.cs" />

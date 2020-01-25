@@ -20,5 +20,7 @@ namespace FinAssist.BaseLib
         IStartWorkoutView CreateStartWorkoutView();
         IShowHistoryWorkoutsListView CreateShowHistoryWorkoutsListView();
         IShowHistoryWorkoutDetails CreateShowHistoryWorkoutDetails();
+        IShowWeightMeasuresListView CreateShowWeightMeasuresListView();
+        IAddNewWeightMeasureView CreateAddNewWeightMeasureView();
     }
 }

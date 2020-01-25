@@ -24,7 +24,7 @@ namespace FinAssist.AppStarter
 
             // a za Account repozitorij koristimo Singleton
             //MainFormController mainController = new MainFormController(_formsFactory, AccountRepository.getInstance(), _transRepo);
-            MainController mainController = new MainController(_formsFactory, ExerciseRepository.getInstance(), WorkoutRepository.getInstance());
+            MainController mainController = new MainController(_formsFactory, ExerciseRepository.getInstance(), WorkoutRepository.getInstance(), WeightMeasureRepository.getInstance());
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
