@@ -20,7 +20,7 @@ namespace FinAssist.Controllers
 
             // zašto proslijeđujemo i mainController?
             // zato što na ovom View-u imamo "Add new account" i "Edit new account" funkcionalnost!
-            form.ShowWorkouts(mainController, workouts);
+            form.ShowWorkouts(mainController, workouts, workoutRepository);
         }
 
         public void ViewHistoryWorkoutDetails(IShowHistoryWorkoutDetails form, HistoryWorkout historyWorkout)

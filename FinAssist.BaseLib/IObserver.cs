@@ -7,7 +7,6 @@ namespace FinAssist.BaseLib
 {
     public interface IObserver
     {
-        void Update();
+        void UpdateObserved();
     }
-
 }

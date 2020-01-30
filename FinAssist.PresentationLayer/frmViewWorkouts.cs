@@ -15,21 +15,23 @@ using FinAssist.Model.Repositories;
 
 namespace FinAssist.PresentationLayer
 {
-    public partial class frmViewWorkouts : Form, IShowWorkoutsListView
+    public partial class frmViewWorkouts : Form, IShowWorkoutsListView, IObserver
     {
         //private List<DisplayExercise> _displayExercises = null;
         private List<Workout> _workouts = null;
         private IMainController _mainController = null;
+        private IWorkoutRepository _workoutRepository = null;
 
-		public frmViewWorkouts()
+        public frmViewWorkouts()
         {
             InitializeComponent();
         }
 
-        public void ShowWorkouts(IMainController mainController, List<Workout> workouts)
+        public void ShowWorkouts(IMainController mainController, List<Workout> workouts, IWorkoutRepository workoutRepository)
         {
             _mainController = mainController;
             _workouts = workouts;
+            _workoutRepository = workoutRepository;
 
             UpdateList();
 
@@ -50,6 +52,8 @@ namespace FinAssist.PresentationLayer
 
         public void UpdateList()
         {
+            listWorkouts.Items.Clear();
+
             for (int i = 0; i < _workouts.Count(); i++)
             {
                 Workout workout = _workouts[i];
@@ -103,6 +107,7 @@ namespace FinAssist.PresentationLayer
                     var index = listWorkouts.SelectedItems[0].Index;
                     var chosenWorkout = _workouts[index];
                     _mainController.DeleteWorkout(chosenWorkout);
+                    UpdateObserved();
                 }
             }
             catch (Exception)
@@ -121,6 +126,7 @@ namespace FinAssist.PresentationLayer
                     var index = listWorkouts.SelectedItems[0].Index;
                     var chosenWorkout = _workouts[index];
                     _mainController.EditWorkout(chosenWorkout);
+                    UpdateObserved();
                 }
             }
             catch (Exception)
@@ -151,6 +157,12 @@ namespace FinAssist.PresentationLayer
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        public void UpdateObserved()
+        {
+            _workouts = _workoutRepository.getAllWorkouts();
+            UpdateList();
         }
     }
 }

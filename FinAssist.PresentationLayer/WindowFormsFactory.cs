@@ -8,7 +8,7 @@ using FinAssist.Model.Repositories;
 
 namespace FinAssist.PresentationLayer
 {
-	public class WindowFormsFactory : IWindowFormsFactory
+	public class WindowFormsFactory : Subject, IWindowFormsFactory
 	{
 		public IAddNewAccountView CreateAddNewAccountView(List<string> inAccType ) {
 			var newFrm = new frmAddAccount(inAccType);
@@ -43,6 +43,7 @@ namespace FinAssist.PresentationLayer
         public IShowWorkoutsListView CreateShowWorkoutsListView()
         {
             var newFrm = new frmViewWorkouts();
+            Attach(newFrm);
 
             return newFrm;
         }

@@ -5,11 +5,12 @@ using System.Text;
 using System.Threading.Tasks;
 
 using FinAssist.Model;
+using FinAssist.Model.Repositories;
 
 namespace FinAssist.BaseLib
 {
-	public interface IShowWorkoutsListView
+	public interface IShowWorkoutsListView : IObserver
 	{
-		void ShowWorkouts(IMainController mainController, List<Workout> workoutList);
+		void ShowWorkouts(IMainController mainController, List<Workout> workoutList, IWorkoutRepository workoutRepository);
 	}
 }

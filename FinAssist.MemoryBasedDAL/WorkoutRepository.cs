@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-
+using FinAssist.BaseLib;
 using FinAssist.Model;
 using FinAssist.Model.Repositories;
 
 namespace FinAssist.DAL.MemoryBased
 {
 	// Ilustracija implementacije In-Memory repozitorija korištenjem Singleton patterna
-	public class WorkoutRepository : IWorkoutRepository
+	public class WorkoutRepository : Subject, IWorkoutRepository
     {
 		private static int _nextId = 1;
 		private static WorkoutRepository _instance;
@@ -93,6 +93,8 @@ namespace FinAssist.DAL.MemoryBased
 				workout.Id = getNewId();					// i redefinirati ga ako nije inicijaliziran
 
 			_listWorkouts.Add(workout);
+
+            NotifyObservers();
 		}
 
         public void editWorkout(Workout workout)
