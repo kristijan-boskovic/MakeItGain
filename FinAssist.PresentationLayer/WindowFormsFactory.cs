@@ -43,6 +43,8 @@ namespace FinAssist.PresentationLayer
         public IShowWorkoutsListView CreateShowWorkoutsListView()
         {
             var newFrm = new frmViewWorkouts();
+
+            _listObservers.Clear();
             Attach(newFrm);
 
             return newFrm;

@@ -7,7 +7,7 @@ namespace FinAssist.BaseLib
 {
     public abstract class Subject
     {
-        static List<IObserver> _listObservers = new List<IObserver>();
+        public static List<IObserver> _listObservers = new List<IObserver>();
 
         public void Attach(IObserver obs)
         {
