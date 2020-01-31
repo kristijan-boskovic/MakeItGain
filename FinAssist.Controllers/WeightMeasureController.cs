@@ -20,7 +20,7 @@ namespace FinAssist.Controllers
 
             // zašto proslijeđujemo i mainController?
             // zato što na ovom View-u imamo "Add new account" i "Edit new account" funkcionalnost!
-            form.ShowWeightMeasures(mainController, weightMeasures);
+            form.ShowWeightMeasures(mainController, weightMeasures, weightMeasureRepository);
         }
 
         public void AddNewWeightMeasure(IAddNewWeightMeasureView form, IWeightMeasureRepository weightMeasureRepository)

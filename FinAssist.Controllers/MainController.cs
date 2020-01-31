@@ -38,7 +38,7 @@ namespace FinAssist.Controllers
                 Exercise dumbbellCurl = new Exercise(5, "Dumbbell curl", MuscleGroup.BICEPS, "Stand up with one dumbbell in each hand. Curl the dumbbells up to shoulder level and then lower them back down.", "dumbbell_curl");
                 Exercise ropePushDown = new Exercise(6, "Rope pushdown", MuscleGroup.TRICEPS, "Stand up in a cable machine. Grab the rope with both hands with your elbows tucked in at your sides. Push the rope down then bring it back up.", "rope_pushdown");
                 Exercise pullUp = new Exercise(7, "Pullup", MuscleGroup.BACK, "Hang freely from a pullup bar with a little wider than shoulder width grip. Pull yourself up until your chin is above the bar, then lower yourself back down.", "pullup");
-                Exercise plank = new Exercise(8, "Plank", MuscleGroup.ABS, "Lie flat on the ground and put your elbows down. Stsand on your elbows and toes, keeping back and abs tight. Hold the position as long as you can.", "plank");
+                Exercise plank = new Exercise(8, "Plank", MuscleGroup.ABS, "Lie flat on the ground and put your elbows down. Stand on your elbows and toes, keeping back and abs tight. Hold the position as long as you can.", "plank");
 
                 _exerciseRepository.addExercise(benchPress);
                 _exerciseRepository.addExercise(militaryPress);
@@ -51,7 +51,7 @@ namespace FinAssist.Controllers
 
                 _workoutRepository.addWorkout(new Workout(1, "Upper body", new List<Exercise>() { benchPress, militaryPress }, 4));
                 _workoutRepository.addWorkout(new Workout(2, "Lower body", new List<Exercise>() { squat, deadlift }, 5));
-                _workoutRepository.addWorkout(new Workout(3, "Full body", new List<Exercise>() { benchPress, militaryPress, squat, deadlift }, 5));
+                _workoutRepository.addWorkout(new Workout(3, "Full body", new List<Exercise>() { benchPress, militaryPress, squat, deadlift }, 3));
 
                 _workoutRepository.finishWorkout(new Workout(1, "Upper body", new List<Exercise>() { benchPress, militaryPress }, 4), "00:44:23", "20.01.2020", 342, new List<int>() { 10, 10, 9, 9, 10, 10, 10, 9 });
 
@@ -114,7 +114,6 @@ namespace FinAssist.Controllers
         public void FinishWorkout(Workout workout, string duration, string date, int caloriesBurned, List<int> reps)
         {
             var workoutController = new WorkoutController();
-            //var newFrm = _formsFactory.CreateEditWorkoutView();
             workoutController.FinishWorkout(workout, duration, date, caloriesBurned, _workoutRepository, reps);
         }
 

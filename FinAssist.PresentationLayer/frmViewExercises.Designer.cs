@@ -33,6 +33,8 @@
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnClose = new System.Windows.Forms.Button();
             this.labelExerciseDescription = new System.Windows.Forms.Label();
+            this.cmbMuscleGroup = new System.Windows.Forms.ComboBox();
+            this.labelFilter = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // listExercises
@@ -63,7 +65,7 @@
             // btnClose
             // 
             this.btnClose.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.btnClose.Location = new System.Drawing.Point(170, 249);
+            this.btnClose.Location = new System.Drawing.Point(182, 249);
             this.btnClose.Margin = new System.Windows.Forms.Padding(2);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(109, 27);
@@ -80,12 +82,42 @@
             this.labelExerciseDescription.TabIndex = 4;
             this.labelExerciseDescription.Text = "Hint: double-click on exercise name to see exercise details.";
             // 
+            // cmbMuscleGroup
+            // 
+            this.cmbMuscleGroup.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbMuscleGroup.FormattingEnabled = true;
+            this.cmbMuscleGroup.Items.AddRange(new object[] {
+            "All",
+            "Abs",
+            "Back",
+            "Biceps",
+            "Chest",
+            "Legs",
+            "Shoulders",
+            "Triceps"});
+            this.cmbMuscleGroup.Location = new System.Drawing.Point(357, 11);
+            this.cmbMuscleGroup.Name = "cmbMuscleGroup";
+            this.cmbMuscleGroup.Size = new System.Drawing.Size(76, 21);
+            this.cmbMuscleGroup.TabIndex = 5;
+            this.cmbMuscleGroup.SelectedIndexChanged += new System.EventHandler(this.cmbMuscleGroup_SelectedIndexChanged);
+            // 
+            // labelFilter
+            // 
+            this.labelFilter.AutoSize = true;
+            this.labelFilter.Location = new System.Drawing.Point(319, 14);
+            this.labelFilter.Name = "labelFilter";
+            this.labelFilter.Size = new System.Drawing.Size(32, 13);
+            this.labelFilter.TabIndex = 6;
+            this.labelFilter.Text = "Filter:";
+            // 
             // frmViewExercises
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(487, 287);
+            this.Controls.Add(this.labelFilter);
+            this.Controls.Add(this.cmbMuscleGroup);
             this.Controls.Add(this.labelExerciseDescription);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.listExercises);
@@ -95,6 +127,7 @@
             this.Text = "Exercises";
             this.Load += new System.EventHandler(this.frmViewExercises_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -105,5 +138,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Label labelExerciseDescription;
+        private System.Windows.Forms.ComboBox cmbMuscleGroup;
+        private System.Windows.Forms.Label labelFilter;
     }
 }

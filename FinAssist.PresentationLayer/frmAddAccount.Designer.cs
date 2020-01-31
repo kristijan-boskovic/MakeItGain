@@ -107,6 +107,7 @@
             this.cmbAccountType.Name = "cmbAccountType";
             this.cmbAccountType.Size = new System.Drawing.Size(114, 21);
             this.cmbAccountType.TabIndex = 1;
+            this.cmbAccountType.SelectedIndexChanged += new System.EventHandler(this.cmbAccountType_SelectedIndexChanged);
             // 
             // txtInitialBalance
             // 

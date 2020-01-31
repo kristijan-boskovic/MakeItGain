@@ -1,13 +1,13 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-
+using FinAssist.BaseLib;
 using FinAssist.Model;
 using FinAssist.Model.Repositories;
 
 namespace FinAssist.DAL.MemoryBased
 {
 	// Ilustracija implementacije In-Memory repozitorija korištenjem Singleton patterna
-	public class WeightMeasureRepository : IWeightMeasureRepository
+	public class WeightMeasureRepository : Subject, IWeightMeasureRepository
 	{
 		private static int _nextID = 1;
 		private static WeightMeasureRepository _instance;
@@ -58,12 +58,12 @@ namespace FinAssist.DAL.MemoryBased
 
 		public void addWeightMeasure(WeightMeasure weightMeasure)
 		{
-			// što ćemo s ID-jem?
-			// provjeriti ćemo da li je neinicijaliziran ilii možda taj Id već postoji
-			if (weightMeasure.Id == WeightMeasure.UndefinedWeightMeasureId || _listWeightMeasures.Any(x => x.Id == weightMeasure.Id) )
-                weightMeasure.Id = getNewId();					// i redefinirati ga ako nije inicijaliziran
-
-			_listWeightMeasures.Add(weightMeasure);
-		}
-	}
+			if (weightMeasure.Id == WeightMeasure.UndefinedWeightMeasureId || _listWeightMeasures.Any(x => x.Id == weightMeasure.Id))
+            {
+                weightMeasure.Id = getNewId();
+            }
+            _listWeightMeasures.Add(weightMeasure);
+            NotifyObservers();
+        }
+    }
 }

@@ -65,7 +65,6 @@ namespace FinAssist.Controllers
                         var exercise = exerciseRepository.getExerciseByName(exerciseName);
                         exercises.Add(exercise);
                     }
-                    //Account newAccount = AccountFactory.CreateAccount(ID, Name, AccType, Balance);
                     Workout newWorkout = new Workout(workoutId, workoutName, exercises, setsPerExercise);
                     workoutRepository.addWorkout(newWorkout);
                 }

@@ -29,6 +29,7 @@ namespace FinAssist.PresentationLayer
 		private void frmStartWorkout_Load(object sender, EventArgs e)
 		{
             stopWatch.Start();
+            timerWorkout.Start();
         }
 
         public void ShowWorkoutSession(IMainController mainController, Workout workout)
@@ -101,12 +102,25 @@ namespace FinAssist.PresentationLayer
                 }
             }
             stopWatch.Stop();
+            timerWorkout.Stop();
             TimeSpan timeElapsed = stopWatch.Elapsed;
             string duration = String.Format("{0:00}:{1:00}:{2:00}", timeElapsed.Hours, timeElapsed.Minutes, timeElapsed.Seconds);
             caloriesBurned = (int) Math.Round(timeElapsed.Seconds * 0.34);
 
             _mainController.FinishWorkout(_workout, duration, DateTime.Now.ToString("dd/MM/yyyy"), caloriesBurned, reps);
             this.Close();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            TimeSpan timeElapsed = stopWatch.Elapsed;
+            string duration = String.Format("{0:00}:{1:00}:{2:00}", timeElapsed.Hours, timeElapsed.Minutes, timeElapsed.Seconds);
+            labelTimer.Text = duration;
+        }
+
+        private void labelTimer_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -37,6 +37,7 @@
             // 
             // btnExercises
             // 
+            this.btnExercises.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnExercises.Location = new System.Drawing.Point(112, 221);
             this.btnExercises.Name = "btnExercises";
             this.btnExercises.Size = new System.Drawing.Size(158, 54);
@@ -47,6 +48,7 @@
             // 
             // btnWorkouts
             // 
+            this.btnWorkouts.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnWorkouts.Location = new System.Drawing.Point(112, 126);
             this.btnWorkouts.Name = "btnWorkouts";
             this.btnWorkouts.Size = new System.Drawing.Size(158, 54);
@@ -57,6 +59,7 @@
             // 
             // btnBody
             // 
+            this.btnBody.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnBody.Location = new System.Drawing.Point(336, 221);
             this.btnBody.Name = "btnBody";
             this.btnBody.Size = new System.Drawing.Size(158, 54);
@@ -67,6 +70,7 @@
             // 
             // btnHistory
             // 
+            this.btnHistory.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnHistory.Location = new System.Drawing.Point(336, 126);
             this.btnHistory.Name = "btnHistory";
             this.btnHistory.Size = new System.Drawing.Size(158, 54);
@@ -78,10 +82,10 @@
             // labelTitle
             // 
             this.labelTitle.AutoSize = true;
-            this.labelTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.labelTitle.Location = new System.Drawing.Point(179, 25);
+            this.labelTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.labelTitle.Location = new System.Drawing.Point(164, 26);
             this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(252, 25);
+            this.labelTitle.Size = new System.Drawing.Size(280, 29);
             this.labelTitle.TabIndex = 6;
             this.labelTitle.Text = "Welcome to Make It Gain";
             this.labelTitle.Click += new System.EventHandler(this.labelTitle_Click);

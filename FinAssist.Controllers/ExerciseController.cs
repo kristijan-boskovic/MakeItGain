@@ -20,7 +20,7 @@ namespace FinAssist.Controllers
 
             // zašto proslijeđujemo i mainController?
             // zato što na ovom View-u imamo "Add new account" i "Edit new account" funkcionalnost!
-            form.ShowExercises(mainController, exercises);
+            form.ShowExercises(mainController, exercises, exerciseRepository);
         }
 
         public void ViewExerciseDetails(IShowExerciseDetails form, Exercise exercise)

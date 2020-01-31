@@ -15,20 +15,23 @@ using FinAssist.Model.Repositories;
 
 namespace FinAssist.PresentationLayer
 {
-    public partial class frmViewWeightMeasures : Form, IShowWeightMeasuresListView
+    public partial class frmViewWeightMeasures : Form, IShowWeightMeasuresListView, IObserver
     {
         private List<WeightMeasure> _weightMeasures = null;
         private IMainController _mainController = null;
+        private IWeightMeasureRepository _weightMeasureRepository = null;
 
-		public frmViewWeightMeasures()
+
+        public frmViewWeightMeasures()
         {
             InitializeComponent();
         }
 
-        public void ShowWeightMeasures(IMainController mainController, List<WeightMeasure> weightMeasures)
+        public void ShowWeightMeasures(IMainController mainController, List<WeightMeasure> weightMeasures, IWeightMeasureRepository weightMeasureRepository)
         {
             _mainController = mainController;
             _weightMeasures = weightMeasures;
+            _weightMeasureRepository = weightMeasureRepository;
 
             UpdateList();
 
@@ -37,6 +40,8 @@ namespace FinAssist.PresentationLayer
 
         public void UpdateList()
         {
+            listWeightMeasures.Items.Clear();
+
             for (int i = 0; i < _weightMeasures.Count(); i++)
             {
                 WeightMeasure weightMeasure = _weightMeasures[i];
@@ -77,6 +82,12 @@ namespace FinAssist.PresentationLayer
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        public void UpdateObserved()
+        {
+            _weightMeasures = _weightMeasureRepository.getAllWeightMeasures();
+            UpdateList();
         }
     }
 }

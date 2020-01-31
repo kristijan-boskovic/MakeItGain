@@ -89,6 +89,9 @@ namespace FinAssist.PresentationLayer
         {
             var newFrm = new frmViewWeightMeasures();
 
+            _listObservers.Clear();
+            Attach(newFrm);
+
             return newFrm;
         }
 

@@ -37,7 +37,7 @@
             // btnClose
             // 
             this.btnClose.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.btnClose.Location = new System.Drawing.Point(229, 340);
+            this.btnClose.Location = new System.Drawing.Point(253, 351);
             this.btnClose.Margin = new System.Windows.Forms.Padding(2);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(102, 37);
@@ -49,9 +49,9 @@
             // labelExerciseDescription
             // 
             this.labelExerciseDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.labelExerciseDescription.Location = new System.Drawing.Point(317, 12);
+            this.labelExerciseDescription.Location = new System.Drawing.Point(352, 12);
             this.labelExerciseDescription.Name = "labelExerciseDescription";
-            this.labelExerciseDescription.Size = new System.Drawing.Size(240, 250);
+            this.labelExerciseDescription.Size = new System.Drawing.Size(257, 66);
             this.labelExerciseDescription.TabIndex = 3;
             this.labelExerciseDescription.Text = "label1";
             this.labelExerciseDescription.Click += new System.EventHandler(this.exerciseDescriptionLabel_Click);
@@ -61,7 +61,7 @@
             this.pictureBoxExercise.Image = global::FinAssist.PresentationLayer.Properties.Resources.pullup1;
             this.pictureBoxExercise.Location = new System.Drawing.Point(12, 12);
             this.pictureBoxExercise.Name = "pictureBoxExercise";
-            this.pictureBoxExercise.Size = new System.Drawing.Size(299, 250);
+            this.pictureBoxExercise.Size = new System.Drawing.Size(334, 288);
             this.pictureBoxExercise.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxExercise.TabIndex = 4;
             this.pictureBoxExercise.TabStop = false;
@@ -71,7 +71,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(569, 388);
+            this.ClientSize = new System.Drawing.Size(613, 399);
             this.Controls.Add(this.pictureBoxExercise);
             this.Controls.Add(this.labelExerciseDescription);
             this.Controls.Add(this.btnClose);

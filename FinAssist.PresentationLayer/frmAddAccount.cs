@@ -58,5 +58,10 @@ namespace FinAssist.PresentationLayer
 				throw new ArgumentException();
 			}
 		}
-	}
+
+        private void cmbAccountType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+    }
 }

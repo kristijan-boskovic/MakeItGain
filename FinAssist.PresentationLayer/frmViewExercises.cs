@@ -19,16 +19,18 @@ namespace FinAssist.PresentationLayer
     {
 	    private List<Exercise> _exercises = null;
 	    private IMainController _mainController = null;
+        private IExerciseRepository _exerciseRepository = null;
 
-		public frmViewExercises()
+        public frmViewExercises()
         {
             InitializeComponent();
         }
 
-        public void ShowExercises(IMainController mainController, List<Exercise> exercises)
+        public void ShowExercises(IMainController mainController, List<Exercise> exercises, IExerciseRepository exerciseRepository)
         {
             _mainController = mainController;
             _exercises = exercises;
+            _exerciseRepository = exerciseRepository;
 
             UpdateList();
 
@@ -57,6 +59,8 @@ namespace FinAssist.PresentationLayer
 
         private void UpdateList()
         {
+            listExercises.Items.Clear();
+
             for (int i = 0; i < _exercises.Count(); i++)
             {
                 Exercise exercise = _exercises[i];
@@ -79,7 +83,23 @@ namespace FinAssist.PresentationLayer
 
         private void frmViewExercises_Load(object sender, EventArgs e)
         {
+            cmbMuscleGroup.SelectedItem = cmbMuscleGroup.Items[0];
+        }
 
+        private void cmbMuscleGroup_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var selectedMuscleGroup = cmbMuscleGroup.SelectedItem.ToString();
+
+            if (selectedMuscleGroup.Equals("All"))
+            {
+                _exercises = _exerciseRepository.getAllExercises();
+            }
+            else
+            {
+                _exercises = _exerciseRepository.getExercisesByMuscleGroup(selectedMuscleGroup.ToUpper());
+            }
+
+            UpdateList();
         }
     }
 }

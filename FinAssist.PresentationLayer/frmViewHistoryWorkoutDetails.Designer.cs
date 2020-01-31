@@ -47,9 +47,10 @@
             // txtHistoryWorkoutDetails
             // 
             this.txtHistoryWorkoutDetails.AutoSize = true;
+            this.txtHistoryWorkoutDetails.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.txtHistoryWorkoutDetails.Location = new System.Drawing.Point(12, 9);
             this.txtHistoryWorkoutDetails.Name = "txtHistoryWorkoutDetails";
-            this.txtHistoryWorkoutDetails.Size = new System.Drawing.Size(35, 13);
+            this.txtHistoryWorkoutDetails.Size = new System.Drawing.Size(41, 15);
             this.txtHistoryWorkoutDetails.TabIndex = 3;
             this.txtHistoryWorkoutDetails.Text = "label1";
             this.txtHistoryWorkoutDetails.Click += new System.EventHandler(this.labelhistoryWorkoutDescription_Click);

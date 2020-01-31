@@ -6,16 +6,15 @@ using FinAssist.Model.Repositories;
 
 namespace FinAssist.DAL.MemoryBased
 {
-	// Ilustracija implementacije In-Memory repozitorija korištenjem Singleton patterna
 	public class ExerciseRepository : IExerciseRepository
 	{
 		private static int _nextID = 1;
 		private static ExerciseRepository _instance;
-
 		private readonly List<Exercise>	_listExercises = new List<Exercise>();
 
 		private ExerciseRepository()
 		{
+
 		}
 
 		public static ExerciseRepository getInstance()
@@ -24,17 +23,13 @@ namespace FinAssist.DAL.MemoryBased
 		}
 
 
-		public int	getExerciseNum()
+		public int getExerciseNum()
 		{
 			return _listExercises.Count;
 		}
 
 		public Exercise getExerciseByName(string exerciseName)
 		{
-			//foreach (var acc in _listAccounts)
-			//	if (acc.Name == inAccName)
-			//		return acc;
-
 			var exercise = (from l in _listExercises where l.ExerciseName == exerciseName select l).First();
 
 			if (exercise != null)
@@ -51,58 +46,38 @@ namespace FinAssist.DAL.MemoryBased
 			return exercise;
 		}
 
-		public List<Exercise> getAllExercises()
-		{
-			List<Exercise> exercises = _listExercises.OfType<Exercise>().ToList();
+        public List<Exercise> getExercisesByMuscleGroup(string muscleGroup)
+        {
+            var exercises = (from l in _listExercises where l.MuscleGroup.ToString() == muscleGroup select l).ToList();
+            return exercises;
+        }
 
+        public List<Exercise> getAllExercises()
+		{
+			var exercises = _listExercises.OfType<Exercise>().ToList();
 			return exercises;
 		}
 
         public List<int> getAllExercisesIds()
 		{
-			return _listExercises.Select(x => x.Id).ToList();
-		}
+			var exercises = _listExercises.Select(x => x.Id).ToList();
+            return exercises;
+        }
 
-		//public List<int> getAllAccountsOfType(AccountTypesList.AccountTypesEnum inType)
-		//{
-		//	return (from acc in _listExercises where AccountTypesList.isAccountOfType(acc, inType) == true select acc.Id).ToList();
-		//}
-
-		public int getNewId()
+        public int getNewId()
 		{
 			int nextID = _nextID;
-
 			_nextID++;
-
 			return nextID;
 		}
 
-		//public bool doesAccountExists(string inAccName)
-		//{
-		//	var acc = (from l in _listExercises where l.Name == inAccName select l).First();
-
-		//	return acc != null;
-		//}
-
-		//public ExpenditureSinkAccount getExpSinkAccount()
-		//{
-		//	foreach (var acc in _listExercises)
-		//		if (acc is ExpenditureSinkAccount)
-		//			return acc as ExpenditureSinkAccount;
-
-		//	throw new NoExpSinkAccountException();
-		//}
-
 		public void addExercise(Exercise exercise)
 		{
-			// provjeriti da li već postoji account s tim imenom
 			if (_listExercises.Any(x => x.ExerciseName == exercise.ExerciseName))
 			{
 				throw new AccountAlreadyExists(); // TODO: change
 			}
 
-			// što ćemo s ID-jem?
-			// provjeriti ćemo da li je neinicijaliziran ilii možda taj Id već postoji
 			if (exercise.Id == Exercise.UndefinedExerciseId || _listExercises.Any(x => x.Id == exercise.Id) )		
 				exercise.Id = getNewId();					// i redefinirati ga ako nije inicijaliziran
 
@@ -113,6 +88,5 @@ namespace FinAssist.DAL.MemoryBased
 		{
 			
 		}
-
 	}
 }
