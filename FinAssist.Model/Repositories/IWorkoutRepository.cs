@@ -15,6 +15,6 @@ namespace FinAssist.Model.Repositories
         void editWorkout(Workout workout);
         void deleteWorkout(Workout workout);
         void startWorkout(Workout workout);
-        void finishWorkout(Workout workout, string duration, string date, int caloriesBurned, List<int> reps);
+        void finishWorkout(Workout workout, string duration, string date, int caloriesBurned, List<int> reps, List<int> weights);
     }
 }

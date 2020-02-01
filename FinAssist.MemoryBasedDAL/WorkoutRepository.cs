@@ -113,9 +113,9 @@ namespace FinAssist.DAL.MemoryBased
             
         }
 
-        public void finishWorkout(Workout workout, string duration, string date, int caloriesBurned, List<int> reps)
+        public void finishWorkout(Workout workout, string duration, string date, int caloriesBurned, List<int> reps, List<int> weights)
         {
-            HistoryWorkout historyWorkout = new HistoryWorkout(workout.Id, workout.WorkoutName, workout.Exercises, workout.SetsPerExercise, duration, date, caloriesBurned, reps);
+            HistoryWorkout historyWorkout = new HistoryWorkout(workout.Id, workout.WorkoutName, workout.Exercises, workout.SetsPerExercise, duration, date, caloriesBurned, reps, weights);
             _listHistoryWorkouts.Add(historyWorkout);
         }
     }

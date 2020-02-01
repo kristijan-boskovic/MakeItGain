@@ -137,9 +137,9 @@ namespace FinAssist.Controllers
             form.ShowWorkoutSession(mainController, workout);
         }
 
-        public void FinishWorkout(Workout workout, string duration, string date, int caloriesBurned, IWorkoutRepository workoutRepository, List<int> reps)
+        public void FinishWorkout(Workout workout, string duration, string date, int caloriesBurned, IWorkoutRepository workoutRepository, List<int> reps, List<int> weights)
         {
-            workoutRepository.finishWorkout(workout, duration, date, caloriesBurned, reps);
+            workoutRepository.finishWorkout(workout, duration, date, caloriesBurned, reps, weights);
         }
 
         public void ViewHistoryWorkouts(IShowHistoryWorkoutsListView form, IWorkoutRepository workoutRepository, IMainController mainController)

@@ -30,22 +30,6 @@ namespace FinAssist.PresentationLayer
         public void ShowHistoryWorkoutDetails(HistoryWorkout historyWorkout)
         {
             txtHistoryWorkoutDetails.Text = historyWorkout.ToString();
-            //var photoName = exercise.PhotoAbbv;
-            //switch (photoName)
-            //{
-            //    case "bench_press":
-            //        pictureBoxExercise.Image = Properties.Resources.bench_press;
-            //        break;
-            //    case "military_press":
-            //        pictureBoxExercise.Image = Properties.Resources.military_press;
-            //        break;
-            //    case "deadlift":
-            //        pictureBoxExercise.Image = Properties.Resources.deadlift;
-            //        break;
-            //    case "squat":
-            //        pictureBoxExercise.Image = Properties.Resources.squat;
-            //        break;
-            //}
             this.Text = historyWorkout.WorkoutName;
 
             this.Show();

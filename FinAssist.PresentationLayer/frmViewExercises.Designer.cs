@@ -87,14 +87,14 @@
             this.cmbMuscleGroup.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbMuscleGroup.FormattingEnabled = true;
             this.cmbMuscleGroup.Items.AddRange(new object[] {
-            "All",
-            "Abs",
-            "Back",
-            "Biceps",
-            "Chest",
-            "Legs",
-            "Shoulders",
-            "Triceps"});
+            "all",
+            "abs",
+            "back",
+            "biceps",
+            "chest",
+            "legs",
+            "shoulders",
+            "triceps"});
             this.cmbMuscleGroup.Location = new System.Drawing.Point(357, 11);
             this.cmbMuscleGroup.Name = "cmbMuscleGroup";
             this.cmbMuscleGroup.Size = new System.Drawing.Size(76, 21);

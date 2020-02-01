@@ -20,6 +20,8 @@ namespace FinAssist.PresentationLayer
         private Stopwatch stopWatch = new Stopwatch();
         private Dictionary<string, List<int>> setsAndReps = new Dictionary<string, List<int>>();
         private List<TextBox> repsInputs = new List<TextBox>();
+        private List<TextBox> weightInputs = new List<TextBox>();
+
 
         public frmStartWorkout()
 		{
@@ -45,21 +47,29 @@ namespace FinAssist.PresentationLayer
 
                 for (int j = 1; j <= numberOfSets; j++)
                 {
-                    Label label = new Label();
-                    label.AutoSize = true;
-                    label.Text = workout.Exercises[i].ExerciseName +  " set " + j + ":";
-                    label.Left = 10;
-                    label.Top = (j) * 20 + (i) * 120 + 3;
+                    Label repsLabel = new Label();
+                    repsLabel.AutoSize = true;
+                    repsLabel.Text = workout.Exercises[i].ExerciseName +  " set " + j + ":";
+                    repsLabel.Left = 10;
+                    repsLabel.Top = (j) * 20 + (i) * 120 + 3;
 
-                    TextBox textBox = new TextBox();
-                    textBox.Left = 130;
-                    textBox.Width = 35;
-                    textBox.Height = 20;
-                    textBox.Top = (j) * 20 + (i) * 120;
+                    TextBox repsTextBox = new TextBox();
+                    repsTextBox.Left = 130;
+                    repsTextBox.Width = 35;
+                    repsTextBox.Height = 20;
+                    repsTextBox.Top = (j) * 20 + (i) * 120;
 
-                    this.Controls.Add(label);
-                    this.Controls.Add(textBox);
-                    repsInputs.Add(textBox);
+                    TextBox weightsTextBox = new TextBox();
+                    weightsTextBox.Left = 170;
+                    weightsTextBox.Width = 35;
+                    weightsTextBox.Height = 20;
+                    weightsTextBox.Top = (j) * 20 + (i) * 120;
+
+                    this.Controls.Add(repsLabel);
+                    this.Controls.Add(repsTextBox);
+                    this.Controls.Add(weightsTextBox);
+                    repsInputs.Add(repsTextBox);
+                    weightInputs.Add(weightsTextBox);
                 }
             }
 
@@ -101,13 +111,32 @@ namespace FinAssist.PresentationLayer
                     reps.Add(Int32.Parse(repsInput.Text));
                 }
             }
+
+            List<int> weights = new List<int>();
+            foreach (var weightInput in weightInputs)
+            {
+                if (String.IsNullOrEmpty(weightInput.Text) || weightInput.Text.StartsWith("-"))
+                {
+                    weightInput.Text = "0";
+                }
+                try
+                {
+                    weights.Add(Int32.Parse(weightInput.Text));
+                }
+                catch (Exception)
+                {
+                    weightInput.Text = "0";
+                    weights.Add(Int32.Parse(weightInput.Text));
+                }
+            }
+
             stopWatch.Stop();
             timerWorkout.Stop();
             TimeSpan timeElapsed = stopWatch.Elapsed;
             string duration = String.Format("{0:00}:{1:00}:{2:00}", timeElapsed.Hours, timeElapsed.Minutes, timeElapsed.Seconds);
             caloriesBurned = (int) Math.Round(timeElapsed.Seconds * 0.34);
 
-            _mainController.FinishWorkout(_workout, duration, DateTime.Now.ToString("dd/MM/yyyy"), caloriesBurned, reps);
+            _mainController.FinishWorkout(_workout, duration, DateTime.Now.ToString("dd/MM/yyyy"), caloriesBurned, reps, weights);
             this.Close();
         }
 

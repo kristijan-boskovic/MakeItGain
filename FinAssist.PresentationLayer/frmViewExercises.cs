@@ -90,7 +90,7 @@ namespace FinAssist.PresentationLayer
         {
             var selectedMuscleGroup = cmbMuscleGroup.SelectedItem.ToString();
 
-            if (selectedMuscleGroup.Equals("All"))
+            if (selectedMuscleGroup.Equals("all"))
             {
                 _exercises = _exerciseRepository.getAllExercises();
             }
