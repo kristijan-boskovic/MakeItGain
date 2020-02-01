@@ -7,7 +7,6 @@ using FinAssist.Model.Repositories;
 
 namespace FinAssist.DAL.MemoryBased
 {
-	// Ilustracija implementacije In-Memory repozitorija korištenjem Singleton patterna
 	public class WorkoutRepository : Subject, IWorkoutRepository
     {
 		private static int _nextId = 1;
@@ -27,12 +26,12 @@ namespace FinAssist.DAL.MemoryBased
 		}
 
 
-		public int	getWorkoutNum()
+		public int	GetWorkoutNum()
 		{
 			return _listWorkouts.Count;
 		}
 
-		public Workout getWorkoutByName(string workoutName)
+		public Workout GetWorkoutByName(string workoutName)
 		{
 			var workout = (from l in _listWorkouts where l.WorkoutName == workoutName select l).First();
 
@@ -41,36 +40,35 @@ namespace FinAssist.DAL.MemoryBased
                 return workout;
             }
 
-            throw new AccountDoesntExist(); // TODO: change
+            throw new WorkoutDoesntExist();
 		}
 
-		public Workout getWorkoutById(int workoutId)
+		public Workout GetWorkoutById(int workoutId)
 		{
 			var workout = (from l in _listWorkouts where l.Id == workoutId select l).First();
 			return workout;
 		}
 
-		public List<Workout> getAllWorkouts()
+		public List<Workout> GetAllWorkouts()
 		{
 			List<Workout> workouts = _listWorkouts.OfType<Workout>().ToList();
             _nextId = workouts.Count + 1;
 			return workouts;
 		}
 
-        public List<HistoryWorkout> getAllHistoryWorkouts()
+        public List<HistoryWorkout> GetAllHistoryWorkouts()
         {
             List<HistoryWorkout> historyWorkouts = _listHistoryWorkouts.OfType<HistoryWorkout>().ToList();
-            //_nextId = workouts.Count + 1;
             return historyWorkouts;
         }
 
 
-        public List<int> getAllWorkoutsIds()
+        public List<int> GetAllWorkoutsIds()
 		{
 			return _listWorkouts.Select(x => x.Id).ToList();
 		}
 
-		public int getNewId()
+		public int GetNewId()
 		{
 			int nextID = _nextId;
 
@@ -79,36 +77,33 @@ namespace FinAssist.DAL.MemoryBased
 			return nextID;
 		}
 
-		public void addWorkout(Workout workout)
+		public void AddWorkout(Workout workout)
 		{
-			// provjeriti da li već postoji account s tim imenom
 			if (_listWorkouts.Any(x => x.WorkoutName == workout.WorkoutName))
 			{
-				throw new AccountAlreadyExists(); // TODO: change
+				throw new ExerciseAlreadyExists();
 			}
 
-			// što ćemo s ID-jem?
-			// provjeriti ćemo da li je neinicijaliziran ilii možda taj Id već postoji
 			if (workout.Id == Workout.UndefinedExerciseId || _listWorkouts.Any(x => x.Id == workout.Id) )		
-				workout.Id = getNewId();					// i redefinirati ga ako nije inicijaliziran
+				workout.Id = GetNewId();
 
 			_listWorkouts.Add(workout);
 
             NotifyObservers();
 		}
 
-        public void editWorkout(Workout workout)
+        public void EditWorkout(Workout workout)
         {
             _listWorkouts.Find(x => x.Id == workout.Id).WorkoutName = workout.WorkoutName;
             _listWorkouts.Find(x => x.Id == workout.Id).Exercises = workout.Exercises;
         }
 
-        public void deleteWorkout(Workout workout)
+        public void DeleteWorkout(Workout workout)
         {
             _listWorkouts.RemoveAll(x => x.Id == workout.Id);
         }
 
-        public void startWorkout(Workout workout)
+        public void StartWorkout(Workout workout)
         {
             
         }

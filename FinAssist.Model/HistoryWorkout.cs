@@ -1,17 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Text;
 
 namespace FinAssist.Model
 {
-	public class HistoryWorkout : Workout
+    public class HistoryWorkout : Workout
 	{
-
-		public HistoryWorkout()
-		{
-
-		}
-
 		public HistoryWorkout(int workoutId, string workoutName, List<Exercise> exercises, int setsPerExercise, string duration, string date, int caloriesBurned, List<int> reps, List<int> weights) : base(workoutId, workoutName, exercises, setsPerExercise)
 		{
             Duration = duration;
@@ -48,15 +41,13 @@ namespace FinAssist.Model
                             break;
                         }
                     }
-                    sb.Append(rep + "x" + Weights[j] + "kg, ");
+                    sb.Append(rep + " x " + Weights[j] + " kg, ");
                 }
 
                 sb.Append("\r\n");
             }
             sb.Append("\r\n");
-
             sb.Append("Duration: " + Duration + "\r\n" + "\r\n");
-
             sb.Append("Calories burned: " + CaloriesBurned + " kcal" + "\r\n" + "\r\n");
 
             return sb.ToString();

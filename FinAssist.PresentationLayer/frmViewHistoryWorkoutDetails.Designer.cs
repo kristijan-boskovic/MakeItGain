@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.btnClose = new System.Windows.Forms.Button();
-            this.txtHistoryWorkoutDetails = new System.Windows.Forms.Label();
+            this.lblHistoryWorkoutDetails = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnClose
@@ -44,16 +44,15 @@
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // txtHistoryWorkoutDetails
+            // lblHistoryWorkoutDetails
             // 
-            this.txtHistoryWorkoutDetails.AutoSize = true;
-            this.txtHistoryWorkoutDetails.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.txtHistoryWorkoutDetails.Location = new System.Drawing.Point(12, 9);
-            this.txtHistoryWorkoutDetails.Name = "txtHistoryWorkoutDetails";
-            this.txtHistoryWorkoutDetails.Size = new System.Drawing.Size(41, 15);
-            this.txtHistoryWorkoutDetails.TabIndex = 3;
-            this.txtHistoryWorkoutDetails.Text = "label1";
-            this.txtHistoryWorkoutDetails.Click += new System.EventHandler(this.labelhistoryWorkoutDescription_Click);
+            this.lblHistoryWorkoutDetails.AutoSize = true;
+            this.lblHistoryWorkoutDetails.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblHistoryWorkoutDetails.Location = new System.Drawing.Point(12, 9);
+            this.lblHistoryWorkoutDetails.Name = "lblHistoryWorkoutDetails";
+            this.lblHistoryWorkoutDetails.Size = new System.Drawing.Size(34, 15);
+            this.lblHistoryWorkoutDetails.TabIndex = 3;
+            this.lblHistoryWorkoutDetails.Text = "label";
             // 
             // frmViewHistoryWorkoutDetails
             // 
@@ -61,7 +60,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(411, 250);
-            this.Controls.Add(this.txtHistoryWorkoutDetails);
+            this.Controls.Add(this.lblHistoryWorkoutDetails);
             this.Controls.Add(this.btnClose);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -75,6 +74,6 @@
 
         #endregion
         private System.Windows.Forms.Button btnClose;
-        private System.Windows.Forms.Label txtHistoryWorkoutDetails;
+        private System.Windows.Forms.Label lblHistoryWorkoutDetails;
     }
 }

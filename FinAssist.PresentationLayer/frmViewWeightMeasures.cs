@@ -1,15 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Globalization;
 using System.Linq;
-using System.Text;
 using System.Windows.Forms;
-
 using FinAssist.BaseLib;
-using FinAssist.Controllers;
 using FinAssist.Model;
 using FinAssist.Model.Repositories;
 
@@ -32,9 +25,7 @@ namespace FinAssist.PresentationLayer
             _mainController = mainController;
             _weightMeasures = weightMeasures;
             _weightMeasureRepository = weightMeasureRepository;
-
             UpdateList();
-
             this.Show();
         }
 
@@ -64,17 +55,12 @@ namespace FinAssist.PresentationLayer
             }
         }
 
-        private void listWeightMeasures_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void frmViewWeightMeasures_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void btnAddNewWeightMeasure_Click(object sender, EventArgs e)
+        private void btnAddWeightMeasure_Click(object sender, EventArgs e)
         {
             _mainController.AddWeightMeasure();
         }
@@ -86,7 +72,7 @@ namespace FinAssist.PresentationLayer
 
         public void UpdateObserved()
         {
-            _weightMeasures = _weightMeasureRepository.getAllWeightMeasures();
+            _weightMeasures = _weightMeasureRepository.GetAllWeightMeasures();
             UpdateList();
         }
     }

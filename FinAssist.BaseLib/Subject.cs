@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace FinAssist.BaseLib
 {
@@ -13,10 +10,12 @@ namespace FinAssist.BaseLib
         {
             _listObservers.Add(obs);
         }
+
         public void Delete(IObserver obs)
         {
             _listObservers.Remove(obs);
         }
+
         public void NotifyObservers()
         {
             foreach(IObserver obs in _listObservers)

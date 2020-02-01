@@ -1,14 +1,8 @@
-﻿using System.Collections.Generic;
-
-namespace FinAssist.Model
+﻿namespace FinAssist.Model
 {
-	public class Exercise : EntityBase<int>
+    public class Exercise : EntityBase<int>
 	{
 		public static readonly int UndefinedExerciseId = -1;
-
-		public Exercise() : base(UndefinedExerciseId)
-		{
-		}
 
 		public Exercise(int exerciseId, string exerciseName, MuscleGroup muscleGroup, string description, string photoAbbv) : base(exerciseId)
 		{

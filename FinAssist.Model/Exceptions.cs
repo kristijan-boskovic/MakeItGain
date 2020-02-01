@@ -3,44 +3,26 @@
 namespace FinAssist.Model
 {
 	[Serializable]
-	public class FinAssistBaseException : Exception
+	public class MakeItGainBaseException : Exception
 	{
+
 	}
 
 	[Serializable]
-	public class NoExpSinkAccountException : FinAssistBaseException
+	public class ExerciseDoesntExist : MakeItGainBaseException
 	{
+
 	}
 
 	[Serializable]
-	public class AccountDoesntExist : FinAssistBaseException
+	public class ExerciseAlreadyExists : MakeItGainBaseException
 	{
+
 	}
 
-	[Serializable]
-	public class AccountAlreadyExists : FinAssistBaseException
-	{
-	}
+    [Serializable]
+    public class WorkoutDoesntExist : MakeItGainBaseException
+    {
 
-	[Serializable]
-	public class ExpPlaceDoesntExist : FinAssistBaseException
-	{
-	}
-
-	[Serializable]
-	public class TransactionIndexException : FinAssistBaseException
-	{
-	}
-
-	public class WrongAccountTypeNameInString : FinAssistBaseException
-	{
-	}
-
-	public class AccountTypeNotInList : FinAssistBaseException
-	{
-	}
-
-	public class TransactionIDAlreadyExists : FinAssistBaseException
-	{
-	}
+    }
 }

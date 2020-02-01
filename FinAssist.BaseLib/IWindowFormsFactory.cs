@@ -1,26 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace FinAssist.BaseLib
+﻿namespace FinAssist.BaseLib
 {
-	public interface IWindowFormsFactory
+    public interface IWindowFormsFactory
 	{
-		IAddNewAccountView CreateAddNewAccountView(List<string> inAccType);
-		IEditAccountView CreateEditAccountView();
-        IShowAccountsListView CreateShowAccountsListView();
-
         IShowExercisesListView CreateShowExercisesListView();
         IShowExerciseDetails CreateShowExercisesDetails();
         IShowWorkoutsListView CreateShowWorkoutsListView();
-        IAddNewWorkoutView CreateAddNewWorkoutView();
+        IAddWorkoutView CreateAddNewWorkoutView();
         IEditWorkoutView CreateEditWorkoutView();
         IStartWorkoutView CreateStartWorkoutView();
         IShowHistoryWorkoutsListView CreateShowHistoryWorkoutsListView();
         IShowHistoryWorkoutDetails CreateShowHistoryWorkoutDetails();
         IShowWeightMeasuresListView CreateShowWeightMeasuresListView();
-        IAddNewWeightMeasureView CreateAddNewWeightMeasureView();
+        IAddWeightMeasureView CreateAddNewWeightMeasureView();
     }
 }

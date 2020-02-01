@@ -34,11 +34,11 @@
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnClose = new System.Windows.Forms.Button();
-            this.btnAddNewWorkout = new System.Windows.Forms.Button();
+            this.btnAddWorkout = new System.Windows.Forms.Button();
             this.btnEditWorkout = new System.Windows.Forms.Button();
             this.btnDeleteWorkout = new System.Windows.Forms.Button();
-            this.btnSetUpWorkout = new System.Windows.Forms.Button();
-            this.labelExerciseDescription = new System.Windows.Forms.Label();
+            this.btnStartWorkout = new System.Windows.Forms.Button();
+            this.lblExerciseDescription = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // listWorkouts
@@ -91,22 +91,22 @@
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // btnAddNewWorkout
+            // btnAddWorkout
             // 
-            this.btnAddNewWorkout.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.btnAddNewWorkout.Location = new System.Drawing.Point(367, 11);
-            this.btnAddNewWorkout.Margin = new System.Windows.Forms.Padding(2);
-            this.btnAddNewWorkout.Name = "btnAddNewWorkout";
-            this.btnAddNewWorkout.Size = new System.Drawing.Size(109, 33);
-            this.btnAddNewWorkout.TabIndex = 3;
-            this.btnAddNewWorkout.Text = "Add new workout";
-            this.btnAddNewWorkout.UseVisualStyleBackColor = true;
-            this.btnAddNewWorkout.Click += new System.EventHandler(this.btnAddNewWorkout_Click);
+            this.btnAddWorkout.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.btnAddWorkout.Location = new System.Drawing.Point(367, 11);
+            this.btnAddWorkout.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAddWorkout.Name = "btnAddWorkout";
+            this.btnAddWorkout.Size = new System.Drawing.Size(109, 33);
+            this.btnAddWorkout.TabIndex = 3;
+            this.btnAddWorkout.Text = "Add new workout";
+            this.btnAddWorkout.UseVisualStyleBackColor = true;
+            this.btnAddWorkout.Click += new System.EventHandler(this.btnAddNewWorkout_Click);
             // 
             // btnEditWorkout
             // 
             this.btnEditWorkout.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.btnEditWorkout.Location = new System.Drawing.Point(367, 61);
+            this.btnEditWorkout.Location = new System.Drawing.Point(367, 59);
             this.btnEditWorkout.Margin = new System.Windows.Forms.Padding(2);
             this.btnEditWorkout.Name = "btnEditWorkout";
             this.btnEditWorkout.Size = new System.Drawing.Size(109, 33);
@@ -118,7 +118,7 @@
             // btnDeleteWorkout
             // 
             this.btnDeleteWorkout.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.btnDeleteWorkout.Location = new System.Drawing.Point(367, 118);
+            this.btnDeleteWorkout.Location = new System.Drawing.Point(367, 107);
             this.btnDeleteWorkout.Margin = new System.Windows.Forms.Padding(2);
             this.btnDeleteWorkout.Name = "btnDeleteWorkout";
             this.btnDeleteWorkout.Size = new System.Drawing.Size(109, 33);
@@ -127,26 +127,26 @@
             this.btnDeleteWorkout.UseVisualStyleBackColor = true;
             this.btnDeleteWorkout.Click += new System.EventHandler(this.btnDeleteWorkout_Click);
             // 
-            // btnSetUpWorkout
+            // btnStartWorkout
             // 
-            this.btnSetUpWorkout.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.btnSetUpWorkout.Location = new System.Drawing.Point(367, 176);
-            this.btnSetUpWorkout.Margin = new System.Windows.Forms.Padding(2);
-            this.btnSetUpWorkout.Name = "btnSetUpWorkout";
-            this.btnSetUpWorkout.Size = new System.Drawing.Size(109, 41);
-            this.btnSetUpWorkout.TabIndex = 6;
-            this.btnSetUpWorkout.Text = "Start workout session";
-            this.btnSetUpWorkout.UseVisualStyleBackColor = true;
-            this.btnSetUpWorkout.Click += new System.EventHandler(this.btnStartWorkout_Click);
+            this.btnStartWorkout.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.btnStartWorkout.Location = new System.Drawing.Point(367, 176);
+            this.btnStartWorkout.Margin = new System.Windows.Forms.Padding(2);
+            this.btnStartWorkout.Name = "btnStartWorkout";
+            this.btnStartWorkout.Size = new System.Drawing.Size(109, 41);
+            this.btnStartWorkout.TabIndex = 6;
+            this.btnStartWorkout.Text = "Start workout";
+            this.btnStartWorkout.UseVisualStyleBackColor = true;
+            this.btnStartWorkout.Click += new System.EventHandler(this.btnStartWorkout_Click);
             // 
-            // labelExerciseDescription
+            // lblExerciseDescription
             // 
-            this.labelExerciseDescription.Location = new System.Drawing.Point(8, 245);
-            this.labelExerciseDescription.Name = "labelExerciseDescription";
-            this.labelExerciseDescription.Size = new System.Drawing.Size(146, 34);
-            this.labelExerciseDescription.TabIndex = 7;
-            this.labelExerciseDescription.Text = "Hint: click on Day number to choose workout.";
-            this.labelExerciseDescription.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblExerciseDescription.Location = new System.Drawing.Point(8, 245);
+            this.lblExerciseDescription.Name = "lblExerciseDescription";
+            this.lblExerciseDescription.Size = new System.Drawing.Size(146, 34);
+            this.lblExerciseDescription.TabIndex = 7;
+            this.lblExerciseDescription.Text = "Hint: click on Day number to choose workout.";
+            this.lblExerciseDescription.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // frmViewWorkouts
             // 
@@ -154,11 +154,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(487, 287);
-            this.Controls.Add(this.labelExerciseDescription);
-            this.Controls.Add(this.btnSetUpWorkout);
+            this.Controls.Add(this.lblExerciseDescription);
+            this.Controls.Add(this.btnStartWorkout);
             this.Controls.Add(this.btnDeleteWorkout);
             this.Controls.Add(this.btnEditWorkout);
-            this.Controls.Add(this.btnAddNewWorkout);
+            this.Controls.Add(this.btnAddWorkout);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.listWorkouts);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
@@ -177,11 +177,11 @@
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.ColumnHeader columnHeader3;
-        private System.Windows.Forms.Button btnAddNewWorkout;
+        private System.Windows.Forms.Button btnAddWorkout;
         private System.Windows.Forms.Button btnEditWorkout;
         private System.Windows.Forms.Button btnDeleteWorkout;
-        private System.Windows.Forms.Button btnSetUpWorkout;
+        private System.Windows.Forms.Button btnStartWorkout;
         private System.Windows.Forms.ColumnHeader columnHeader4;
-        private System.Windows.Forms.Label labelExerciseDescription;
+        private System.Windows.Forms.Label lblExerciseDescription;
     }
 }

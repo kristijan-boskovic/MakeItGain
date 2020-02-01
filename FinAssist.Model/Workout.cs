@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace FinAssist.Model
 {
-	public class Workout : EntityBase<int>
+    public class Workout : EntityBase<int>
 	{
 		public static readonly int UndefinedExerciseId = -1;
-
-		public Workout() : base(UndefinedExerciseId)
-		{
-		}
 
 		public Workout(int workoutId, string workoutName, List<Exercise> exercises, int setsPerExercise) : base(workoutId)
 		{

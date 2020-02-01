@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 using FinAssist.Model;
 
 namespace FinAssist.BaseLib
 {
-	public interface IShowHistoryWorkoutsListView
+    public interface IShowHistoryWorkoutsListView
 	{
 		void ShowHistoryWorkouts(IMainController mainController, List<HistoryWorkout> historyWorkoutList);
 	}

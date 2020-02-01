@@ -10,95 +10,67 @@ namespace FinAssist.PresentationLayer
 {
 	public class WindowFormsFactory : Subject, IWindowFormsFactory
 	{
-		public IAddNewAccountView CreateAddNewAccountView(List<string> inAccType ) {
-			var newFrm = new frmAddAccount(inAccType);
-
-			return newFrm;
-		}
-		public IShowAccountsListView CreateShowAccountsListView() {
-			var newFrm = new frmViewAccounts();
-
-			return newFrm;
-		}
-		public IEditAccountView CreateEditAccountView() {
-			var newFrm = new frmEditAccount();
-
-			return newFrm;
-		}
-
         public IShowExercisesListView CreateShowExercisesListView()
         {
             var newFrm = new frmViewExercises();
-
             return newFrm;
         }
 
         public IShowExerciseDetails CreateShowExercisesDetails()
         {
             var newFrm = new frmViewExerciseDetails();
-
             return newFrm;
         }
 
         public IShowWorkoutsListView CreateShowWorkoutsListView()
         {
             var newFrm = new frmViewWorkouts();
-
             _listObservers.Clear();
             Attach(newFrm);
-
             return newFrm;
         }
 
-        public IAddNewWorkoutView CreateAddNewWorkoutView()
+        public IAddWorkoutView CreateAddNewWorkoutView()
         {
             var newFrm = new frmAddWorkout();
-
             return newFrm;
         }
 
         public IEditWorkoutView CreateEditWorkoutView()
         {
             var newFrm = new frmEditWorkout();
-
             return newFrm;
         }
 
         public IStartWorkoutView CreateStartWorkoutView()
         {
             var newFrm = new frmStartWorkout();
-
             return newFrm;
         }
 
         public IShowHistoryWorkoutsListView CreateShowHistoryWorkoutsListView()
         {
             var newFrm = new frmViewHistoryWorkouts();
-
             return newFrm;
         }
 
         public IShowHistoryWorkoutDetails CreateShowHistoryWorkoutDetails()
         {
             var newFrm = new frmViewHistoryWorkoutDetails();
-
             return newFrm;
         }
 
         public IShowWeightMeasuresListView CreateShowWeightMeasuresListView()
         {
             var newFrm = new frmViewWeightMeasures();
-
             _listObservers.Clear();
             Attach(newFrm);
-
             return newFrm;
         }
 
-        public IAddNewWeightMeasureView CreateAddNewWeightMeasureView()
+        public IAddWeightMeasureView CreateAddNewWeightMeasureView()
         {
             var newFrm = new frmAddWeightMeasure();
-
             return newFrm;
         }
     }

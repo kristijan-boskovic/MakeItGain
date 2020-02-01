@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-
 using FinAssist.Model;
 using FinAssist.Model.Repositories;
 
@@ -23,12 +22,12 @@ namespace FinAssist.DAL.MemoryBased
 		}
 
 
-		public int getExerciseNum()
+		public int GetExerciseNum()
 		{
 			return _listExercises.Count;
 		}
 
-		public Exercise getExerciseByName(string exerciseName)
+		public Exercise GetExerciseByName(string exerciseName)
 		{
 			var exercise = (from l in _listExercises where l.ExerciseName == exerciseName select l).First();
 
@@ -37,54 +36,54 @@ namespace FinAssist.DAL.MemoryBased
                 return exercise;
             }
 
-            throw new AccountDoesntExist(); // TODO: change
+            throw new ExerciseDoesntExist();
 		}
 
-		public Exercise getExerciseById(int exerciseId)
+		public Exercise GetExerciseById(int exerciseId)
 		{
 			var exercise = (from l in _listExercises where l.Id == exerciseId select l).First();
 			return exercise;
 		}
 
-        public List<Exercise> getExercisesByMuscleGroup(string muscleGroup)
+        public List<Exercise> GetExercisesByMuscleGroup(string muscleGroup)
         {
             var exercises = (from l in _listExercises where l.MuscleGroup.ToString() == muscleGroup select l).ToList();
             return exercises;
         }
 
-        public List<Exercise> getAllExercises()
+        public List<Exercise> GetAllExercises()
 		{
 			var exercises = _listExercises.OfType<Exercise>().ToList();
 			return exercises;
 		}
 
-        public List<int> getAllExercisesIds()
+        public List<int> GetAllExercisesIds()
 		{
 			var exercises = _listExercises.Select(x => x.Id).ToList();
             return exercises;
         }
 
-        public int getNewId()
+        public int GetNewId()
 		{
 			int nextID = _nextID;
 			_nextID++;
 			return nextID;
 		}
 
-		public void addExercise(Exercise exercise)
+		public void AddExercise(Exercise exercise)
 		{
 			if (_listExercises.Any(x => x.ExerciseName == exercise.ExerciseName))
 			{
-				throw new AccountAlreadyExists(); // TODO: change
+				throw new ExerciseAlreadyExists();
 			}
 
 			if (exercise.Id == Exercise.UndefinedExerciseId || _listExercises.Any(x => x.Id == exercise.Id) )		
-				exercise.Id = getNewId();					// i redefinirati ga ako nije inicijaliziran
+				exercise.Id = GetNewId();
 
 			_listExercises.Add(exercise);
 		}
 
-		public void deleteExercise(int exerciseId)
+		public void DeleteExercise(int exerciseId)
 		{
 			
 		}

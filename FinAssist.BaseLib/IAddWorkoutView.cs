@@ -1,11 +1,10 @@
-﻿using FinAssist.Model;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace FinAssist.BaseLib
 {
-    public interface IEditWorkoutView
+    public interface IAddWorkoutView
 	{
-		bool ConfirmEditWorkout(Workout workout);
+		bool ConfirmAddWorkout();
 		string	WorkoutName { get; }
 		List<string> ExerciseNames { get; }
         int SetsPerExercise { get; }

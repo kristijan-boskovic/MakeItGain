@@ -28,25 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.labelWorkoutName = new System.Windows.Forms.Label();
+            this.lblWorkoutName = new System.Windows.Forms.Label();
             this.btnEditWorkout = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.txtWorkoutName = new System.Windows.Forms.TextBox();
-            this.labelExercises = new System.Windows.Forms.Label();
+            this.lblExercises = new System.Windows.Forms.Label();
             this.chkdListBoxExercises = new System.Windows.Forms.CheckedListBox();
             this.txtSetsPerExercise = new System.Windows.Forms.TextBox();
-            this.labelSetsPerExercise = new System.Windows.Forms.Label();
+            this.lblSetsPerExercise = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // labelWorkoutName
+            // lblWorkoutName
             // 
-            this.labelWorkoutName.AutoSize = true;
-            this.labelWorkoutName.Location = new System.Drawing.Point(9, 20);
-            this.labelWorkoutName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelWorkoutName.Name = "labelWorkoutName";
-            this.labelWorkoutName.Size = new System.Drawing.Size(80, 13);
-            this.labelWorkoutName.TabIndex = 0;
-            this.labelWorkoutName.Text = "Workout name:";
+            this.lblWorkoutName.AutoSize = true;
+            this.lblWorkoutName.Location = new System.Drawing.Point(9, 20);
+            this.lblWorkoutName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblWorkoutName.Name = "lblWorkoutName";
+            this.lblWorkoutName.Size = new System.Drawing.Size(80, 13);
+            this.lblWorkoutName.TabIndex = 0;
+            this.lblWorkoutName.Text = "Workout name:";
             // 
             // btnEditWorkout
             // 
@@ -80,15 +80,15 @@
             this.txtWorkoutName.Size = new System.Drawing.Size(145, 20);
             this.txtWorkoutName.TabIndex = 0;
             // 
-            // labelExercises
+            // lblExercises
             // 
-            this.labelExercises.AutoSize = true;
-            this.labelExercises.Location = new System.Drawing.Point(11, 55);
-            this.labelExercises.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelExercises.Name = "labelExercises";
-            this.labelExercises.Size = new System.Drawing.Size(55, 13);
-            this.labelExercises.TabIndex = 1;
-            this.labelExercises.Text = "Exercises:";
+            this.lblExercises.AutoSize = true;
+            this.lblExercises.Location = new System.Drawing.Point(11, 55);
+            this.lblExercises.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblExercises.Name = "lblExercises";
+            this.lblExercises.Size = new System.Drawing.Size(55, 13);
+            this.lblExercises.TabIndex = 1;
+            this.lblExercises.Text = "Exercises:";
             // 
             // chkdListBoxExercises
             // 
@@ -101,7 +101,7 @@
             "Dumbbell curl",
             "Rope pushdown",
             "Pullup",
-            "Plank"});
+            "Situp"});
             this.chkdListBoxExercises.Location = new System.Drawing.Point(106, 55);
             this.chkdListBoxExercises.Name = "chkdListBoxExercises";
             this.chkdListBoxExercises.Size = new System.Drawing.Size(144, 64);
@@ -115,15 +115,15 @@
             this.txtSetsPerExercise.Size = new System.Drawing.Size(31, 20);
             this.txtSetsPerExercise.TabIndex = 9;
             // 
-            // labelSetsPerExercise
+            // lblSetsPerExercise
             // 
-            this.labelSetsPerExercise.AutoSize = true;
-            this.labelSetsPerExercise.Location = new System.Drawing.Point(11, 128);
-            this.labelSetsPerExercise.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelSetsPerExercise.Name = "labelSetsPerExercise";
-            this.labelSetsPerExercise.Size = new System.Drawing.Size(91, 13);
-            this.labelSetsPerExercise.TabIndex = 8;
-            this.labelSetsPerExercise.Text = "Sets per exercise:";
+            this.lblSetsPerExercise.AutoSize = true;
+            this.lblSetsPerExercise.Location = new System.Drawing.Point(11, 128);
+            this.lblSetsPerExercise.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSetsPerExercise.Name = "lblSetsPerExercise";
+            this.lblSetsPerExercise.Size = new System.Drawing.Size(91, 13);
+            this.lblSetsPerExercise.TabIndex = 8;
+            this.lblSetsPerExercise.Text = "Sets per exercise:";
             // 
             // frmEditWorkout
             // 
@@ -132,13 +132,13 @@
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(268, 199);
             this.Controls.Add(this.txtSetsPerExercise);
-            this.Controls.Add(this.labelSetsPerExercise);
+            this.Controls.Add(this.lblSetsPerExercise);
             this.Controls.Add(this.chkdListBoxExercises);
             this.Controls.Add(this.txtWorkoutName);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnEditWorkout);
-            this.Controls.Add(this.labelExercises);
-            this.Controls.Add(this.labelWorkoutName);
+            this.Controls.Add(this.lblExercises);
+            this.Controls.Add(this.lblWorkoutName);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmEditWorkout";
@@ -151,13 +151,13 @@
 
         #endregion
 
-        private System.Windows.Forms.Label labelWorkoutName;
+        private System.Windows.Forms.Label lblWorkoutName;
         private System.Windows.Forms.Button btnEditWorkout;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.TextBox txtWorkoutName;
-        private System.Windows.Forms.Label labelExercises;
+        private System.Windows.Forms.Label lblExercises;
         private System.Windows.Forms.CheckedListBox chkdListBoxExercises;
         private System.Windows.Forms.TextBox txtSetsPerExercise;
-        private System.Windows.Forms.Label labelSetsPerExercise;
+        private System.Windows.Forms.Label lblSetsPerExercise;
     }
 }

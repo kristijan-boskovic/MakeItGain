@@ -45,11 +45,8 @@
     <Compile Include="WeightMeasureController.cs" />
     <Compile Include="WorkoutController.cs" />
     <Compile Include="ExerciseController.cs" />
-    <Compile Include="AccountController.cs" />
     <Compile Include="MainController.cs" />
-    <Compile Include="MainFormController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TransactionController.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FinAssist.BaseLib\MakeItGain.BaseLib.csproj">

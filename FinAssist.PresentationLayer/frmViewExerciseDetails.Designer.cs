@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.btnClose = new System.Windows.Forms.Button();
-            this.labelExerciseDescription = new System.Windows.Forms.Label();
-            this.pictureBoxExercise = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxExercise)).BeginInit();
+            this.lblExerciseDescription = new System.Windows.Forms.Label();
+            this.pctrBoxExercise = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pctrBoxExercise)).BeginInit();
             this.SuspendLayout();
             // 
             // btnClose
@@ -46,25 +46,25 @@
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // labelExerciseDescription
+            // lblExerciseDescription
             // 
-            this.labelExerciseDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.labelExerciseDescription.Location = new System.Drawing.Point(352, 12);
-            this.labelExerciseDescription.Name = "labelExerciseDescription";
-            this.labelExerciseDescription.Size = new System.Drawing.Size(257, 66);
-            this.labelExerciseDescription.TabIndex = 3;
-            this.labelExerciseDescription.Text = "label1";
-            this.labelExerciseDescription.Click += new System.EventHandler(this.exerciseDescriptionLabel_Click);
+            this.lblExerciseDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblExerciseDescription.Location = new System.Drawing.Point(352, 12);
+            this.lblExerciseDescription.Name = "lblExerciseDescription";
+            this.lblExerciseDescription.Size = new System.Drawing.Size(257, 66);
+            this.lblExerciseDescription.TabIndex = 3;
+            this.lblExerciseDescription.Text = "label";
+            this.lblExerciseDescription.Click += new System.EventHandler(this.exerciseDescriptionLabel_Click);
             // 
-            // pictureBoxExercise
+            // pctrBoxExercise
             // 
-            this.pictureBoxExercise.Image = global::FinAssist.PresentationLayer.Properties.Resources.pullup1;
-            this.pictureBoxExercise.Location = new System.Drawing.Point(12, 12);
-            this.pictureBoxExercise.Name = "pictureBoxExercise";
-            this.pictureBoxExercise.Size = new System.Drawing.Size(334, 288);
-            this.pictureBoxExercise.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxExercise.TabIndex = 4;
-            this.pictureBoxExercise.TabStop = false;
+            this.pctrBoxExercise.Image = global::FinAssist.PresentationLayer.Properties.Resources.situp;
+            this.pctrBoxExercise.Location = new System.Drawing.Point(12, 12);
+            this.pctrBoxExercise.Name = "pctrBoxExercise";
+            this.pctrBoxExercise.Size = new System.Drawing.Size(334, 269);
+            this.pctrBoxExercise.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pctrBoxExercise.TabIndex = 4;
+            this.pctrBoxExercise.TabStop = false;
             // 
             // frmViewExerciseDetails
             // 
@@ -72,22 +72,22 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(613, 399);
-            this.Controls.Add(this.pictureBoxExercise);
-            this.Controls.Add(this.labelExerciseDescription);
+            this.Controls.Add(this.pctrBoxExercise);
+            this.Controls.Add(this.lblExerciseDescription);
             this.Controls.Add(this.btnClose);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmViewExerciseDetails";
             this.Text = "View exercises";
             this.Load += new System.EventHandler(this.frmViewExerciseDetails_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxExercise)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctrBoxExercise)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
         private System.Windows.Forms.Button btnClose;
-        private System.Windows.Forms.Label labelExerciseDescription;
-        private System.Windows.Forms.PictureBox pictureBoxExercise;
+        private System.Windows.Forms.Label lblExerciseDescription;
+        private System.Windows.Forms.PictureBox pctrBoxExercise;
     }
 }

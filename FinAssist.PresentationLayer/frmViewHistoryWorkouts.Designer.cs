@@ -32,7 +32,7 @@
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnClose = new System.Windows.Forms.Button();
-            this.txtHint = new System.Windows.Forms.Label();
+            this.lblHint = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // listHistoryWorkouts
@@ -72,13 +72,13 @@
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // txtHint
+            // lblHint
             // 
-            this.txtHint.Location = new System.Drawing.Point(319, 196);
-            this.txtHint.Name = "txtHint";
-            this.txtHint.Size = new System.Drawing.Size(147, 34);
-            this.txtHint.TabIndex = 4;
-            this.txtHint.Text = "Hint: double-click on workout name to see workout details.";
+            this.lblHint.Location = new System.Drawing.Point(319, 196);
+            this.lblHint.Name = "lblHint";
+            this.lblHint.Size = new System.Drawing.Size(147, 34);
+            this.lblHint.TabIndex = 4;
+            this.lblHint.Text = "Hint: double-click on workout name to see workout details.";
             // 
             // frmViewHistoryWorkouts
             // 
@@ -86,7 +86,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(487, 287);
-            this.Controls.Add(this.txtHint);
+            this.Controls.Add(this.lblHint);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.listHistoryWorkouts);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
@@ -104,6 +104,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.Button btnClose;
-        private System.Windows.Forms.Label txtHint;
+        private System.Windows.Forms.Label lblHint;
     }
 }

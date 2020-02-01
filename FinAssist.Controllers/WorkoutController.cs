@@ -1,10 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-
 using FinAssist.Model;
 using FinAssist.Model.Repositories;
 using FinAssist.BaseLib;
@@ -15,11 +11,7 @@ namespace FinAssist.Controllers
     {
         public void ViewWorkouts(IShowWorkoutsListView form, IWorkoutRepository workoutRepository, IMainController mainController)
         {
-            // dohvati sve accounte i proslijedi ih View-u
-            List<Workout> workouts = workoutRepository.getAllWorkouts();
-
-            // zašto proslijeđujemo i mainController?
-            // zato što na ovom View-u imamo "Add new account" i "Edit new account" funkcionalnost!
+            List<Workout> workouts = workoutRepository.GetAllWorkouts();
             form.ShowWorkouts(mainController, workouts, workoutRepository);
         }
 
@@ -28,9 +20,9 @@ namespace FinAssist.Controllers
             form.ShowHistoryWorkoutDetails(historyWorkout);
         }
 
-        public void AddNewWorkout(IAddNewWorkoutView form, IWorkoutRepository workoutRepository, IExerciseRepository exerciseRepository)
+        public void AddNewWorkout(IAddWorkoutView form, IWorkoutRepository workoutRepository, IExerciseRepository exerciseRepository)
         {
-            if (form.ShowViewModal() == true)
+            if (form.ConfirmAddWorkout() == true)
             {
                 try
                 {
@@ -57,16 +49,16 @@ namespace FinAssist.Controllers
                         return;
                     }
                     List<string> exerciseNames = form.ExerciseNames;
-                    int workoutId = workoutRepository.getNewId();
+                    int workoutId = workoutRepository.GetNewId();
                     List<Exercise> exercises = new List<Exercise>();
 
                     foreach (var exerciseName in exerciseNames)
                     {
-                        var exercise = exerciseRepository.getExerciseByName(exerciseName);
+                        var exercise = exerciseRepository.GetExerciseByName(exerciseName);
                         exercises.Add(exercise);
                     }
                     Workout newWorkout = new Workout(workoutId, workoutName, exercises, setsPerExercise);
-                    workoutRepository.addWorkout(newWorkout);
+                    workoutRepository.AddWorkout(newWorkout);
                 }
                 catch (Exception ex)
                 {
@@ -78,7 +70,7 @@ namespace FinAssist.Controllers
 
         public void EditWorkout(IEditWorkoutView form, Workout workout, IWorkoutRepository workoutRepository, IExerciseRepository exerciseRepository)
         {
-            if (form.ShowViewModal(workout) == true)
+            if (form.ConfirmEditWorkout(workout) == true)
             {
                 try
                 {
@@ -105,19 +97,18 @@ namespace FinAssist.Controllers
                         return;
                     }
                     List<string> exerciseNames = form.ExerciseNames;
-                    //int workoutId = workoutRepository.getNewId();
                     int workoutId = workout.Id;
                     List<Exercise> exercises = new List<Exercise>();
 
                     foreach (var exerciseName in exerciseNames)
                     {
-                        var exercise = exerciseRepository.getExerciseByName(exerciseName);
+                        var exercise = exerciseRepository.GetExerciseByName(exerciseName);
                         exercises.Add(exercise);
                     }
                     workout.WorkoutName = workoutName;
                     workout.Exercises = exercises;
                     workout.SetsPerExercise = setsPerExercise;
-                    workoutRepository.editWorkout(workout);
+                    workoutRepository.EditWorkout(workout);
                 }
                 catch (Exception ex)
                 {
@@ -129,7 +120,7 @@ namespace FinAssist.Controllers
 
         public void DeleteWorkout(Workout workout, IWorkoutRepository workoutRepository)
         {
-            workoutRepository.deleteWorkout(workout);
+            workoutRepository.DeleteWorkout(workout);
         }
 
         public void StartWorkout(IStartWorkoutView form, Workout workout, IWorkoutRepository workoutRepository, IMainController mainController)
@@ -144,11 +135,7 @@ namespace FinAssist.Controllers
 
         public void ViewHistoryWorkouts(IShowHistoryWorkoutsListView form, IWorkoutRepository workoutRepository, IMainController mainController)
         {
-            // dohvati sve accounte i proslijedi ih View-u
-            List<HistoryWorkout> historyWorkouts = workoutRepository.getAllHistoryWorkouts();
-
-            // zašto proslijeđujemo i mainController?
-            // zato što na ovom View-u imamo "Add new account" i "Edit new account" funkcionalnost!
+            List<HistoryWorkout> historyWorkouts = workoutRepository.GetAllHistoryWorkouts();
             form.ShowHistoryWorkouts(mainController, historyWorkouts);
         }
     }

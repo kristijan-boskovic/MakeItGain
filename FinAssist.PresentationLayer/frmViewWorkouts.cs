@@ -161,7 +161,7 @@ namespace FinAssist.PresentationLayer
 
         public void UpdateObserved()
         {
-            _workouts = _workoutRepository.getAllWorkouts();
+            _workouts = _workoutRepository.GetAllWorkouts();
             UpdateList();
         }
     }

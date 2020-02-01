@@ -34,7 +34,8 @@
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnClose = new System.Windows.Forms.Button();
-            this.btnAddNewWeightMeasure = new System.Windows.Forms.Button();
+            this.btnAddWeightMeasure = new System.Windows.Forms.Button();
+            this.lblHint = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // listWeightMeasures
@@ -52,7 +53,6 @@
             this.listWeightMeasures.TabIndex = 0;
             this.listWeightMeasures.UseCompatibleStateImageBehavior = false;
             this.listWeightMeasures.View = System.Windows.Forms.View.Details;
-            this.listWeightMeasures.SelectedIndexChanged += new System.EventHandler(this.listWeightMeasures_SelectedIndexChanged);
             // 
             // columnHeader1
             // 
@@ -86,17 +86,25 @@
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // btnAddNewWeightMeasure
+            // btnAddWeightMeasure
             // 
-            this.btnAddNewWeightMeasure.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.btnAddNewWeightMeasure.Location = new System.Drawing.Point(11, 11);
-            this.btnAddNewWeightMeasure.Margin = new System.Windows.Forms.Padding(2);
-            this.btnAddNewWeightMeasure.Name = "btnAddNewWeightMeasure";
-            this.btnAddNewWeightMeasure.Size = new System.Drawing.Size(99, 46);
-            this.btnAddNewWeightMeasure.TabIndex = 3;
-            this.btnAddNewWeightMeasure.Text = "Add new weight measure";
-            this.btnAddNewWeightMeasure.UseVisualStyleBackColor = true;
-            this.btnAddNewWeightMeasure.Click += new System.EventHandler(this.btnAddNewWeightMeasure_Click);
+            this.btnAddWeightMeasure.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.btnAddWeightMeasure.Location = new System.Drawing.Point(11, 11);
+            this.btnAddWeightMeasure.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAddWeightMeasure.Name = "btnAddWeightMeasure";
+            this.btnAddWeightMeasure.Size = new System.Drawing.Size(99, 46);
+            this.btnAddWeightMeasure.TabIndex = 3;
+            this.btnAddWeightMeasure.Text = "Add new weight measure";
+            this.btnAddWeightMeasure.UseVisualStyleBackColor = true;
+            this.btnAddWeightMeasure.Click += new System.EventHandler(this.btnAddWeightMeasure_Click);
+            // 
+            // lblHint
+            // 
+            this.lblHint.Location = new System.Drawing.Point(8, 193);
+            this.lblHint.Name = "lblHint";
+            this.lblHint.Size = new System.Drawing.Size(117, 34);
+            this.lblHint.TabIndex = 5;
+            this.lblHint.Text = "Hint: for decimal sign use comma (e.g. 92,5)";
             // 
             // frmViewWeightMeasures
             // 
@@ -104,7 +112,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(487, 287);
-            this.Controls.Add(this.btnAddNewWeightMeasure);
+            this.Controls.Add(this.lblHint);
+            this.Controls.Add(this.btnAddWeightMeasure);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.listWeightMeasures);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
@@ -123,7 +132,8 @@
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.ColumnHeader columnHeader3;
-        private System.Windows.Forms.Button btnAddNewWeightMeasure;
+        private System.Windows.Forms.Button btnAddWeightMeasure;
         private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.Label lblHint;
     }
 }

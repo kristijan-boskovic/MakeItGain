@@ -63,69 +63,9 @@ namespace FinAssist.PresentationLayer.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap baseline_av_timer_white_24dp {
-            get {
-                object obj = ResourceManager.GetObject("baseline_av_timer_white_24dp", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap baseline_emoji_people_white_24dp {
-            get {
-                object obj = ResourceManager.GetObject("baseline_emoji_people_white_24dp", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap baseline_fitness_center_white_24dp {
-            get {
-                object obj = ResourceManager.GetObject("baseline_fitness_center_white_24dp", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap baseline_list_white_24dp {
-            get {
-                object obj = ResourceManager.GetObject("baseline_list_white_24dp", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap baseline_whatshot_white_24dp {
-            get {
-                object obj = ResourceManager.GetObject("baseline_whatshot_white_24dp", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap bench_press {
             get {
                 object obj = ResourceManager.GetObject("bench_press", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap bench_press1 {
-            get {
-                object obj = ResourceManager.GetObject("bench_press1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -143,19 +83,9 @@ namespace FinAssist.PresentationLayer.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap deadlift1 {
+        internal static System.Drawing.Bitmap dumbbell_curl {
             get {
-                object obj = ResourceManager.GetObject("deadlift1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap dumbbell_curl1 {
-            get {
-                object obj = ResourceManager.GetObject("dumbbell_curl1", resourceCulture);
+                object obj = ResourceManager.GetObject("dumbbell_curl", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -173,9 +103,9 @@ namespace FinAssist.PresentationLayer.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap military_press1 {
+        internal static System.Drawing.Bitmap pullup {
             get {
-                object obj = ResourceManager.GetObject("military_press1", resourceCulture);
+                object obj = ResourceManager.GetObject("pullup", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -183,9 +113,9 @@ namespace FinAssist.PresentationLayer.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap plank1 {
+        internal static System.Drawing.Bitmap rope_pushdown {
             get {
-                object obj = ResourceManager.GetObject("plank1", resourceCulture);
+                object obj = ResourceManager.GetObject("rope_pushdown", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -193,19 +123,9 @@ namespace FinAssist.PresentationLayer.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap pullup1 {
+        internal static System.Drawing.Bitmap situp {
             get {
-                object obj = ResourceManager.GetObject("pullup1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap rope_pushdown1 {
-            get {
-                object obj = ResourceManager.GetObject("rope_pushdown1", resourceCulture);
+                object obj = ResourceManager.GetObject("situp", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -216,26 +136,6 @@ namespace FinAssist.PresentationLayer.Properties {
         internal static System.Drawing.Bitmap squat {
             get {
                 object obj = ResourceManager.GetObject("squat", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap squat1 {
-            get {
-                object obj = ResourceManager.GetObject("squat1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap squat2 {
-            get {
-                object obj = ResourceManager.GetObject("squat2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

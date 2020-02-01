@@ -1,17 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Globalization;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
-
 using FinAssist.BaseLib;
-using FinAssist.Controllers;
 using FinAssist.Model;
-using FinAssist.Model.Repositories;
 
 namespace FinAssist.PresentationLayer
 {
@@ -29,33 +19,33 @@ namespace FinAssist.PresentationLayer
 
         public void ShowExerciseDetails(Exercise exercise)
         {
-            labelExerciseDescription.Text = exercise.Description;
+            lblExerciseDescription.Text = exercise.Description;
             var photoName = exercise.PhotoAbbv;
             switch (photoName)
             {
                 case "bench_press":
-                    pictureBoxExercise.Image = Properties.Resources.bench_press1;
+                    pctrBoxExercise.Image = Properties.Resources.bench_press;
                     break;
                 case "military_press":
-                    pictureBoxExercise.Image = Properties.Resources.military_press1;
+                    pctrBoxExercise.Image = Properties.Resources.military_press;
                     break;
                 case "deadlift":
-                    pictureBoxExercise.Image = Properties.Resources.deadlift1;
+                    pctrBoxExercise.Image = Properties.Resources.deadlift;
                     break;
                 case "squat":
-                    pictureBoxExercise.Image = Properties.Resources.squat2;
+                    pctrBoxExercise.Image = Properties.Resources.squat;
                     break;
                 case "dumbbell_curl":
-                    pictureBoxExercise.Image = Properties.Resources.dumbbell_curl1;
+                    pctrBoxExercise.Image = Properties.Resources.dumbbell_curl;
                     break;
                 case "rope_pushdown":
-                    pictureBoxExercise.Image = Properties.Resources.rope_pushdown1;
+                    pctrBoxExercise.Image = Properties.Resources.rope_pushdown;
                     break;
                 case "pullup":
-                    pictureBoxExercise.Image = Properties.Resources.pullup1;
+                    pctrBoxExercise.Image = Properties.Resources.pullup;
                     break;
-                case "plank":
-                    pictureBoxExercise.Image = Properties.Resources.plank1;
+                case "situp":
+                    pctrBoxExercise.Image = Properties.Resources.situp;
                     break;
             }
             this.Text = exercise.ExerciseName;

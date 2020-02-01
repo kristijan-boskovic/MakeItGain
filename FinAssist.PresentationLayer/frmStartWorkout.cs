@@ -1,18 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Diagnostics;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 using FinAssist.BaseLib;
 using FinAssist.Model;
 
 namespace FinAssist.PresentationLayer
 {
-	public partial class frmStartWorkout : Form, IStartWorkoutView
+    public partial class frmStartWorkout : Form, IStartWorkoutView
 	{
         private IMainController _mainController = null;
         private Workout _workout = null;
@@ -31,7 +26,7 @@ namespace FinAssist.PresentationLayer
 		private void frmStartWorkout_Load(object sender, EventArgs e)
 		{
             stopWatch.Start();
-            timerWorkout.Start();
+            tmrWorkout.Start();
         }
 
         public void ShowWorkoutSession(IMainController mainController, Workout workout)
@@ -76,22 +71,6 @@ namespace FinAssist.PresentationLayer
             this.Show();
         }
 
-        //public string WorkoutName => txtSetsPerExercise.Text;
-
-  //      public List<string> ExerciseNames
-  //      {
-		//	get
-		//	{
-  //              var checkedItems = chkdListBoxExercises.CheckedItems;
-  //              List<string> exerciseNames = new List<string>();
-  //              foreach(var checkedItem in checkedItems)
-  //              {
-  //                  exerciseNames.Add(checkedItem.ToString());
-  //              }
-  //              return exerciseNames;
-  //          }
-		//}
-
         private void btnFinishWorkout_Click(object sender, EventArgs e)
         {
             List<int> reps = new List<int>();
@@ -131,7 +110,7 @@ namespace FinAssist.PresentationLayer
             }
 
             stopWatch.Stop();
-            timerWorkout.Stop();
+            tmrWorkout.Stop();
             TimeSpan timeElapsed = stopWatch.Elapsed;
             string duration = String.Format("{0:00}:{1:00}:{2:00}", timeElapsed.Hours, timeElapsed.Minutes, timeElapsed.Seconds);
             caloriesBurned = (int) Math.Round(timeElapsed.Seconds * 0.34);
@@ -140,16 +119,11 @@ namespace FinAssist.PresentationLayer
             this.Close();
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
+        private void tmrWorkout_Tick(object sender, EventArgs e)
         {
             TimeSpan timeElapsed = stopWatch.Elapsed;
             string duration = String.Format("{0:00}:{1:00}:{2:00}", timeElapsed.Hours, timeElapsed.Minutes, timeElapsed.Seconds);
-            labelTimer.Text = duration;
-        }
-
-        private void labelTimer_Click(object sender, EventArgs e)
-        {
-
+            lblTimer.Text = duration;
         }
     }
 }

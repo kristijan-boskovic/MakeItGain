@@ -32,7 +32,7 @@
             this.btnWorkouts = new System.Windows.Forms.Button();
             this.btnBody = new System.Windows.Forms.Button();
             this.btnHistory = new System.Windows.Forms.Button();
-            this.labelTitle = new System.Windows.Forms.Label();
+            this.lblWelcomeTitle = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnExercises
@@ -79,23 +79,22 @@
             this.btnHistory.UseVisualStyleBackColor = true;
             this.btnHistory.Click += new System.EventHandler(this.historyButton_Click);
             // 
-            // labelTitle
+            // lblWelcomeTitle
             // 
-            this.labelTitle.AutoSize = true;
-            this.labelTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.labelTitle.Location = new System.Drawing.Point(164, 26);
-            this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(280, 29);
-            this.labelTitle.TabIndex = 6;
-            this.labelTitle.Text = "Welcome to Make It Gain";
-            this.labelTitle.Click += new System.EventHandler(this.labelTitle_Click);
+            this.lblWelcomeTitle.AutoSize = true;
+            this.lblWelcomeTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblWelcomeTitle.Location = new System.Drawing.Point(164, 26);
+            this.lblWelcomeTitle.Name = "lblWelcomeTitle";
+            this.lblWelcomeTitle.Size = new System.Drawing.Size(280, 29);
+            this.lblWelcomeTitle.TabIndex = 6;
+            this.lblWelcomeTitle.Text = "Welcome to Make It Gain";
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(629, 415);
-            this.Controls.Add(this.labelTitle);
+            this.Controls.Add(this.lblWelcomeTitle);
             this.Controls.Add(this.btnHistory);
             this.Controls.Add(this.btnBody);
             this.Controls.Add(this.btnWorkouts);
@@ -115,6 +114,6 @@
         private System.Windows.Forms.Button btnWorkouts;
         private System.Windows.Forms.Button btnBody;
         private System.Windows.Forms.Button btnHistory;
-        private System.Windows.Forms.Label labelTitle;
+        private System.Windows.Forms.Label lblWelcomeTitle;
     }
 }

@@ -1,17 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Globalization;
 using System.Linq;
-using System.Text;
 using System.Windows.Forms;
-
 using FinAssist.BaseLib;
-using FinAssist.Controllers;
 using FinAssist.Model;
-using FinAssist.Model.Repositories;
 
 namespace FinAssist.PresentationLayer
 {
@@ -29,9 +21,7 @@ namespace FinAssist.PresentationLayer
         {
             _mainController = mainController;
             _historyWorkouts = historyWorkouts;
-
             UpdateList();
-
             this.Show();
         }
 
@@ -54,17 +44,10 @@ namespace FinAssist.PresentationLayer
             for (int i = 0; i < _historyWorkouts.Count(); i++)
             {
                 HistoryWorkout historyWorkout = _historyWorkouts[i];
-
                 ListViewItem lvt = new ListViewItem(historyWorkout.WorkoutName);
                 lvt.SubItems.Add(historyWorkout.Date);
-
                 listHistoryWorkouts.Items.Add(lvt);
             }
-        }
-
-        private void listHistoryWorkouts_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void frmViewHistory_Load(object sender, EventArgs e)
