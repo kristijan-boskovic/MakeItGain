@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="FinAssist.DAL.MemoryBased.ExerciseRepository" BaseTypeListCollapsed="true">
+    <Position X="2.75" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>IAAEAAAAAAAACEAAAAAAACAAAIAAAASAAAAAAAAAAAA=</HashCode>
+      <FileName>ExerciseRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="FinAssist.DAL.MemoryBased.WeightMeasureRepository" BaseTypeListCollapsed="true">
+    <Position X="5.25" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAEAAAAAAAAAABABAAASAAAAACAAAAAA=</HashCode>
+      <FileName>WeightMeasureRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="FinAssist.DAL.MemoryBased.WorkoutRepository" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAkAAAAAAAAAECAAQAEAAAAAoAAAAUAEAAAAAABAAQ=</HashCode>
+      <FileName>WorkoutRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -85,9 +85,9 @@
             this.lblWelcomeTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.lblWelcomeTitle.Location = new System.Drawing.Point(164, 26);
             this.lblWelcomeTitle.Name = "lblWelcomeTitle";
-            this.lblWelcomeTitle.Size = new System.Drawing.Size(280, 29);
+            this.lblWelcomeTitle.Size = new System.Drawing.Size(268, 29);
             this.lblWelcomeTitle.TabIndex = 6;
-            this.lblWelcomeTitle.Text = "Welcome to Make It Gain";
+            this.lblWelcomeTitle.Text = "Welcome to MakeItGain";
             // 
             // frmMain
             // 
@@ -102,7 +102,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmMain";
-            this.Text = "Make It Gain";
+            this.Text = "MakeItGain";
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

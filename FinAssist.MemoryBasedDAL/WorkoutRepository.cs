@@ -55,15 +55,12 @@ namespace FinAssist.DAL.MemoryBased
 
 		public void AddWorkout(Workout workout)
 		{
-			if (_listWorkouts.Any(x => x.WorkoutName == workout.WorkoutName))
-			{
-				throw new ExerciseAlreadyExists();
-			}
+			if (workout.Id == Workout.UndefinedExerciseId || _listWorkouts.Any(x => x.Id == workout.Id))
+            {
+                workout.Id = GetNewId();
+            }
 
-			if (workout.Id == Workout.UndefinedExerciseId || _listWorkouts.Any(x => x.Id == workout.Id) )		
-				workout.Id = GetNewId();
-
-			_listWorkouts.Add(workout);
+            _listWorkouts.Add(workout);
 
             NotifyObservers();
 		}

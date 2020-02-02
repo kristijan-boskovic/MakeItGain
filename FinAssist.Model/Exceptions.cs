@@ -19,10 +19,4 @@ namespace FinAssist.Model
 	{
 
 	}
-
-    [Serializable]
-    public class WorkoutDoesntExist : MakeItGainBaseException
-    {
-
-    }
 }
