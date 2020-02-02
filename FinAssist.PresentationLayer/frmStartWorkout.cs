@@ -115,7 +115,7 @@ namespace FinAssist.PresentationLayer
             string duration = String.Format("{0:00}:{1:00}:{2:00}", timeElapsed.Hours, timeElapsed.Minutes, timeElapsed.Seconds);
             caloriesBurned = (int) Math.Round(timeElapsed.Seconds * 0.34);
 
-            _mainController.FinishWorkout(_workout, duration, DateTime.Now.ToString("dd/MM/yyyy"), caloriesBurned, reps, weights);
+            _mainController.AddWorkoutToHistory(_workout, duration, DateTime.Now.ToString("dd/MM/yyyy"), caloriesBurned, reps, weights);
             this.Close();
         }
 

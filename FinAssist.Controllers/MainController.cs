@@ -48,7 +48,7 @@ namespace FinAssist.Controllers
                 _workoutRepository.AddWorkout(new Workout(2, "Lower body", new List<Exercise>() { squat, deadlift }, 5));
                 _workoutRepository.AddWorkout(new Workout(3, "Full body", new List<Exercise>() { benchPress, militaryPress, squat, deadlift }, 3));
 
-                _workoutRepository.finishWorkout(new Workout(1, "Upper body", new List<Exercise>() { benchPress, militaryPress }, 4), "00:44:23", "20.01.2020", 342, new List<int>() { 10, 10, 9, 9, 10, 10, 10, 9 }, new List<int>() { 90, 95, 100, 100, 70, 70, 75, 75 });
+                _workoutRepository.AddWorkoutToHistory(new Workout(1, "Upper body", new List<Exercise>() { benchPress, militaryPress }, 4), "00:44:23", "20.01.2020", 342, new List<int>() { 10, 10, 9, 9, 10, 10, 10, 9 }, new List<int>() { 90, 95, 100, 100, 70, 70, 75, 75 });
 
                 _weightMeasureRepository.AddWeightMeasure(new WeightMeasure(1, 103.5, 90.0, "10.01.2020"));
                 _weightMeasureRepository.AddWeightMeasure(new WeightMeasure(2, 102.0, 90.0, "20.01.2020"));
@@ -57,7 +57,7 @@ namespace FinAssist.Controllers
 			}
 		}
 
-		public void ShowExercises()
+        public void ShowExercises()
 		{
 			var exerciseController = new ExerciseController();
 			var newFrm = _formsFactory.CreateShowExercisesListView();
@@ -105,10 +105,10 @@ namespace FinAssist.Controllers
             workoutController.StartWorkout(newFrm, workout, _workoutRepository, this);
         }
 
-        public void FinishWorkout(Workout workout, string duration, string date, int caloriesBurned, List<int> reps, List<int> weights)
+        public void AddWorkoutToHistory(Workout workout, string duration, string date, int caloriesBurned, List<int> reps, List<int> weights)
         {
             var workoutController = new WorkoutController();
-            workoutController.FinishWorkout(workout, duration, date, caloriesBurned, _workoutRepository, reps, weights);
+            workoutController.AddWorkoutToHistory(workout, duration, date, caloriesBurned, _workoutRepository, reps, weights);
         }
 
         public void ShowHistoryWorkouts()

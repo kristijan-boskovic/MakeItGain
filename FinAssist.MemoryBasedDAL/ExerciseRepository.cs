@@ -21,12 +21,6 @@ namespace FinAssist.DAL.MemoryBased
 			return _instance ?? (_instance = new ExerciseRepository());
 		}
 
-
-		public int GetExerciseNum()
-		{
-			return _listExercises.Count;
-		}
-
 		public Exercise GetExerciseByName(string exerciseName)
 		{
 			var exercise = (from l in _listExercises where l.ExerciseName == exerciseName select l).First();
@@ -37,12 +31,6 @@ namespace FinAssist.DAL.MemoryBased
             }
 
             throw new ExerciseDoesntExist();
-		}
-
-		public Exercise GetExerciseById(int exerciseId)
-		{
-			var exercise = (from l in _listExercises where l.Id == exerciseId select l).First();
-			return exercise;
 		}
 
         public List<Exercise> GetExercisesByMuscleGroup(string muscleGroup)
@@ -56,12 +44,6 @@ namespace FinAssist.DAL.MemoryBased
 			var exercises = _listExercises.OfType<Exercise>().ToList();
 			return exercises;
 		}
-
-        public List<int> GetAllExercisesIds()
-		{
-			var exercises = _listExercises.Select(x => x.Id).ToList();
-            return exercises;
-        }
 
         public int GetNewId()
 		{
@@ -82,10 +64,5 @@ namespace FinAssist.DAL.MemoryBased
 
 			_listExercises.Add(exercise);
 		}
-
-		public void DeleteExercise(int exerciseId)
-		{
-			
-		}
-	}
+    }
 }

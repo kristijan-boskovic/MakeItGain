@@ -25,31 +25,13 @@ namespace FinAssist.DAL.MemoryBased
 			return _instance ?? (_instance = new WorkoutRepository());
 		}
 
+        public Workout GetWorkoutById(int workoutId)
+        {
+            var workout = (from l in _listWorkouts where l.Id == workoutId select l).First();
+            return workout;
+        }
 
-		public int	GetWorkoutNum()
-		{
-			return _listWorkouts.Count;
-		}
-
-		public Workout GetWorkoutByName(string workoutName)
-		{
-			var workout = (from l in _listWorkouts where l.WorkoutName == workoutName select l).First();
-
-			if (workout != null)
-            {
-                return workout;
-            }
-
-            throw new WorkoutDoesntExist();
-		}
-
-		public Workout GetWorkoutById(int workoutId)
-		{
-			var workout = (from l in _listWorkouts where l.Id == workoutId select l).First();
-			return workout;
-		}
-
-		public List<Workout> GetAllWorkouts()
+        public List<Workout> GetAllWorkouts()
 		{
 			List<Workout> workouts = _listWorkouts.OfType<Workout>().ToList();
             _nextId = workouts.Count + 1;
@@ -61,12 +43,6 @@ namespace FinAssist.DAL.MemoryBased
             List<HistoryWorkout> historyWorkouts = _listHistoryWorkouts.OfType<HistoryWorkout>().ToList();
             return historyWorkouts;
         }
-
-
-        public List<int> GetAllWorkoutsIds()
-		{
-			return _listWorkouts.Select(x => x.Id).ToList();
-		}
 
 		public int GetNewId()
 		{
@@ -103,12 +79,7 @@ namespace FinAssist.DAL.MemoryBased
             _listWorkouts.RemoveAll(x => x.Id == workout.Id);
         }
 
-        public void StartWorkout(Workout workout)
-        {
-            
-        }
-
-        public void finishWorkout(Workout workout, string duration, string date, int caloriesBurned, List<int> reps, List<int> weights)
+        public void AddWorkoutToHistory(Workout workout, string duration, string date, int caloriesBurned, List<int> reps, List<int> weights)
         {
             HistoryWorkout historyWorkout = new HistoryWorkout(workout.Id, workout.WorkoutName, workout.Exercises, workout.SetsPerExercise, duration, date, caloriesBurned, reps, weights);
             _listHistoryWorkouts.Add(historyWorkout);

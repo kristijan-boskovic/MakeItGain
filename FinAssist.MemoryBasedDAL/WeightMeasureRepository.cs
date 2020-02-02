@@ -23,28 +23,11 @@ namespace FinAssist.DAL.MemoryBased
 			return _instance ?? (_instance = new WeightMeasureRepository());
 		}
 
-
-		public int GetWeightMeasureNum()
-		{
-			return _listWeightMeasures.Count;
-		}
-
-		public WeightMeasure GetWeightMeasureById(int weightMeasureId)
-		{
-			var weightMeasure = (from l in _listWeightMeasures where l.Id == weightMeasureId select l).First();
-			return weightMeasure;
-		}
-
 		public List<WeightMeasure> GetAllWeightMeasures()
 		{
 			List<WeightMeasure> weightMeasures = _listWeightMeasures.OfType<WeightMeasure>().ToList();
 
 			return weightMeasures;
-		}
-
-        public List<int> GetAllWeightMeasuresIds()
-		{
-			return _listWeightMeasures.Select(x => x.Id).ToList();
 		}
 
 		public int GetNewId()

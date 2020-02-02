@@ -58,9 +58,6 @@ namespace FinAssist.PresentationLayer
             {
                 Workout workout = _workouts[i];
 
-                //string muscleGroup = displayExercise.MuscleGroup.ToString().ToLower();
-                //string accInitialBalance = acc.InitialBalance.ToString(CultureInfo.InvariantCulture);
-
                 ListViewItem lvt = new ListViewItem((i+1).ToString());
                 lvt.SubItems.Add(workout.WorkoutName);
 
